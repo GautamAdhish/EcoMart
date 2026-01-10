@@ -150,6 +150,7 @@ header ul li a:hover::after {
     font-size: 30px;
     margin-bottom: 10px;
     text-align: center;
+    text-decoration: underline;
 }
 
 .formbutton1, .formbutton2{
@@ -211,6 +212,10 @@ header ul li a:hover::after {
     flex: 1;
 }
 
+.contactform:hover, .feedbackform:hover {
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.7);
+    transition: box-shadow 0.5s ease;
+}
 
 .talkform {
     color: #ecf39e;

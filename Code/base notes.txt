@@ -1,0 +1,49 @@
+<div class="projectintro">
+    <h2>Introduction to the project</h2>
+    <p>Your one-stop shop for eco-friendly products that make a difference.</p>
+</div>
+
+form area: 
+
+<form action="">
+    <h1 class="contacthead">
+        Contact Us
+    </h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br><br>
+
+    <label for="message">Message:</label>
+    <br>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+**Stick footer to the bottom of the page youtube guide**
+https://www.youtube.com/watch?v=Sau3hn7zEUY
+
+
+/* .formbutton1 {
+    margin-left: 115px;
+    margin-top: 32px;
+}
+
+.formbutton2 {
+    margin-left: 100px;
+    margin-top: 32px;
+} */
+
+Contact us ma sab personal information chai mandatory ani feedback ma chai personal information is optional.
+feedback form ma euta drop down hunxa jasle chai users haru lai option dinxa where they can choose the part in the website that they are disappointed with
+others vanne drop down ma click garda euta hidden div appear hunxa, which allows the users to type message where they can specify the element jun chaoi tini haru lai chitta bujhne ani tyo chai options ma xaina
+
+Div vitra ko content lai bich ma lyauna "justify-content: space-around;"

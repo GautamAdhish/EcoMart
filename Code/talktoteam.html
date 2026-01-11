@@ -150,6 +150,28 @@
                 color: #292712;
             }
 
+            .formcollective {
+                transition: transform 0.4s ease, box-shadow 0.5s ease;
+            }
+
+            .formcollective:hover {
+                transform: translateY(-5px); /* Same lift as product cards */
+                box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6); /* Deeper shadow on hover */
+            }
+
+            .contactform, .feedbackform, .form {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .form:hover {
+                transform: translateY(-3px);
+                /* Keeps the look consistent without overlapping the main container too much */
+            }
+
+            .submit:hover, .back:hover {
+                transform: scale(1.05); /* Slight grow effect to match the 'active' feel */
+                transition: 0.3s ease;
+            }
         </style>
     </head>
     <body>

@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>EcoMart - Products</title>
+    <style>
+        /* New Category Title Styling */
+        .category-title {
+            color: #ecf39e;
+            font-size: 28px;
+            margin: 40px 70px 10px 70px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #90a955; /* Subtle underline to separate sections */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Adjusting the grid for better flow */
+        .products {
+            display: grid;
+            /* Using auto-fill to keep cards properly sized even if only 1 item exists in a category */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            gap: 30px;
+            padding: 20px 70px 40px 70px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,95 +45,115 @@
         </nav>
     </header>
     <main>
-        <section class="products">
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/BambooToothBrush.png" alt="Bamboo Toothbrush">
-                <p class="name">Bamboo Toothbrush</p>
-                <p class="category">Personal Care</p>
-                <p><span class="old-price">Rs.200</span> <strong>Rs.150</strong></p>
-            </div>
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/ReusableBag.png" alt="Casual Hemp Bag">
-                <p class="name">Casual Hemp Bag</p>
-                <p class="category">Sustainable Fashion</p>
-                <p><span class="old-price">Rs.2000</span> <strong>Rs.1800</strong></p>
-            </div>
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/InsulatedWaterBottle.png" alt="Insulated Water Bottle">
-                <p class="name">Insulated Steel Water Bottle</p>
-                <p class="category">Reusable & Daily Use</p>
-                <p><span class="old-price">Rs.750</span> <strong>Rs.600</strong></p>
-            </div>
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/ToothpasteTablets.png" alt="Toothpaste Tablets">
-                <p class="name">Toothpaste Tablets</p>
-                <p class="category">Personal Care</p>
-                <p><span class="old-price">Rs.350</span> <strong>Rs.300</strong></p>
-            </div>
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/SteelStraws.png" alt="Reusable Steel Straw Set">
-                <p class="name">Reusable Steel Straw Set</p>
-                <p class="category">Reusable & Daily Use</p>
-                <p><span class="old-price">Rs.300</span> <strong>Rs.250</strong></p>
-            </div>
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/CottonMask.png" alt="Organic Cotton Face Mask">
-                <p class="name">Organic Cotton Face Mask</p>
-                <p class="category">Sustainable Fashion</p>
-                <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
-            </div>
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/BambooComb.png" alt="Bamboo Hair Comb">
-                <p class="name">Bamboo Hair Comb</p>
-                <p class="category">Personal Care</p>
-                <p><span class="old-price">Rs.250</span> <strong>Rs.200</strong></p>
-            </div>
-            <div class="card">
-                <p class="badge">People's Favorite</p>
-                <img src="../Assets/Images/CompostBags.png" alt="Compostable Garbage Bags">
-                <p class="name">Compostable Garbage Bags</p>
-                <p class="category">Home Essentials</p>
-                <p><span class="old-price">Rs.500</span> <strong>Rs.420</strong></p>
-            </div>
-            <div class="card">
-                <img src="../Assets/Images/ReusableCup.png" alt="Reusable Coffee Cup">
-                <p class="name">Reusable Coffee Cup</p>
-                <p class="category">Reusable & Daily Use</p>
-                <p><span class="old-price">Rs.600</span> <strong>Rs.500</strong></p>
-            </div>
-            <div class="card">
-                <img src="../Assets/Images/DishBar.png" alt="Eco-Friendly Dishwashing Bar">
-                <p class="name">Eco-Friendly Dishwashing Bar</p>
-                <p class="category">Home Essentials</p>
-                <p><span class="old-price">Rs.280</span> <strong>Rs.230</strong></p>
-            </div>
-            <div class="card">
-                <img src="../Assets/Images/WoodenCutlery.png" alt="Wooden Cutlery Set">
-                <p class="name">Wooden Cutlery Set</p>
-                <p class="category">Kitchen Essentials</p>
-                <p><span class="old-price">Rs.450</span> <strong>Rs.380</strong></p>
-            </div>
-            <div class="card">
-                <img src="../Assets/Images/LunchBox.png" alt="Bamboo Fiber Lunch Box">
-                <p class="name">Bamboo Fiber Lunch Box</p>
-                <p class="category">Reusable & Daily Use</p>
-                <p><span class="old-price">Rs.1000</span> <strong>Rs.850</strong></p>
-            </div>
-            <div class="card">
-                <img src="../Assets/Images/EcoNotebook.png" alt="Eco-Friendly Notebook">
-                <p class="name">Eco-Friendly Notebook</p>
-                <p class="category">Stationery</p>
-                <p><span class="old-price">Rs.300</span> <strong>Rs.250</strong></p>
-            </div>
-        </section>
-    </main>
+        <main>
+            <h1 class="products-header">Our Products</h1>
+
+            <h2 class="category-title">Personal Care</h2>
+            <section class="products">
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/BambooToothBrush.png" alt="Bamboo Toothbrush">
+                    <p class="name">Bamboo Toothbrush</p>
+                    <p class="category">Personal Care</p>
+                    <p><span class="old-price">Rs.200</span> <strong>Rs.150</strong></p>
+                </div>
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/ToothpasteTablets.png" alt="Toothpaste Tablets">
+                    <p class="name">Toothpaste Tablets</p>
+                    <p class="category">Personal Care</p>
+                    <p><span class="old-price">Rs.350</span> <strong>Rs.300</strong></p>
+                </div>
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/BambooComb.png" alt="Bamboo Hair Comb">
+                    <p class="name">Bamboo Hair Comb</p>
+                    <p class="category">Personal Care</p>
+                    <p><span class="old-price">Rs.250</span> <strong>Rs.200</strong></p>
+                </div>
+            </section>
+
+            <h2 class="category-title">Reusable & Daily Use</h2>
+            <section class="products">
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/InsulatedWaterBottle.png" alt="Insulated Water Bottle">
+                    <p class="name">Insulated Steel Water Bottle</p>
+                    <p class="category">Reusable & Daily Use</p>
+                    <p><span class="old-price">Rs.750</span> <strong>Rs.600</strong></p>
+                </div>
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/SteelStraws.png" alt="Reusable Steel Straw Set">
+                    <p class="name">Reusable Steel Straw Set</p>
+                    <p class="category">Reusable & Daily Use</p>
+                    <p><span class="old-price">Rs.300</span> <strong>Rs.250</strong></p>
+                </div>
+                <div class="card">
+                    <img src="../Assets/Images/Products/ReusableCup.png" alt="Reusable Coffee Cup">
+                    <p class="name">Reusable Coffee Cup</p>
+                    <p class="category">Reusable & Daily Use</p>
+                    <p><span class="old-price">Rs.600</span> <strong>Rs.500</strong></p>
+                </div>
+                <div class="card">
+                    <img src="../Assets/Images/Products/LunchBox.png" alt="Bamboo Fiber Lunch Box">
+                    <p class="name">Bamboo Fiber Lunch Box</p>
+                    <p class="category">Reusable & Daily Use</p>
+                    <p><span class="old-price">Rs.1000</span> <strong>Rs.850</strong></p>
+                </div>
+            </section>
+
+            <h2 class="category-title">Sustainable Fashion</h2>
+            <section class="products">
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/ReusableBag.png" alt="Casual Hemp Bag">
+                    <p class="name">Casual Hemp Bag</p>
+                    <p class="category">Sustainable Fashion</p>
+                    <p><span class="old-price">Rs.2000</span> <strong>Rs.1800</strong></p>
+                </div>
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/CottonMask.png" alt="Organic Cotton Face Mask">
+                    <p class="name">Organic Cotton Face Mask</p>
+                    <p class="category">Sustainable Fashion</p>
+                    <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
+                </div>
+            </section>
+
+            <h2 class="category-title">Home & Kitchen Essentials</h2>
+            <section class="products">
+                <div class="card">
+                    <p class="badge">People's Favorite</p>
+                    <img src="../Assets/Images/Products/CompostBags.png" alt="Compostable Garbage Bags">
+                    <p class="name">Compostable Garbage Bags</p>
+                    <p class="category">Home Essentials</p>
+                    <p><span class="old-price">Rs.500</span> <strong>Rs.420</strong></p>
+                </div>
+                <div class="card">
+                    <img src="../Assets/Images/Products/DishBar.png" alt="Eco-Friendly Dishwashing Bar">
+                    <p class="name">Eco-Friendly Dishwashing Bar</p>
+                    <p class="category">Home Essentials</p>
+                    <p><span class="old-price">Rs.280</span> <strong>Rs.230</strong></p>
+                </div>
+                <div class="card">
+                    <img src="../Assets/Images/Products/WoodenCutlery.png" alt="Wooden Cutlery Set">
+                    <p class="name">Wooden Cutlery Set</p>
+                    <p class="category">Kitchen Essentials</p>
+                    <p><span class="old-price">Rs.450</span> <strong>Rs.380</strong></p>
+                </div>
+            </section>
+
+            <h2 class="category-title">Stationery</h2>
+            <section class="products">
+                <div class="card">
+                    <img src="../Assets/Images/Products/EcoBook.png" alt="Eco-Friendly Notebook">
+                    <p class="name">Eco-Friendly Notebook</p>
+                    <p class="category">Stationery</p>
+                    <p><span class="old-price">Rs.300</span> <strong>Rs.250</strong></p>
+                </div>
+            </section>
+        </main>
     <footer>
         <p>&copy; 2024 EcoMart. All rights reserved.</p>
     </footer>

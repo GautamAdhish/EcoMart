@@ -246,7 +246,7 @@ header ul li a:hover::after {
     padding: 40px; /* Uniform padding */
     font-size: 18px;
     line-height: 1.8;
-    background-color: #4f772d;
+    background-color: #90a955;
     text-align: center;
     border-radius: 25px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
@@ -254,10 +254,19 @@ header ul li a:hover::after {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border: 5px solid #31572c;
+    transition: box-shadow 0.5s ease;
 }
+
+.card:hover {
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.7);
+    z-index: 1000; /* Brings the hovered card to the front */
+}
+
 .card img {
     max-width: 100%;
     height: auto;
+    border: 5px solid #31572c;
 }
 .badge {
     font-weight: bold;
@@ -267,6 +276,14 @@ header ul li a:hover::after {
 .old-price {
     text-decoration: line-through;
     opacity: 0.8;
+}
+
+.products-header {
+    text-align: center;
+    color: #ecf39e;
+    font-size: 45px;
+    margin: 40px 0;
+    text-decoration: underline;
 }
 
 /* Footer Styling */
@@ -279,7 +296,7 @@ footer {
     width: 100%;
     bottom: 0;
     border-top: 1px solid rgba(236, 243, 158, 0.1);
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 10000; /* Ensures it stays on top */
     margin-top: auto;
     -webkit-box-align: end;
 }

@@ -125,6 +125,7 @@ header ul li a:hover::after {
     text-align: center;
     margin-top: 50px;
     font-size: 45px;
+    text-decoration: underline;
 }
 
 /* Combined Form Styles for consistency */
@@ -309,7 +310,7 @@ footer {
     width: 100%;
     bottom: 0;
     border-top: 1px solid rgba(236, 243, 158, 0.1);
-    z-index: 10000;
+    z-index: 100;
     margin-top: auto;
 }
 

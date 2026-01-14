@@ -6,7 +6,7 @@
     <title>EcoMart - Home</title>
     <link rel="stylesheet" href="../Code/style.css">
     <style>
-* {
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -65,6 +65,7 @@
       .main-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        /* Devan ko part, idk what this is */
         grid-template-areas:
           "about right"
           "featured featured";
@@ -77,6 +78,7 @@
         background: #4f772d;
         padding: 32px;
         border-radius: 12px;
+        /* blurry shadow ko lagi */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       }
 
@@ -115,7 +117,7 @@
         margin: 12px 0 8px;
       }
 
-      /* Paragraphs and Lists - specific to content cards */
+      /* Paragraphs and Lists which are specific to content cards */
       .card p {
         color: #ecf39e;
         font-size: 16px;
@@ -143,7 +145,7 @@
         left: -10px;
       }
 
-      /* Products Grid - FLEXBOX */
+      /* Products Grid */
       .products-grid {
         display: flex;
         flex-wrap: nowrap;
@@ -163,6 +165,7 @@
         transition: transform 0.3s ease;
       }
 
+      /* Featured product ma click garda khera ali kati mathi janxa */
       .product:hover {
         transform: translateY(-5px);
       }
@@ -182,6 +185,7 @@
       }
 
       /* CTA Button */
+      /* CTA vaneko class name */
       .cta {
         display: inline-block;
         padding: 14px 28px;

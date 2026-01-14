@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-:root {
-    --buttonbg: #31572c;
-    --buttonhover: #90A955;
-}
-
 /* General Reset */
 body {
     background-color: #132a13;
@@ -147,6 +142,14 @@ header ul li a:hover::after {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     text-align: justify;
     font-size: 18px;
+    transform: translateY(0px);
+}
+
+.contactform:hover, .feedbackform:hover {
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.7);
+    z-index: 1000;
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    transform: translateY(-10px);
 }
 
 .contactform h2, .feedbackform h2 {
@@ -210,12 +213,6 @@ header ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex: 1;
-}
-
-.contactform:hover, .feedbackform:hover {
-    box-shadow: 20px 20px 30px rgba(0,0,0,0.7);
-    z-index: 1000;
-    transition: box-shadow 0.5s ease;
 }
 
 .talkform {

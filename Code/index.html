@@ -4,183 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoMart - Home</title>
+    <link rel="stylesheet" href="../Code/style.css">
     <style>
-      /* Global Styles */
-      * {
+* {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
       body {
-        background-color: #292712;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: #1a1a1a;
         line-height: 1.6;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+        background-color: #132a13;
       }
 
+      /* Main content container */
       .container {
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 0 16px;
+        padding: 0 20px;
       }
 
-      /* ================= HEADER STYLE (MATCHED) ================= */
-      header {
-          background-color: #31572c;
-          padding: 10px 80px; 
-          display: flex;       
-          justify-content: space-between; 
-          align-items: center; 
-          box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      /* Main content area */
+      main {
+        flex: 1;
+        padding: 40px 0;
       }
 
-      header h1.logo {
-          color: #ecf39e;
-          font-size: 32px; /* Matched font size */
-          letter-spacing: -1px;
-          padding: 15px 0;
-      }
-
-      header a {
-          text-decoration: none;
-          color: #ecf39e;
-      }
-
-      ul.menu {
-          list-style-type: none;
-          display: flex;       
-          gap: 40px; /* Matched gap */
-      }
-
-      header ul li a {
-          text-decoration: none;
-          color: #ecf39e;
-          font-size: 20px; /* Matched font size */
-          font-weight: 500;
-          position: relative; 
-          padding-bottom: 5px;
-          transition: color 0.3s ease;
-      }
-
-      /* Middle-Out Underline logic */
-      header ul li a::after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: #90A955;
-          transform: scaleX(0);
-          transform-origin: center;
-          transition: transform 0.3s ease-in-out;
-      }
-
-      header ul li a:hover {
-          color: #90A955;
-      }
-
-      header ul li a:hover::after {
-          transform: scaleX(1);
-      }
-
-      /* ================= BODY & GRID CONTENT ================= */
+      /* Hero Section */
       .hero-body {
-        background: #eef2f6;
-        border-radius: 8px;
-        margin: 32px 0;
-        padding: 48px;
+        background: #4f772d;
+        color: #ecf39e;
+        border-radius: 12px;
+        margin: 32px 0 48px;
+        padding: 60px 48px;
         text-align: center;
+        box-shadow: 0 4px 20px rgba(49, 87, 44, 0.2);
       }
 
       .hero-body h1 {
-        margin-bottom: 8px;
-        font-size: 35.2px;
+        margin-bottom: 16px;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
       }
 
+      .hero-body p {
+        font-size: 20px;
+        opacity: 0.9;
+        max-width: 600px;
+        margin: 0 auto;
+        color: #ecf39e;
+      }
+
+      /* Grid Layout */
       .main-grid {
         display: grid;
-        grid-template-columns: 360px 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
           "about right"
           "featured featured";
-        gap: 24px;
-        margin-bottom: 48px;
+        gap: 30px;
+        margin-bottom: 60px;
       }
 
+      /* Cards */
       .card {
-        background: #eef2f6;
-        padding: 24px;
-        border-radius: 8px;
+        background: #4f772d;
+        padding: 32px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       }
 
       .about-column {
         grid-area: about;
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
       }
 
       .right-column {
         grid-area: right;
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 30px;
       }
 
       .featured-right {
         grid-area: featured;
       }
 
+      /* Home page specific headings */
+      .card h2 {
+        color: #ecf39e;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #90A955;
+      }
+
+      .product h3 {
+        color: #31572c;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 12px 0 8px;
+      }
+
+      /* Paragraphs and Lists - specific to content cards */
+      .card p {
+        color: #ecf39e;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .list-style {
+        padding-left: 24px;
+        margin: 16px 0;
+      }
+
+      .list-style li {
+        color: #ecf39e;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 10px;
+      }
+
+      .list-style li::before {
+        content: "•"; /* Add bullet point */
+        color: #90A955;
+        font-weight: bold;
+        position: absolute;
+        left: -10px;
+      }
+
+      /* Products Grid - FLEXBOX */
       .products-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 24px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 30px;
         margin-top: 24px;
+        overflow-x: auto;
+        padding: 10px 0;
       }
 
       .product {
+        flex: 0 0 auto;
+        width: 300px;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .product:hover {
+        transform: translateY(-5px);
       }
 
       .product img {
         width: 100%;
-        height: 200px;
+        height: 220px;
         object-fit: cover;
-        border-radius: 6px;
+        border-radius: 8px;
+        border: 1px solid #e0e6dc;
       }
 
-      ul.list-style {
-        padding-left: 24px;
+      .product p {
+        color: #718096;
+        font-size: 15px;
+        line-height: 1.6;
       }
 
+      /* CTA Button */
       .cta {
         display: inline-block;
-        padding: 9.6px 19.2px;
-        background: #4b8b3b;
-        color: #fff;
+        padding: 14px 28px;
+        background: #31572c;
+        color: #ecf39e;
         text-decoration: none;
-        border-radius: 6px;
-        margin-top: 16px;
-        font-weight: bold;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        border: 2px solid #31572c;
       }
 
       .cta:hover {
-        background: #3b702d;
-      }
-
-      footer {
-        background-color: #31572c;
-        color: #ecf39e;
-        text-align: center;
-        padding: 24px 0;
-        margin-top: auto;
+        background: #90A955;
+        color: #31572c;
+        border-color: #90A955;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(49, 87, 44, 0.2);
       }
     </style>
 </head>
@@ -209,8 +230,19 @@
         <div class="main-grid">
             <aside id="about" class="about-column card">
                 <h2>About Us</h2>
-                <p>We are a small cooperative committed to sustainably-grown food and fair partnerships with local farmers.</p>
-                <p>We prioritize quality, transparency, and community wellbeing.</p>
+                <p>
+                  Founded by eco-conscious individuals tired of wasteful products, EcoMart makes sustainable living accessible and stylish.
+                  We carefully select every item—from biodegradable personal care to reusable home essentials and ensuring they meet high environmental and ethical standards.
+                </p>
+                <p>
+                  We're more than a store; we're a community promoting conscious consumerism.
+                  Through education and quality products, we help you reduce waste effortlessly. 
+                  Each purchase supports environmental initiatives, turning everyday shopping into planet-positive action.
+                </p>
+                <p>
+                  Join us in making a difference—one eco-friendly choice at a time.
+                  Together, we can create a healthier planet for future generations.
+                </p>
             </aside>
 
             <div class="right-column">

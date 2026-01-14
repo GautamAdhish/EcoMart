@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoMart - Home</title>
     <style>
-      :root {
-        --bg: #292712;
-        --card: #eef2f6;
-        --accent: #4b8b3b;
-        --muted: #6b6b6b;
-        --container: 1100px;
-        --radius: 8px;
-        --text: #1a1a1a;
-        --header-green: #31572c;
-        --logo-cream: #ecf39e;
-        --underline-green: #90A955;
-      }
-
       /* Global Styles */
       * {
         margin: 0;
@@ -26,9 +13,9 @@
       }
 
       body {
-        background-color: var(--bg);
+        background-color: #292712;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: var(--text);
+        color: #1a1a1a;
         line-height: 1.6;
         min-height: 100vh;
         display: flex;
@@ -36,15 +23,15 @@
       }
 
       .container {
-        max-width: var(--container);
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: 0 16px;
       }
 
       /* ================= HEADER STYLE (MATCHED) ================= */
       header {
-          background-color: var(--header-green);
-          padding: 10px 80px;  /* Matched to provided CSS */
+          background-color: #31572c;
+          padding: 10px 80px; 
           display: flex;       
           justify-content: space-between; 
           align-items: center; 
@@ -52,7 +39,7 @@
       }
 
       header h1.logo {
-          color: var(--logo-cream);
+          color: #ecf39e;
           font-size: 32px; /* Matched font size */
           letter-spacing: -1px;
           padding: 15px 0;
@@ -60,7 +47,7 @@
 
       header a {
           text-decoration: none;
-          color: var(--logo-cream);
+          color: #ecf39e;
       }
 
       ul.menu {
@@ -71,7 +58,7 @@
 
       header ul li a {
           text-decoration: none;
-          color: var(--logo-cream);
+          color: #ecf39e;
           font-size: 20px; /* Matched font size */
           font-weight: 500;
           position: relative; 
@@ -87,14 +74,14 @@
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: var(--underline-green);
+          background-color: #90A955;
           transform: scaleX(0);
           transform-origin: center;
           transition: transform 0.3s ease-in-out;
       }
 
       header ul li a:hover {
-          color: var(--underline-green);
+          color: #90A955;
       }
 
       header ul li a:hover::after {
@@ -103,16 +90,16 @@
 
       /* ================= BODY & GRID CONTENT ================= */
       .hero-body {
-        background: var(--card);
-        border-radius: var(--radius);
-        margin: 2rem 0;
-        padding: 3rem;
+        background: #eef2f6;
+        border-radius: 8px;
+        margin: 32px 0;
+        padding: 48px;
         text-align: center;
       }
 
       .hero-body h1 {
-        margin-bottom: 0.5rem;
-        font-size: 2.2rem;
+        margin-bottom: 8px;
+        font-size: 35.2px;
       }
 
       .main-grid {
@@ -121,28 +108,28 @@
         grid-template-areas:
           "about right"
           "featured featured";
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        gap: 24px;
+        margin-bottom: 48px;
       }
 
       .card {
-        background: var(--card);
-        padding: 1.5rem;
-        border-radius: var(--radius);
+        background: #eef2f6;
+        padding: 24px;
+        border-radius: 8px;
       }
 
       .about-column {
         grid-area: about;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 16px;
       }
 
       .right-column {
         grid-area: right;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 24px;
       }
 
       .featured-right {
@@ -152,14 +139,14 @@
       .products-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        margin-top: 1.5rem;
+        gap: 24px;
+        margin-top: 24px;
       }
 
       .product {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 8px;
       }
 
       .product img {
@@ -170,17 +157,17 @@
       }
 
       ul.list-style {
-        padding-left: 1.5rem;
+        padding-left: 24px;
       }
 
       .cta {
         display: inline-block;
-        padding: 0.6rem 1.2rem;
-        background: var(--accent);
+        padding: 9.6px 19.2px;
+        background: #4b8b3b;
         color: #fff;
         text-decoration: none;
         border-radius: 6px;
-        margin-top: 1rem;
+        margin-top: 16px;
         font-weight: bold;
       }
 
@@ -192,23 +179,8 @@
         background-color: #31572c;
         color: #ecf39e;
         text-align: center;
-        padding: 1.5rem 0;
+        padding: 24px 0;
         margin-top: auto;
-      }
-
-      /* Responsive Adjustments */
-      @media (max-width: 850px) {
-        header {
-            padding: 10px 20px;
-            flex-direction: column;
-        }
-        .main-grid {
-          grid-template-columns: 1fr;
-          grid-template-areas:
-            "about"
-            "right"
-            "featured";
-        }
       }
     </style>
 </head>

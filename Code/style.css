@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+:root {
+    --buttonbg: #31572c;
+    --buttonhover: #90A955;
+}
+
 /* General Reset */
 body {
-    background-color: #292712;
+    background-color: #132a13;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;

@@ -6,21 +6,6 @@
     <title>EcoMart - Home</title>
     <link rel="stylesheet" href="../Code/style.css">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #1a1a1a;
-        line-height: 1.6;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background-color: #132a13;
-      }
 
       /* Main content container */
       .container {
@@ -206,12 +191,42 @@
         transform: translateY(-2px);
         box-shadow: 0 6px 15px rgba(49, 87, 44, 0.2);
       }
+
+      .buttongrp {
+            display: flex;
+            gap: 14px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .buy, .cart, .view {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #31572c;
+            border: 2px solid #31572c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .buy:hover, .cart:hover, .view:hover {
+            background-color: #90A955;
+            transform: translateY(-2px);
+        }
+
+        .buy img, .cart img, .view img {
+            background-color: transparent;
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <h1 class="logo">EcoMart</h1>
+            <h1>EcoMart</h1>
         </a>
         <nav class="navbar">
             <ul class="menu">
@@ -219,6 +234,7 @@
                 <li><a href="../Code/about.html">About Us</a></li>
                 <li><a href="../Code/products.html">Products</a></li>
                 <li><a href="../Code/blog.html">Blog</a></li>
+                <li><a href="../Code/research.html">Research</a></li>
                 <li><a href="../Code/contact.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -268,30 +284,48 @@
             <section id="featured" class="card featured-right">
                 <h2>Featured Products</h2>
                 <div class="products-grid">
-                    <article class="product">
-                        <img src="honey.png" alt="Jar of organic honey">
-                        <h3>Raw Wildflower Honey</h3>
-                        <p>Local, unfiltered honey from nearby apiaries.</p>
-                    </article>
+                    <div class="card">
+                      <img src="../Assets/Images/Products/ToothpasteTablets.png" alt="Toothpaste Tablets">
+                      <p class="name">Toothpaste Tablets</p>
+                      <p class="category">Personal Care</p>
+                      <p><span class="old-price">Rs.350</span> <strong>Rs.300</strong></p>
+                      <div class="buttongrp">
+                          <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                          <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                          <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                      </div>
+                  </div>
 
-                    <article class="product">
-                        <img src="diddysoil.png" alt="Bottle of olive oil">
-                        <h3>Cold-Pressed Olive Oil</h3>
-                        <p>Extra-virgin, cold-pressed for maximum flavor.</p>
-                    </article>
+                    <div class="card">
+                      <img src="../Assets/Images/Products/BambooBottle.png" alt="Insulated Water Bottle">
+                      <p class="name">Bamboo Water Bottle</p>
+                      <p class="category">Reusable & Daily Use</p>
+                      <p><span class="old-price">Rs.750</span> <strong>Rs.600</strong></p>
+                      <div class="buttongrp">
+                          <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                          <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                          <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                      </div>
+                  </div>
 
-                    <article class="product">
-                        <img src="veggytale.png" alt="Fresh vegetables">
-                        <h3>Seasonal Veg Box</h3>
-                        <p>Weekly box of seasonal vegetables sourced from our farms.</p>
-                    </article>
+                    <div class="card">
+                      <img src="../Assets/Images/Products/CompostBags.png" alt="Compostable Garbage Bags">
+                      <p class="name">Compostable Garbage Bags</p>
+                      <p class="category">Home Essentials</p>
+                      <p><span class="old-price">Rs.500</span> <strong>Rs.420</strong></p>
+                      <div class="buttongrp">
+                          <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                          <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                          <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                      </div>
+                  </div>
                 </div>
             </section>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 EcoMart. All rights reserved.</p>
+      <p>&copy; 2024 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
     </footer>
 </body>
 </html>

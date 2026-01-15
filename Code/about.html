@@ -1,35 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>EcoMart - About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoMart — About Us & Our Team</title>
+  <link rel="stylesheet" href="../Code/style.css">
+  <style>
+    /* INTERNAL CSS: For About Us page specific styling */
+    
+    /* Main about container */
+    .about-main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #ecf39e;
+    }
+    
+    /* Mission section */
+    .mission-section {
+      background-color: #4f772d;
+      padding: 50px 40px;
+      border-radius: 25px;
+      text-align: center;
+      margin-bottom: 60px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      border: 3px solid #31572c;
+    }
+    
+    .mission-section h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      color: #ecf39e;
+    }
+    
+    .mission-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+    
+    .mission-highlight {
+      background-color: #31572c;
+      padding: 25px;
+      border-radius: 15px;
+      margin-top: 30px;
+      border-left: 5px solid #90A955;
+    }
+    
+    /* Team section */
+    .team-section {
+      margin: 60px 0;
+    }
+    
+    .team-section h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #ecf39e;
+      margin-bottom: 50px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #90A955;
+    }
+    
+    /* Team member flex container - REPLACED GRID WITH FLEX */
+    .team-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .team-member-card {
+      background-color: #4f772d;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      border: 3px solid #31572c;
+      text-align: center;
+      padding-bottom: 25px;
+      flex: 1 1 280px; /* Flexible basis of 280px, can grow and shrink */
+      max-width: 350px; /* Maximum width for larger screens */
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .team-member-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    
+    /* Individual portfolio links */
+    .portfolio-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #31572c;
+      color: #ecf39e;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      margin-top: auto; /* Push to bottom in flex column layout */
+    }
+    
+    .portfolio-link:hover {
+      background-color: #90A955;
+      color: #132a13;
+      border-color: #31572c;
+    }
+    
+    /* Core values section - REPLACED GRID WITH FLEX */
+    .values-section {
+      background-color: #31572c;
+      padding: 50px;
+      border-radius: 25px;
+      margin: 60px 0;
+      border: 3px solid #4f772d;
+    }
+    
+    .values-section h2 {
+      text-align: center;
+      color: #ecf39e;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+    
+    .values-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    
+    .value-card {
+      background-color: #4f772d;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      border: 2px solid #90A955;
+      flex: 1 1 300px; /* Flexible basis of 300px */
+      max-width: 350px;
+    }
+    
+    .value-card h3 {
+      color: #ecf39e;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    
+    .value-card p {
+      color: #cfe1b9;
+      line-height: 1.6;
+    }
+    
+    /* Statistics section - REPLACED GRID WITH FLEX */
+    .stats-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 60px 0;
+    }
+    
+    .stat-card {
+      background-color: #31572c;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      border: 2px solid #4f772d;
+      flex: 1 1 200px; /* Flexible basis of 200px */
+      max-width: 250px;
+    }
+    
+    .stat-number {
+      color: #90A955;
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .stat-label {
+      color: #ecf39e;
+      font-size: 18px;
+    }
+    
+    /* INLINE CSS: Applied directly to specific elements */
+    .eco-highlight {
+      background-color: rgba(144, 169, 85, 0.3);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    
+    /* Additional member info styling for better flex layout */
+    .member-info {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1; /* Allow content to take available space */
+    }
+    
+    .member-name {
+      color: #ecf39e;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .member-role {
+      color: #90A955;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .member-bio {
+      color: #cfe1b9;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    .member-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    
+    .skill-tag {
+      background-color: #31572c;
+      color: #90A955;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    
+    .member-photo {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid #90A955;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1 class="logo">
-            EcoMart
-        </h1>
-        <nav class="navbar">
-            <div class="container">
-                <ul class="menu">
-                    <li><a href="../Code/index.html">Home</a></li>
-                    <li><a href="../Code/about.html" class="active">About Us</a></li>
-                    <li><a href="../Code/products.html">Products</a></li>
-                    <li><a href="../Code/blog.html">Blog</a></li>
-                    <li><a href="../Code/contact.html">Contact Us</a></li>
-                </ul>
+  <header>
+    <!-- DIV: Logo and navigation container -->
+    <div class="logo-container">
+      <a href="../Code/index.html">
+        <h1 class="logo">EcoMart</h1>
+      </a>
+    </div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="menu">
+          <li><a href="../Code/index.html">Home</a></li>
+          <li><a href="../Code/about.html" class="active">About Us</a></li>
+          <li><a href="../Code/products.html">Products</a></li>
+          <li><a href="../Code/blog.html">Blog</a></li>
+          <li><a href="../Code/research.html">Research</a></li>
+          <li><a href="../Code/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="about-main">
+    <!-- Mission Statement Section -->
+    <section class="mission-section">
+      <h1>Our Mission & Vision</h1>
+      <p>At EcoMart, we believe in creating a sustainable future through conscious consumerism. Our mission is to make eco-friendly living accessible, affordable, and stylish for everyone.</p>
+      
+      <div class="mission-highlight">
+        <p style="font-size: 20px; font-style: italic; color: #cfe1b9;">
+          "We're not just selling products; we're cultivating a community dedicated to positive environmental change. Every purchase you make supports sustainable practices and contributes to a healthier planet."
+        </p>
+      </div>
+      
+      <p style="margin-top: 30px;">
+        Founded in 2024 by a team of environmentally-conscious students, EcoMart combines <span class="eco-highlight" style="color: #90A955;">innovation with sustainability</span> to deliver products that don't compromise on quality or ethics.
+      </p>
+    </section>
+
+    <!-- Team Introduction -->
+    <section class="team-section">
+      <h2>Meet Our Creative Team</h2>
+      
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 18px; line-height: 1.6; color: #cfe1b9;">
+        Our diverse team of passionate individuals brings together expertise in web development, design, sustainability, and user experience. Each member has contributed uniquely to creating EcoMart.
+      </p>
+      
+      <!-- Team Member Cards - NOW USING FLEX -->
+      <div class="team-flex">
+        
+        <!-- Devan -->
+        <div class="team-member-card">
+          <img src="../Assets/Images/Team/team1.jpg" alt="Devan - Home & Blog Developer" class="member-photo">
+          <div class="member-info">
+            <h3 class="member-name">Devan</h3>
+            <p class="member-role">Home & About Us Developer</p>
+            <p class="member-bio">Led the development of our engaging home page and about us section. Focuses on creating user-friendly interfaces that educate about sustainability.</p>
+            <div class="member-skills">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">UX Design</span>
+              <span class="skill-tag">Content Strategy</span>
             </div>
-        </nav>
-    </header>
-    <main>
-        <h1 style="color: #ecf39e; text-align: center; margin-top: 50px; margin-bottom: 50px;">
-            WORK IN PROGRESS!
-        </h1>
-    </main>
-    <footer>
-        <p>&copy; 2024 EcoMart. All rights reserved.</p>
-    </footer>
+            <a href="d.html" class="portfolio-link">View Portfolio →</a>
+          </div>
+        </div>
+        
+        <!-- Adhish -->
+        <div class="team-member-card">
+          <img src="../Assets/Images/Team/team2.jpg" alt="Adhish - JavaScript Specialist" class="member-photo">
+          <div class="member-info">
+            <h3 class="member-name">Adhish</h3>
+            <p class="member-role">JavaScript & Contact Specialist</p>
+            <p class="member-bio">Implemented interactive features and form validations. Created comprehensive wireframes that guided our website's structure and user flow.</p>
+            <div class="member-skills">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Form Validation</span>
+              <span class="skill-tag">Wireframing</span>
+            </div>
+            <a href="member2.html" class="portfolio-link">View Portfolio →</a>
+          </div>
+        </div>
+        
+        <!-- Kritagya -->
+        <div class="team-member-card">
+          <img src="../Assets/Images/Team/team3.jpg" alt="Kritigya - CSS Designer" class="member-photo">
+          <div class="member-info">
+            <h3 class="member-name">Kritagya</h3>
+            <p class="member-role">CSS & Products Designer</p>
+            <p class="member-bio">Designed our visually appealing product pages and implemented the consistent green theme throughout the website. Ensured responsive design across all devices.</p>
+            <div class="member-skills">
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">Product Layout</span>
+            </div>
+            <a href="member3.html" class="portfolio-link">View Portfolio →</a>
+          </div>
+        </div>
+        
+        <!-- Sneha -->
+        <div class="team-member-card">
+          <img src="../Assets/Images/Team/team4.jpg" alt="Sneha - Blog Developer" class="member-photo">
+          <div class="member-info">
+            <h3 class="member-name">Sneha</h3>
+            <p class="member-role">Blog Developer</p>
+            <p class="member-bio">Created this comprehensive About Us page showcasing our team. Focused on presenting individual contributions while maintaining a cohesive team narrative.</p>
+            <div class="member-skills">
+              <span class="skill-tag">HTML Structure</span>
+              <span class="skill-tag">Blog Page</span>
+              <span class="skill-tag">Content Writing</span>
+            </div>
+            <a href="member4.html" class="portfolio-link">View Portfolio →</a>
+          </div>
+        </div>
+        
+        <!-- Anamika -->
+        <div class="team-member-card">
+          <img src="../Assets/Images/Team/team5.jpg" alt="Anamika - Research Specialist" class="member-photo">
+          <div class="member-info">
+            <h3 class="member-name">Anamika</h3>
+            <p class="member-role">Research & Documentation</p>
+            <p class="member-bio">Conducted comprehensive research on competitor websites and sustainable e-commerce trends. Documented our development process and improvements.</p>
+            <div class="member-skills">
+              <span class="skill-tag">Research Analysis</span>
+              <span class="skill-tag">Documentation</span>
+              <span class="skill-tag">Comparisons</span>
+            </div>
+            <a href="member5.html" class="portfolio-link">View Portfolio →</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!-- Company Values - NOW USING FLEX -->
+    <section class="values-section">
+      <h2>Our Core Values</h2>
+      <div class="values-flex">
+        <div class="value-card">
+          <h3>Sustainability First</h3>
+          <p>Every product is carefully vetted for its environmental impact. We prioritize materials that are renewable, biodegradable, or recycled.</p>
+        </div>
+        <div class="value-card">
+          <h3>Transparency</h3>
+          <p>We believe in complete transparency about our products, processes, and pricing. No greenwashing, just honest sustainability.</p>
+        </div>
+        <div class="value-card">
+          <h3>Community Focus</h3>
+          <p>We're building a community of conscious consumers who support each other in making sustainable lifestyle choices.</p>
+        </div>
+        <div class="value-card">
+          <h3>Innovation</h3>
+          <p>Continuously seeking better solutions, from packaging alternatives to new sustainable materials and technologies.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Statistics - NOW USING FLEX -->
+    <section class="stats-section">
+      <div class="stat-card">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Team Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Eco Products</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6</div>
+        <div class="stat-label">Main Website Pages</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Sustainable Focus</div>
+      </div>
+    </section>
+    
+    <!-- DIV: Call to action -->
+    <div style="text-align: center; margin: 60px 0 40px;">
+      <h2 style="color: #ecf39e; font-size: 32px; margin-bottom: 20px;">Ready to Make a Difference?</h2>
+      <p style="color: #cfe1b9; font-size: 18px; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        Explore our sustainable products or learn more about eco-living through our blog.
+      </p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="../Code/products.html" style="background-color: #31572c; color: #ecf39e; padding: 15px 35px; text-decoration: none; border-radius: 10px; font-weight: bold; border: 2px solid #90A955; transition: all 0.3s ease;">
+          Shop Products
+        </a>
+        <a href="../Code/blog.html" style="background-color: #4f772d; color: #ecf39e; padding: 15px 35px; text-decoration: none; border-radius: 10px; font-weight: bold; border: 2px solid #90A955; transition: all 0.3s ease;">
+          Read Our Blog
+        </a>
+        <a href="../Code/contact.html" style="background-color: #90A955; color: #132a13; padding: 15px 35px; text-decoration: none; border-radius: 10px; font-weight: bold; border: 2px solid #31572c; transition: all 0.3s ease;">
+          Contact Us
+        </a>
+      </div>
+    </div>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2024 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
+  </footer>
 </body>
 </html>

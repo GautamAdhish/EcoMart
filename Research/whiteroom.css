@@ -1,0 +1,232 @@
+/* ===================== ROOT VARIABLES ===================== */
+/* Centralized theme values for easy global changes */
+:root {
+  --bg: #292712;          /* Page background */
+  --card: #DAD7CD;        /* Card background color */
+  --accent: #4b8b3b;      /* Buttons / highlights */
+  --muted: #6b6b6b;
+  --container: 1550px;    /* Overall page width (stretches layout right) */
+  --radius: 8px;          /* Rounded corners */
+}
+
+/* ===================== RESET ===================== */
+/* Removes default browser spacing inconsistencies */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ===================== BODY ===================== */
+/* Base typography and background */
+body {
+  background-color: var(--bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #123;
+}
+
+/* ===================== HEADER ===================== */
+/* Top navigation bar */
+header {
+  background-color: #31572c;
+  padding: 15px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px; /* Aligns header with main content */
+}
+
+.logo img {
+  height: 50px;
+  display: block;
+}
+
+/* Navigation menu */
+ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #ecf39e;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+header ul li a:hover {
+  color: #90A955;
+  text-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+/* ===================== MAIN CONTAINER ===================== */
+/* Centers and constrains page content */
+main.container {
+  max-width: var(--container);
+  margin-left: 20px; /* Matches header alignment */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 140px);
+}
+
+/* ===================== CARD BASE STYLES ===================== */
+/* Shared styles for all content boxes */
+.body,
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+}
+
+.card {
+  padding: 1.5rem; /* Unified padding for all cards */
+}
+
+/* intro section */
+.body {
+  margin: 1rem 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ===================== GRID LAYOUT ===================== */
+/* Two-column layout:
+   - Left: About Us (wider)
+   - Right: Goals + Achieve + Featured */
+.main-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr; /* Clean, balanced stretch */
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "about right"
+    "about featured";
+  gap: 24px;
+  flex: 1;
+}
+
+/* ===================== LEFT COLUMN ===================== */
+/* About Us section */
+.about-column {
+  grid-area: about;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ===================== RIGHT COLUMN ===================== */
+/* Container for goals + achieve cards */
+.right-column {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top-right cards */
+.top-cards {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Individual goal / achieve cards */
+.top-cards > .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===================== FEATURED PRODUCTS ===================== */
+/* Bottom-right section */
+.featured-right {
+  grid-area: featured;
+}
+
+/* Product grid layout */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Individual product card */
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===================== ELEMENTS ===================== */
+ul {
+  padding-left: 1.25rem;
+}
+
+/* Call-to-action button */
+.cta {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.cta:hover {
+  background: #3b702d;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background-color: #31572c;
+  color: #ecf39e;
+  text-align: center;
+  padding: 15px 0;
+  margin: 2rem 0 0 20px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+/* Tablet & below */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about"
+      "right"
+      "featured";
+  }
+
+  .top-cards {
+    flex-direction: column;
+  }
+
+  ul.menu {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  ul.menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

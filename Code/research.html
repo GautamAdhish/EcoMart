@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoMart — Research & Comparison</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Research page main container */
+    .research-main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #ecf39e;
+    }
+    
+    .research-header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding: 30px;
+      background-color: #4f772d;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+    
+    .research-header h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #ecf39e;
+      text-decoration: underline;
+    }
+    
+    .research-header p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Comparison sections */
+    .comparison-section {
+      margin: 60px 0;
+      background-color: rgba(79, 119, 45, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      border: 2px solid #31572c;
+    }
+    
+    .page-title {
+      color: #ecf39e;
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 15px;
+      border-bottom: 3px solid #90A955;
+    }
+    
+    /* Comparison grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .comparison-card {
+      background-color: #31572c;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .comparison-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .comparison-card h3 {
+      color: #90A955;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .comparison-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #90A955;
+      margin-bottom: 20px;
+    }
+    
+    /* TABLE: For comparison data */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      background-color: #31572c;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .comparison-table th {
+      background-color: #4f772d;
+      color: #ecf39e;
+      padding: 15px;
+      text-align: left;
+      font-size: 18px;
+    }
+    
+    .comparison-table td {
+      padding: 15px;
+      border-bottom: 1px solid #90A955;
+      color: #ecf39e;
+      vertical-align: top;
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .comparison-table tr:hover {
+      background-color: rgba(144, 169, 85, 0.2);
+    }
+    
+    /* List styling for differences/similarities */
+    .comparison-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .comparison-list li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+    
+    .comparison-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #90A955;
+      font-weight: bold;
+    }
+    
+    .differences-list li:before {
+      content: "→";
+      color: #ecf39e;
+    }
+    
+    /* FORM: For user feedback on comparisons */
+    .research-feedback-form {
+      background-color: #4f772d;
+      padding: 30px;
+      border-radius: 20px;
+      margin: 50px 0;
+      border: 2px solid #31572c;
+    }
+    
+    .research-feedback-form h3 {
+      color: #ecf39e;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      color: #ecf39e;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 2px solid #31572c;
+      background-color: #ecf39e;
+      color: #132a13;
+      font-size: 16px;
+    }
+    
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .form-submit-btn {
+      background-color: #31572c;
+      color: #ecf39e;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      display: block;
+      margin: 20px auto 0;
+    }
+    
+    .form-submit-btn:hover {
+      background-color: #90A955;
+      color: #132a13;
+    }
+    
+    /* Page navigation */
+    .page-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      padding: 20px 0;
+      border-top: 2px solid #4f772d;
+      border-bottom: 2px solid #4f772d;
+    }
+    
+    .nav-btn {
+      background-color: #4f772d;
+      color: #ecf39e;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .nav-btn:hover {
+      background-color: #90A955;
+      color: #132a13;
+      border-color: #31572c;
+    }
+    
+    /* DIV: Container for references */
+    .references-container {
+      background-color: #31572c;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    
+    .references-container h3 {
+      color: #90A955;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    .references-list {
+      list-style-type: decimal;
+      padding-left: 20px;
+      color: #ecf39e;
+    }
+    
+    .references-list li {
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    
+    .references-list a {
+      color: #90A955;
+      text-decoration: none;
+    }
+    
+    .references-list a:hover {
+      text-decoration: underline;
+    }
+    
+    /* INLINE CSS: Applied directly to specific elements */
+    .highlight {
+      background-color: rgba(236, 243, 158, 0.2);
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-- DIV: Navigation container -->
+    <div class="logo-container">
+      <h1 class="logo">EcoMart</h1>
+    </div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="menu">
+          <li><a href="../Code/index.html">Home</a></li>
+          <li><a href="../Code/about.html">About Us</a></li>
+          <li><a href="../Code/products.html">Products</a></li>
+          <li><a href="../Code/blog.html">Blog</a></li>
+          <li><a href="../Code/research.html" class="active">Research</a></li>
+          <li><a href="../Code/contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="research-main">
+    <section class="research-header">
+      <h1>Research & Website Comparison</h1>
+      <p>This page documents our research process and compares our website design with existing eco-friendly e-commerce platforms. We analyzed competitors to identify best practices and implement unique improvements for a better user experience.</p>
+    </section>
+
+    <!-- DIV: Main comparison container -->
+    <div class="comparison-container">
+      
+      <!-- Home Page Comparison -->
+      <section class="comparison-section">
+        <h2 class="page-title">Home Page Comparison</h2>
+        
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <h3>Reference Website</h3>
+            <!-- <img src="../Assets/Images/Research/home_reference.png" alt="Reference Home Page" class="comparison-img"> -->
+            <p><strong>Website:</strong> The Soma Store (https://thesomastore.com)</p>
+            <p>Features clean design with hero section, product categories, and sustainable messaging.</p>
+          </div>
+          
+          <div class="comparison-card">
+            <h3>Our Home Page</h3>
+            <!-- <img src="../Assets/Images/Research/our_home.png" alt="Our Home Page" class="comparison-img"> -->
+            <p><strong>EcoMart Home Page</strong></p>
+            <p>Includes hero section, about us, eco-goals, featured products, and call-to-action buttons.</p>
+          </div>
+        </div>
+        
+        <!-- TABLE: Comparison table -->
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Reference Website</th>
+              <th>Our Website (EcoMart)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Hero Section</strong></td>
+              <td>Simple banner with tagline</td>
+              <td>Interactive hero with clear value proposition and visual appeal</td>
+            </tr>
+            <tr>
+              <td><strong>Navigation</strong></td>
+              <td>Standard top navigation</td>
+              <td>Enhanced navigation with hover effects and active state indicators</td>
+            </tr>
+            <tr>
+              <td><strong>Content Organization</strong></td>
+              <td>Basic grid layout</td>
+              <td>Strategic grid with clear sections: About, Goals, Featured Products</td>
+            </tr>
+            <tr>
+              <td><strong>Color Scheme</strong></td>
+              <td>Minimal green accents</td>
+              <td>Consistent eco-themed palette (#31572c, #4f772d, #90A955, #ecf39e)</td>
+            </tr>
+            <tr>
+              <td><strong>Mobile Responsiveness</strong></td>
+              <td>Responsive but basic</td>
+              <td>Fully responsive with optimized layouts for all devices</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div style="display: flex; gap: 40px; margin-top: 30px;">
+          <div style="flex: 1;">
+            <h4 style="color: #90A955;">Similarities</h4>
+            <ul class="comparison-list">
+              <li>Both focus on eco-friendly products</li>
+              <li>Use green color schemes</li>
+              <li>Include product categories</li>
+              <li>Have clear navigation menus</li>
+            </ul>
+          </div>
+          <div style="flex: 1;">
+            <h4 style="color: #ecf39e;">Differences & Improvements</h4>
+            <ul class="comparison-list differences-list">
+              <li>We added interactive hover effects on navigation</li>
+              <li>Our layout includes specific eco-goals section</li>
+              <li>We implemented "People's Favorite" badges on products</li>
+              <li>Enhanced visual hierarchy with better typography</li>
+              <li>Added smooth transitions and animations</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Products Page Comparison -->
+      <section class="comparison-section">
+        <h2 class="page-title">Products Page Comparison</h2>
+        
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <h3>Reference Website</h3>
+            <!-- <img src="../Assets/Images/Research/products_reference.png" alt="Reference Products Page" class="comparison-img"> -->
+            <p><strong>Website:</strong> Package Free Shop (https://packagefreeshop.com)</p>
+            <p>Product grid with filters, prices, and basic product information.</p>
+          </div>
+          
+          <div class="comparison-card">
+            <h3>Our Products Page</h3>
+            <!-- <img src="../Assets/Images/Research/our_products.png" alt="Our Products Page" class="comparison-img"> -->
+            <p><strong>EcoMart Products Page</strong></p>
+            <p>Categorized products with interactive buttons, badges, and detailed views.</p>
+          </div>
+        </div>
+        
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Reference Website</th>
+              <th>Our Website (EcoMart)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Product Organization</strong></td>
+              <td>Simple grid layout</td>
+              <td>Categorized by type (Personal Care, Fashion, etc.) with clear headers</td>
+            </tr>
+            <tr>
+              <td><strong>Product Information</strong></td>
+              <td>Basic name and price</td>
+              <td>Detailed with category, old/new prices, and interactive buttons</td>
+            </tr>
+            <tr>
+              <td><strong>User Interaction</strong></td>
+              <td>Add to cart only</td>
+              <td>Three-button system: Buy, Cart, View with hover effects</td>
+            </tr>
+            <tr>
+              <td><strong>Visual Design</strong></td>
+              <td>Minimal product cards</td>
+              <td>Enhanced cards with borders, shadows, and consistent styling</td>
+            </tr>
+            <tr>
+              <td><strong>Product Details</strong></td>
+              <td>Separate page or modal</td>
+              <td>Detailed view page with recommendations (e.g., hempbag.html)</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div style="display: flex; gap: 40px; margin-top: 30px;">
+          <div style="flex: 1;">
+            <h4 style="color: #90A955;">Similarities</h4>
+            <ul class="comparison-list">
+              <li>Grid-based product display</li>
+              <li>Product images and prices</li>
+              <li>Eco-friendly product focus</li>
+              <li>Add to cart functionality</li>
+            </ul>
+          </div>
+          <div style="flex: 1;">
+            <h4 style="color: #ecf39e;">Differences & Improvements</h4>
+            <ul class="comparison-list differences-list">
+              <li>We added category-based organization with headers</li>
+              <li>Implemented "People's Favorite" badges</li>
+              <li>Added three interactive buttons per product</li>
+              <li>Created detailed product pages with recommendations</li>
+              <li>Used consistent card design with hover effects</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Contact Page Comparison -->
+      <section class="comparison-section">
+        <h2 class="page-title">Contact Page Comparison</h2>
+        
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <h3>Reference Website</h3>
+            <!-- <img src="../Assets/Images/Research/contact_reference.png" alt="Reference Contact Page" class="comparison-img"> -->
+            <p><strong>Website:</strong> Ecomart.app Contact Page</p>
+            <p>Basic contact form with name, email, and message fields.</p>
+          </div>
+          
+          <div class="comparison-card">
+            <h3>Our Contact Page</h3>
+            <!-- <img src="../Assets/Images/Research/our_contact.png" alt="Our Contact Page" class="comparison-img"> -->
+            <p><strong>EcoMart Contact Page</strong></p>
+            <p>Dual-form system with both contact and feedback options.</p>
+          </div>
+        </div>
+        
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Reference Website</th>
+              <th>Our Website (EcoMart)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Form Structure</strong></td>
+              <td>Single contact form</td>
+              <td>Dual-option: Contact Team + Feedback forms</td>
+            </tr>
+            <tr>
+              <td><strong>Fields Included</strong></td>
+              <td>Basic: Name, Email, Message</td>
+              <td>Comprehensive: Name, Email, Phone, Gender, Subject, Message</td>
+            </tr>
+            <tr>
+              <td><strong>User Experience</strong></td>
+              <td>Simple form submission</td>
+              <td>Floating labels, icons, and hover effects</td>
+            </tr>
+            <tr>
+              <td><strong>Additional Features</strong></td>
+              <td>None</td>
+              <td>Gender selection, subject dropdown, back button</td>
+            </tr>
+            <tr>
+              <td><strong>Visual Design</strong></td>
+              <td>Minimal styling</td>
+              <td>Professional forms with consistent eco-theme</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- About Us Page Comparison -->
+      <section class="comparison-section">
+        <h2 class="page-title">About Us Page Comparison</h2>
+        
+        <div class="comparison-grid">
+          <div class="comparison-card">
+            <h3>Reference Website</h3>
+            <!-- <img src="../Assets/Images/Research/about_reference.png" alt="Reference About Page" class="comparison-img"> -->
+            <p><strong>Website:</strong> iBambo About Us Page</p>
+            <p>Company description, mission, and values with team photos.</p>
+          </div>
+          
+          <div class="comparison-card">
+            <h3>Our About Us Page</h3>
+            <!-- <img src="../Assets/Images/Research/our_about.png" alt="Our About Page" class="comparison-img"> -->
+            <p><strong>EcoMart About Us Page</strong></p>
+            <p>Team member portfolios with individual layouts and roles.</p>
+          </div>
+        </div>
+        
+        <div style="margin-top: 30px;">
+          <h4 style="color: #ecf39e; margin-bottom: 20px;">Key Improvement</h4>
+          <p style="line-height: 1.6; color: #ecf39e;">While reference About Us pages focus on company information, our page emphasizes <span class="highlight" style="color: #90A955; font-weight: bold;">individual team member portfolios</span>. Each member has a unique layout showcasing their specific contributions, skills, and roles in the project. This personal touch helps build trust and demonstrates the collaborative nature of our team.</p>
+        </div>
+      </section>
+      
+      <!-- DIV: References section -->
+      <div class="references-container">
+        <h3>Website References Used in Research</h3>
+        <ol class="references-list">
+          <li>The Soma Store - <a href="https://thesomastore.com" target="_blank">https://thesomastore.com</a> (Home Page Reference)</li>
+          <li>Package Free Shop - <a href="https://packagefreeshop.com" target="_blank">https://packagefreeshop.com</a> (Products Page Reference)</li>
+          <li>Ecomart.app - <a href="https://ecomart.app" target="_blank">https://ecomart.app</a> (Contact Page Reference)</li>
+          <li>iBambo - <a href="https://ibambo.com" target="_blank">https://ibambo.com</a> (About Us Page Reference)</li>
+        </ol>
+      </div>
+      
+      <!-- DIV: Page navigation -->
+      <div class="page-nav">
+        <a href="../Code/blog.html" class="nav-btn">← Back to Blog</a>
+        <a href="../Code/index.html" class="nav-btn">Go to Home →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+body {
+    background-color: #132a13;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.contain{
+	display: flex;
+}
+.left{
+flex: 30%;
+margin-left: 30px;
+
+}
+.right{
+	flex: 100%;
+	padding-left: 20px;
+    margin-left: 20px;
+}
+.card{
+	background-color:#90A955;
+	padding:20px;
+	margin-top: 20px;
+	height: 420px;
+}
+.card img:hover{
+    box-shadow:5px 5px 10px black;
+	transform: scale(1.1);
+}
+/*.check{
+	background-color:#4f772d;
+	margin-top: 100px;
+	width: 998px;
+	margin-left:0px;
+}*/

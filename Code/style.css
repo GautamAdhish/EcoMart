@@ -255,6 +255,9 @@ header ul li a:hover::after {
     justify-content: space-between;
     border: 5px solid #31572c;
     transition: box-shadow 0.5s ease, transform 0.3s ease;
+    /* NEW: Make card position relative for tags */
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -263,11 +266,20 @@ header ul li a:hover::after {
     z-index: 1000;
 }
 
+/* CHANGED: Fix image height and add zoom effect */
 .card img {
     max-width: 100%;
-    height: auto;
-    border: 5px solid #31572c;
+    height: 200px; /* FIX: Fixed height for all images */
+    object-fit: contain; /* FIX: Prevents image distortion */
     border-radius: 10px;
+    background-color: #31572c; /* FIX: Adds background color */
+    padding: 10px; /* FIX: Adds padding around image */
+    transition: transform 0.5s ease; /* NEW: Smooth zoom transition */
+}
+
+/* NEW: Zoom effect on image hover */
+.card:hover img {
+    transform: scale(1.08); /* FIX: Slight zoom on hover */
 }
 
 /* ADDED: Uniform Product Typography */
@@ -302,6 +314,68 @@ header ul li a:hover::after {
     text-decoration: underline;
 }
 
+.tag-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    z-index: 10;
+}
+
+/* ========== PRODUCT TAGS STYLES ========== */
+
+/* Base tag style */
+.product-tag {
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+/* Different tag colors */
+.product-tag.sale {
+    background-color: #e74c3c; /* Red for SALE */
+}
+
+.product-tag.premium {
+    background-color: #f39c12; /* Gold for PREMIUM */
+}
+
+.product-tag.handmade {
+    background-color: #3498db; /* Blue for HAND-MADE */
+}
+
+.product-tag.limited {
+    background-color: #9b59b6; /* Purple for LIMITED STOCK */
+}
+
+.product-tag.favorite {
+    background-color: #2ecc71; /* Green for FAVORITE */
+}
+
+/* NEW: Small tags for secondary badges (below product name) */
+.small-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 11px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+/* blog navigation */
+.active {
+    background-color: rgba(144, 169, 85, 0.3);
+    border-radius: 4px;
+    padding: 5px 15px;
+}
+
 /* Footer Styling */
 footer {
     background-color: #31572c;
@@ -316,13 +390,3 @@ footer {
     margin-top: auto;
 }
 
-@media (max-width: 768px) {
-    .container-flex {
-        flex-direction: column; 
-        align-items: center;
-    }
-    
-    .contactform, .feedbackform {
-        width: 100%; 
-    }
-}

@@ -3,33 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>EcoMart - Blog</title>
+    <link rel="stylesheet" href="../Code/style.css">
+    <title>EcoMart - Technology Blog</title>
+    <style>
+        /* Blog Container */
+        .blog-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: rgba(79, 119, 45, 0.9);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid #31572c;
+            color: #ecf39e;
+        }
+
+        /* Blog Header */
+        .blog-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #90A955;
+        }
+
+        .blog-header h1 {
+            color: #ecf39e;
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .blog-date {
+            color: #cfe1b9;
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        /* Blog Content */
+        .blog-content {
+            line-height: 1.8;
+        }
+
+        /* Section Styling */
+        .blog-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(49, 87, 44, 0.7);
+            border-radius: 15px;
+            border-left: 5px solid #90A955;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .blog-section h2 {
+            color: #ecf39e;
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .blog-section h2::before {
+            content: "•";
+            color: #90A955;
+            font-size: 30px;
+        }
+
+        .blog-section p {
+            font-size: 18px;
+            text-align: justify;
+            color: #e8f5e8;
+            margin-bottom: 0;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(144, 169, 85, 0.3);
+            border-left: 4px solid #ecf39e;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        /* Divider */
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #90A955, transparent);
+            margin: 40px 0;
+            border: none;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <h1 class="logo">
-            EcoMart
-        </h1>
+        <a href="index.html">
+            <h1 class="logo">EcoMart</h1>
+        </a>
         <nav class="navbar">
-            <div class="container">
-                <ul class="menu">
-                    <li><a href="../Code/index.html">Home</a></li>
-                    <li><a href="../Code/about.html" target="_blank">About Us</a></li>
-                    <li><a href="../Code/products.html" target="_blank">Products</a></li>
-                    <li><a href="../Code/blog.html" target="_blank">Blog</a></li>
-                    <li><a href="../Code/contact.html" target="_blank">Contact Us</a></li>
-                </ul>
-            </div>
+            <ul class="menu">
+                <li><a href="../Code/index.html">Home</a></li>
+                <li><a href="../Code/about.html">About Us</a></li>
+                <li><a href="../Code/products.html">Products</a></li>
+                <li><a href="../Code/blog.html" class="active">Blog</a></li>
+                <li><a href="../Code/contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
+
     <main>
-        <h1 style="color: #ecf39e; text-align: center; margin-top: 50px; margin-bottom: 50px;">
-            WORK IN PROGRESS!
-        </h1>
+        <div class="blog-container">
+            <div class="blog-header">
+                <h1>Technology & Sustainability</h1>
+                <div class="blog-date">Published: December 2024 | Category: Technology & Environment</div>
+            </div>
+
+            <div class="blog-content">
+                <!-- Introduction Section -->
+                <div class="blog-section">
+                    <h2>Understanding Technology's Role</h2>
+                    <p>Technology is an integral part of our everyday lives, enabling us to accomplish tasks faster, more efficiently, and with greater convenience. From smartphones that keep us connected with loved ones to computers and the internet that facilitate learning and work, technology provides essential support in numerous aspects of modern living. It empowers healthcare professionals with advanced tools for diagnosis and treatment, enhances educational experiences through interactive learning platforms, and drives business innovation for economic growth. When utilized responsibly, technology not only improves our quality of life but also serves as a powerful tool for solving complex problems and fostering global collaboration.</p>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Positive Impact Section -->
+                <div class="blog-section">
+                    <h2>The Positive Impact of Technology</h2>
+                    <p>Technology has revolutionized our world by making communication instantaneous, education universally accessible, and work significantly more productive. Advanced medical technology saves lives through precise diagnostics and minimally invasive treatments, while digital learning platforms provide students worldwide with educational resources previously unavailable. Businesses leverage technology to streamline operations, reduce costs, and create sustainable growth opportunities. Moreover, technology enhances our daily lives by connecting communities, conserving time through automation, and providing innovative solutions to environmental and social challenges.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Key Benefits:</strong> Enhanced communication, improved healthcare, accessible education, efficient business operations, and innovative problem-solving capabilities.</p>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Negative Impact Section -->
+                <div class="blog-section">
+                    <h2>The Negative Impact of Technology</h2>
+                    <p>Despite its numerous advantages, technology presents significant challenges that require careful management. Excessive device usage contributes to health concerns including digital eye strain, sleep disruption, and sedentary lifestyles. The decline in face-to-face interactions can lead to social isolation and weakened interpersonal relationships. Additionally, growing dependence on technology exposes individuals and organizations to cybersecurity threats, privacy breaches, and data vulnerabilities. Automation and artificial intelligence, while efficient, may also result in job displacement across various industries, necessitating workforce adaptation and retraining programs.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Key Challenges:</strong> Health risks from overuse, reduced personal interaction, cybersecurity vulnerabilities, privacy concerns, and potential job displacement through automation.</p>
+                    </div>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Sustainable Sales Section -->
+                <div class="blog-section">
+                    <h2>Technology Driving Sustainable Product Sales</h2>
+                    <p>Technology serves as a powerful catalyst for promoting sustainable product adoption by enhancing consumer awareness, building trust, and simplifying eco-friendly purchasing decisions. Digital platforms, social media channels, and e-commerce websites enable sustainable brands to reach broader audiences while educating consumers about environmental benefits. Features such as product transparency tools, sustainability certifications, and customer reviews establish credibility and foster informed decision-making. Digital marketing strategies effectively communicate sustainability narratives, while data analytics help companies understand consumer preferences and optimize their sustainable offerings for maximum impact.</p>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <!-- Conclusion Section -->
+                <div class="blog-section">
+                    <h2>Conclusion</h2>
+                    <p>Technology plays a dual yet pivotal role in advancing sustainability. On one hand, it accelerates the adoption of eco-friendly products through digital accessibility, transparent information sharing, and targeted consumer education. Its positive contributions include facilitating sustainable business models, enhancing environmental monitoring, and promoting conscious consumption patterns. Conversely, technology's environmental footprint—through electronic waste, energy consumption, and resource-intensive manufacturing—requires responsible management and circular economy approaches. The future of sustainable technology lies in balancing innovation with environmental stewardship, ensuring that technological progress aligns with ecological preservation and social wellbeing.</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Final Thought:</strong> Technology, when guided by sustainability principles, can be our most powerful ally in creating a greener, more equitable future for all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; 2024 EcoMart. All rights reserved.</p>
+        <p>&copy; 2024 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
     </footer>
 </body>
 </html>

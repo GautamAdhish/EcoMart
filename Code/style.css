@@ -111,9 +111,7 @@ header ul li a:hover::after {
     line-height: 1.8;
     font-weight: 500;
     display: flex;
-    justify-content: space-between;
-    margin-left: 490px;
-    margin-right: 490px;
+    justify-content: center;
     margin-top: 70px;
     margin-bottom: 70px;
     gap: 20px;

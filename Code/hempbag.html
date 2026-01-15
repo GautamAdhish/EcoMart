@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Casual Hemp Bag | EcoMart</title>
+    <link rel="stylesheet" href="../Code/style.css">
+    <style>
+        /* PRODUCT DETAILS SECTION */
+        .product-details {
+            padding: 40px 70px;
+        }
+
+        /* Main product card */
+        .product-card {
+            display: flex;              
+            gap: 30px;                 
+            background-color: #4f772d;
+            padding: 30px;
+            border-radius: 25px;
+        }
+
+        /* Product image container */
+        .product-image {
+            flex: 1;            /* Takes less space than info */
+            text-align: center;
+        }
+
+        /* Product image */
+        .product-image img {
+            width: 85%;
+            height: 400px;
+            object-fit: fill;        /* Ensures no empty space */
+            border-radius: 25px;
+        }
+
+        /* Inner bordered product info box */
+        .product-info {
+            flex: 2;         /* Takes more space than image */
+            border: 2px solid #ecf39e;
+            color: #ecf39e;
+            padding: 30px;
+            border-radius: 25px;
+            line-height: 1.8;       /*The space between each line is 1.8 times the font size*/
+            background-color: transparent;
+        }
+
+        /* Popular product badge */
+        .badge {
+            background-color: #ecf39e;
+            color: #4f772d;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 15px;
+            display: inline-block;      /* allows an element to stay inline while still using width, height, padding, and margin like a block element. */
+            margin-bottom: 10px;
+        }
+
+        /* Old price styling */
+        .old-price {
+            text-decoration: line-through;
+            opacity: 0.8;
+        }
+
+        /* Add to cart button */
+        .buy-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #ecf39e;
+            color: #4f772d;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: #d9e57d;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+ <header>
+        <h1 class="logo">
+            EcoMart
+        </h1>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="../Code/index.html">Home</a></li>
+                    <li><a href="../Code/about.html">About Us</a></li>
+                    <li><a href="../Code/products.html" class="active">Products</a></li>
+                    <li><a href="../Code/blog.html">Blog</a></li>
+                    <li><a href="../Code/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<!-- PRODUCT DETAILS -->
+<section class="product-details">
+    <div class="product-card">
+
+        <!-- Product Image -->
+        <div class="product-image">
+            <img src="../Assets/Images/Products/ReusableBag.png" alt="Casual Hemp Bag">
+        </div>
+
+        <!-- Product Information -->
+        <div class="product-info">
+            <span class="badge">People's Favorite</span>
+
+            <h2>Casual Hemp Bag</h2>
+            <p><strong>Category:</strong> Sustainable Fashion</p>
+
+            <p>
+                <span class="old-price">Rs.2000</span>
+                <strong> Rs.1800</strong>
+            </p>
+
+            <p>
+                The Casual Hemp Bag is made from natural hemp fibers,
+                offering a durable and eco-friendly alternative to synthetic bags.
+                It is suitable for daily use and reduces environmental impact.
+            </p>
+
+            <ul>
+                <li>Made from natural hemp fabric</li>
+                <li>Strong and long-lasting</li>
+                <li>Reusable and biodegradable</li>
+                <li>Stylish and eco-conscious design</li>
+            </ul>
+            <button class="buy-btn">Buy Now</button>
+            <button class="buy-btn">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2024 EcoMart. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

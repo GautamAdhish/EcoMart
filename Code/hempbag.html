@@ -84,17 +84,21 @@
         /* RECOMMENDED PRODUCTS SECTION - POLISHED */
         .recommendation {
             padding: 60px 70px;
-            background-color: #f9fbf3;
+            background-color: #132a13;
         }
 
         .recom {
             max-width: 1200px;
             margin: 0 auto;
+            background-color: #4f772d;
+            padding: 40px;
+            border-radius: 25px;
+            border: 1px solid #31572c;
         }
 
         .recom h2 {
             text-align: center;
-            color: #4f772d;
+            color: #ecf39e;
             font-size: 28px;
             margin-bottom: 40px;
             position: relative;
@@ -120,7 +124,7 @@
         }
 
         .recomcard {
-            background-color: white;
+            background-color: #90a955;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(79, 119, 45, 0.08);
@@ -136,6 +140,7 @@
         }
 
         .recomcard img {
+            margin-top: 10px;
             width: 100%;
             height: 220px;
             object-fit: contain; /* To fit the whole image as is */
@@ -154,14 +159,14 @@
         }
 
         .recomcard h3 {
-            color: #4f772d;
+            color: #31572c;
             font-size: 20px;
             margin-bottom: 10px;
             font-weight: 600;
         }
 
         .recomcard p {
-            color: #666;
+            color: #4f772d;
             line-height: 1.6;
             margin-bottom: 15px;
             font-size: 15px;
@@ -175,30 +180,11 @@
             margin-bottom: 20px;
         }
 
-        .recomcard-btn {
-            background-color: #ecf39e;
-            color: #4f772d;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .recomcard-btn:hover {
-            background-color: #d9e57d;
-            transform: translateY(-2px);
-        }
-
         /* Eco badge for recommended products */
         .eco-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 55px;
+            right: 50px;
             background-color: #4f772d;
             color: white;
             font-size: 12px;
@@ -212,6 +198,37 @@
             position: relative;
             overflow: hidden;
         }
+
+        .buttongrp {
+            display: flex;
+            gap: 14px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .buy, .cart, .view {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #31572c;
+            border: 2px solid #31572c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .buy:hover, .cart:hover, .view:hover {
+            background-color: #90A955;
+            transform: translateY(-2px);
+        }
+
+        .buy img, .cart img, .view img {
+            background-color: transparent;
+        }
+
     </style>
 </head>
 
@@ -270,52 +287,63 @@
             </ul>
             <button class="buy-btn">Buy Now</button>
             <button class="buy-btn">Add to Cart</button>
+            <button class="buy-btn" onclick="window.location.href='../Code/products.html'">Go Back</button>
         </div>
 
     </div>
 </section>
 
-<!-- ENHANCED RECOMMENDED PRODUCTS SECTION -->
 <section class="recommendation">
     <div class="recom">
         <h2>You Might Also Like</h2>
         <div class="recomcards">
-            <div class="recomcard">
-                <div class="recomcard-image-container">
-                    <span class="eco-badge">Eco Choice</span>
-                    <img src="../Assets/Images/Products/BambooToothBrush.png" alt="Bamboo Toothbrush">
+            <div class="card">
+                <div class="image">
+                    <span class="eco-badge" style="right: 60px;">Eco-Friendly</span>
+                    <img src="../Assets/Products/BambooToothBrush.png" alt="Organic Cotton Face Mask">
                 </div>
-                <div class="recomcard-content">
-                    <h3>Bamboo Toothbrush</h3>
-                    <p>100% biodegradable bamboo handle with BPA-free bristles. A sustainable alternative to plastic toothbrushes.</p>
-                    <div class="recomcard-price">Rs.150</div>
-                    <a href="#" class="recomcard-btn">View Details</a>
+                <div class="card-content">
+                    <p class="name">Bamboo Toothbrush</p>
+                    <p class="category">Personal Care</p>
+                    <p class="price">
+                        <span class="old-price">Rs.200</span> <strong>Rs.150</strong>
+                    </p>
                 </div>
-            </div>
-            
-            <div class="recomcard">
-                <div class="recomcard-image-container">
-                    <span class="eco-badge">Zero Waste</span>
-                    <img src="../Assets/Images/Products/SteelStraws.png" alt="Metal Straw">
-                </div>
-                <div class="recomcard-content">
-                    <h3>Stainless Steel Straw Set</h3>
-                    <p>Reusable stainless steel straws with cleaning brush and carrying case. Perfect for reducing single-use plastic.</p>
-                    <div class="recomcard-price">Rs.100</div>
-                    <a href="#" class="recomcard-btn">View Details</a>
+
+                <div class="buttongrp">
+                    <button class="buy""><img src="../Assets/Images/bag-shopping-solid-full.svg" alt=""></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""></button>
                 </div>
             </div>
             
-            <div class="recomcard">
-                <div class="recomcard-image-container">
-                    <span class="eco-badge">Recycled</span>
-                    <img src="../Assets/Images/Products/EcoBook.png" alt="Recycled Notebook">
+            <div class="card">
+                <div class="image">
+                    <span class="eco-badge" style="right: 60px;">Premium</span>
+                    <img src="../Assets/Products/BambooBottle.png" alt="Organic Cotton Face Mask">
                 </div>
-                <div class="recomcard-content">
-                    <h3>Recycled Paper Notebook</h3>
-                    <p>Made from 100% recycled paper with a durable eco-friendly cover. Perfect for notes, sketches, and journals.</p>
-                    <div class="recomcard-price">Rs.250</div>
-                    <a href="#" class="recomcard-btn">View Details</a>
+                <p class="name">Glass Spray Bottle</p>
+                <p class="category">Reusable & Daily Use</p>
+                <p><span class="old-price">Rs.700</span> <strong>Rs.550</strong></p>
+                <div class="buttongrp">
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                </div>
+            </div> 
+            
+            <div class="card">
+                <div class="image">
+                    <span class="eco-badge">Handmade</span>
+                    <img src="../Assets/Images/Products/CottonMask.png" alt="Organic Cotton Face Mask">
+                </div>
+                <p class="name">Organic Cotton Face Mask</p>
+                <p class="category">Sustainable Fashion</p>
+                <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
+                <div class="buttongrp">
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
                 </div>
             </div>
         </div>

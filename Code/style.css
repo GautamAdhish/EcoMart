@@ -325,7 +325,12 @@ header ul li a:hover::after {
 /* ========== PRODUCT TAGS STYLES ========== */
 
 /* Base tag style */
-.product-tag {
+
+/* This is still work in progress. 
+   This was supposed to add premium product tags overlay on the picture in products page.
+   Not completed yet. */
+
+   .product-tag {
     padding: 5px 12px;
     border-radius: 15px;
     font-size: 12px;

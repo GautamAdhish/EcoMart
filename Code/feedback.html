@@ -7,19 +7,23 @@
         <title>EcoMart - Feedback</title>
         <style>
             .form {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 20px;
+                display: flex;
+                flex-wrap: wrap; /* allows items to wrap to next line */
+                gap: 20px; /* spacing between items */
             }
+
 
             .inputwrap {
                 position: relative;
+                flex: 1 1 calc(50% - 10px); /* Two per row with gap compensation */
+                min-width: 250px; /* optional for responsiveness */
             }
+
 
             /* Full width fields */
             .full,
             .gender-wrap {
-                grid-column: span 2;
+                flex: 1 1 100%;
             }
 
             /* Inputs */
@@ -103,16 +107,16 @@
 
             /* Center the wrapper across both grid columns */
             .submit-button {
-                grid-column: span 2;
                 display: flex;
                 justify-content: center;
             }
+
              
             .container-button-group {
-                grid-column: span 2; /* KEY: This lets the div use the full form width */
                 display: flex;
-                justify-content: space-between; /* Pushes first child left, last child right */
+                justify-content: space-between;
                 align-items: center;
+                width: 100%; /* ensures it stretches across */
                 margin-top: 20px;
             }
             

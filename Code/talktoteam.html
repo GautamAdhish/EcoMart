@@ -7,19 +7,27 @@
         <title>EcoMart - Talk To Us</title>
         <style>
             .form {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
+                display: flex;
+                flex-wrap: wrap;
                 gap: 20px;
             }
 
             .inputwrap {
                 position: relative;
+                flex: 0 0 calc(50% - 10px);
             }
 
+
             /* Full width fields */
+            /* this is what affects the form */
+            /* flex: vaneko
+            initial: dont take excess space
+            middle do not shrink
+            rest affects the reamining part of the form */
             .full,
-            .gender-wrap {
-                grid-column: span 2;
+            .gender-wrap,
+            .container-button-group {
+                flex: 0 0 100%;
             }
 
             /* Inputs */
@@ -103,17 +111,16 @@
 
             /* Center the wrapper across both grid columns */
             .submit-button {
-                grid-column: span 2;
                 display: flex;
                 justify-content: center;
             }
-             
+
             .container-button-group {
-                grid-column: span 2; /* KEY: This lets the div use the full form width */
+                flex: 0 0 100%;
                 display: flex;
-                justify-content: space-between; /* Pushes first child left, last child right */
+                justify-content: center;
                 align-items: center;
-                margin-top: 20px;
+                gap: 150px;
             }
             
             .submit {
@@ -125,7 +132,6 @@
                 cursor: pointer;
                 font-size: 22px;
                 transition: background-color 0.3s ease;
-                margin-left: 25px;
             }
 
             .submit:hover {
@@ -142,8 +148,12 @@
                 cursor: pointer;
                 font-size: 22px;
                 transition: background-color 0.3s ease;
-                margin-right: 25px;
             }
+
+            .back-button {
+                display: flex;
+            }
+
 
             .back:hover {
                 background-color: #90A955;

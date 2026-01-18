@@ -57,10 +57,14 @@
     
     /* Comparison grid */
     .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       gap: 30px;
       margin-bottom: 40px;
+    }
+
+    .comparison-grid > * {
+      /* What this does is that it selects all the child class created inside the "comparison-grid" class */
+      flex: 1;
     }
     
     .comparison-card {

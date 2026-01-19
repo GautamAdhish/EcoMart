@@ -252,9 +252,11 @@ header ul li a:hover::after {
     justify-content: space-between;
     border: 5px solid #31572c;
     transition: box-shadow 0.5s ease, transform 0.3s ease;
-    /* NEW: Make card position relative for tags */
+    /* Make card position relative for tags */
     position: relative;
     overflow: hidden;
+    flex: 1 1 280px;
+    max-width: 310px;
 }
 
 .card:hover {

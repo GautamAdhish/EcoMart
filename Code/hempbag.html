@@ -228,6 +228,7 @@
         }
 
     </style>
+    <script src="../Code/paybutton.js"></script>
 </head>
 
 <body>
@@ -250,6 +251,17 @@
             </div>
         </nav>
     </header>
+
+    <div class="buyAlert" id="displayAlert">
+        <div class="alertContent" id="showAlert">
+            <h3>
+                Wait
+            </h3>
+            <p>
+                Please be patient while we complete developing the paywall.
+            </p>
+        </div>
+    </div>
 
 <!-- PRODUCT DETAILS -->
 <section class="product-details">
@@ -284,7 +296,7 @@
                 <li>Reusable and biodegradable</li>
                 <li>Stylish and eco-conscious design</li>
             </ul>
-            <button class="buy-btn">Buy Now</button>
+            <button class="buy-btn" id="buyAlert" onclick="buybutton('Please be patient while we finish developing the paywall.')">Buy Now</button>
             <button class="buy-btn">Add to Cart</button>
             <button class="buy-btn" onclick="window.location.href='../Code/products.html'">Go Back</button>
         </div>

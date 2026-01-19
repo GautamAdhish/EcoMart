@@ -25,7 +25,7 @@
         background: #4f772d;
         color: #ecf39e;
         border-radius: 12px;
-        margin: 32px 0 48px;
+        margin: 20px 0;
         padding: 60px 48px;
         text-align: center;
         box-shadow: 0 4px 20px rgba(49, 87, 44, 0.2);
@@ -48,13 +48,9 @@
 
       /* Grid Layout */
       .main-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* Devan ko part, idk what this is */
-        grid-template-areas:
-          "about right"
-          "featured featured";
-        gap: 30px;
+        display: flex;
+        flex-wrap: wrap;       /* allows second row */
+        gap: 20px;
         margin-bottom: 60px;
       }
 
@@ -67,22 +63,19 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       }
 
-      .about-column {
-        grid-area: about;
+      .about-column,
+      .right-column {
+        flex: 1 1 480px;   /* two columns on large screens */
+      }
+
+      .right-column {
         display: flex;
         flex-direction: column;
         gap: 20px;
       }
 
-      .right-column {
-        grid-area: right;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-      }
-
       .featured-right {
-        grid-area: featured;
+        flex: 0 0 100%;
       }
 
       /* Home page specific headings */
@@ -90,7 +83,6 @@
         color: #ecf39e;
         font-size: 28px;
         font-weight: 600;
-        margin-bottom: 20px;
         padding-bottom: 10px;
         border-bottom: 2px solid #90A955;
       }
@@ -107,7 +99,6 @@
         color: #ecf39e;
         font-size: 16px;
         line-height: 1.7;
-        margin-bottom: 16px;
       }
 
       .list-style {

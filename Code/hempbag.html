@@ -252,16 +252,18 @@
         </nav>
     </header>
 
-    <div class="buyAlert" id="displayAlert">
-        <div class="alertContent" id="showAlert">
-            <h3>
-                Wait
-            </h3>
-            <p>
-                Please be patient while we complete developing the paywall.
-            </p>
+    <!-- Popup that comes when pressing the buy button -->
+
+    <div class="buyAlert" id="buyAlertModal">
+        <div class="alertContent">
+            <div id="crossimage">
+                <img src="../Assets/Images/xmark-solid-full.svg" alt="Rejected">
+            </div>
+            <h3>Please Wait!</h3>
+            <p>Please be patient while we complete developing the paywall.</p>
         </div>
     </div>
+
 
 <!-- PRODUCT DETAILS -->
 <section class="product-details">
@@ -296,75 +298,76 @@
                 <li>Reusable and biodegradable</li>
                 <li>Stylish and eco-conscious design</li>
             </ul>
-            <button class="buy-btn" id="buyAlert" onclick="buybutton('Please be patient while we finish developing the paywall.')">Buy Now</button>
+            <button class="buy-btn" id="buyButton">Buy Now</button>
             <button class="buy-btn">Add to Cart</button>
             <button class="buy-btn" onclick="window.location.href='../Code/products.html'">Go Back</button>
         </div>
 
     </div>
-</section>
 
-<section class="recommendation">
-    <div class="recom">
-        <h2>You Might Also Like</h2>
-        <div class="recomcards">
-            <div class="card">
-                <div class="image">
-                    <span class="eco-badge" style="right: 60px;">Eco-Friendly</span>
-                    <img src="../Assets/Products/BambooToothBrush.png" alt="Organic Cotton Face Mask">
-                </div>
-                <div class="card-content">
-                    <p class="name">Bamboo Toothbrush</p>
-                    <p class="category">Personal Care</p>
-                    <p class="price">
-                        <span class="old-price">Rs.200</span> <strong>Rs.150</strong>
-                    </p>
-                </div>
+    </section>
 
-                <div class="buttongrp">
-                    <button class="buy""><img src="../Assets/Images/bag-shopping-solid-full.svg" alt=""></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""></button>
+    <section class="recommendation">
+        <div class="recom">
+            <h2>You Might Also Like</h2>
+            <div class="recomcards">
+                <div class="card">
+                    <div class="image">
+                        <span class="eco-badge" style="right: 60px;">Eco-Friendly</span>
+                        <img src="../Assets/Products/BambooToothBrush.png" alt="Organic Cotton Face Mask">
+                    </div>
+                    <div class="card-content">
+                        <p class="name">Bamboo Toothbrush</p>
+                        <p class="category">Personal Care</p>
+                        <p class="price">
+                            <span class="old-price">Rs.200</span> <strong>Rs.150</strong>
+                        </p>
+                    </div>
+
+                    <div class="buttongrp">
+                        <button class="buy""><img src="../Assets/Images/bag-shopping-solid-full.svg" alt=""></button>
+                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""></button>
+                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""></button>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="card">
-                <div class="image">
-                    <span class="eco-badge" style="right: 60px;">Premium</span>
-                    <img src="../Assets/Products/BambooBottle.png" alt="Organic Cotton Face Mask">
-                </div>
-                <p class="name">Glass Spray Bottle</p>
-                <p class="category">Reusable & Daily Use</p>
-                <p><span class="old-price">Rs.700</span> <strong>Rs.550</strong></p>
-                <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                </div>
-            </div> 
-            
-            <div class="card">
-                <div class="image">
-                    <span class="eco-badge">Handmade</span>
-                    <img src="../Assets/Images/Products/CottonMask.png" alt="Organic Cotton Face Mask">
-                </div>
-                <p class="name">Organic Cotton Face Mask</p>
-                <p class="category">Sustainable Fashion</p>
-                <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
-                <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                
+                <div class="card">
+                    <div class="image">
+                        <span class="eco-badge" style="right: 60px;">Premium</span>
+                        <img src="../Assets/Products/BambooBottle.png" alt="Organic Cotton Face Mask">
+                    </div>
+                    <p class="name">Glass Spray Bottle</p>
+                    <p class="category">Reusable & Daily Use</p>
+                    <p><span class="old-price">Rs.700</span> <strong>Rs.550</strong></p>
+                    <div class="buttongrp">
+                        <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    </div>
+                </div> 
+                
+                <div class="card">
+                    <div class="image">
+                        <span class="eco-badge">Handmade</span>
+                        <img src="../Assets/Images/Products/CottonMask.png" alt="Organic Cotton Face Mask">
+                    </div>
+                    <p class="name">Organic Cotton Face Mask</p>
+                    <p class="category">Sustainable Fashion</p>
+                    <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
+                    <div class="buttongrp">
+                        <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-    <p>&copy; 2026 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
+    </footer>
 
 </body>
 </html>

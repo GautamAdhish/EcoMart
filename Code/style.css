@@ -380,6 +380,53 @@ header ul li a:hover::after {
     padding: 5px 15px;
 }
 
+.buyAlert {
+    position: fixed;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    pointer-events: none;
+    transition: top 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.buyAlert.show {
+    top: 50px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.alertContent {
+    position: relative;
+    background-color: rgba(231, 76, 60, 0.4);
+    padding: 20px 20px 20px 60px; /* leave space for the cross on the left */
+    border-radius: 50px;
+    width: 500px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    border: 5px solid #e74c3c;
+}
+
+#crossimage {
+    position: absolute;
+    left: 5px;               /* distance from left edge */
+    top: 50%;                 /* base vertical center */
+    transform: translateY(-50%); /* slightly adjust up/down */
+    pointer-events: none;  
+}
+
+#crossimage img {
+    width: 75px;   
+    height: 75px; 
+    gap: 10px;
+}
+
 /* Footer Styling */
 footer {
     background-color: #31572c;

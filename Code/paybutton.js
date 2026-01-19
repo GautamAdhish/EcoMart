@@ -1,6 +1,14 @@
-const buyButton = document.getElementById('buyAlert');
-const displayAlert = document.getElementById('displayAlert');
+document.addEventListener("DOMContentLoaded", function() {
+    const buyButton = document.getElementById('buyButton');
+    const buyAlertModal = document.getElementById('buyAlertModal');
 
-buyButton.addEventListener('click', function(){
-    displayAlert.style.display = 'flex';
-})
+    buyButton.addEventListener('click', function() {
+        // Show alert
+        buyAlertModal.classList.add('show');
+
+        // Hide alert after 3 seconds
+        setTimeout(() => {
+            buyAlertModal.classList.remove('show');
+        }, 3000);
+    });
+});

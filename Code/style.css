@@ -230,9 +230,8 @@ header ul li a:hover::after {
 }
 
 .products {
-    display: grid;
-    /* Changed to auto-fill to handle varying item counts per category */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;               /* allows multiple rows, like the products column side by side */
     gap: 30px;
     padding: 20px 70px 50px 70px;
 }

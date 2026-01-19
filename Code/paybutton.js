@@ -1,14 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const buyButton = document.getElementById('buyButton');
+document.addEventListener('DOMContentLoaded', () => {
+    const buyButtons = document.querySelectorAll('.buy-btn-popup');
     const buyAlertModal = document.getElementById('buyAlertModal');
 
-    buyButton.addEventListener('click', function() {
-        // Show alert
-        buyAlertModal.classList.add('show');
+    buyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            buyAlertModal.classList.add('show'); // show popup
 
-        // Hide alert after 3 seconds
-        setTimeout(() => {
-            buyAlertModal.classList.remove('show');
-        }, 3000);
+            setTimeout(() => {
+                buyAlertModal.classList.remove('show'); // hide after 3 seconds
+            }, 3000);
+        });
     });
 });

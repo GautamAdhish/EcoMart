@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cartButtons.forEach(button => {
         button.addEventListener('click', () => {
-            cartAlertModal.classList.add('show'); // show popup
+            cartAlertModal.classList.add('show');
 
             setTimeout(() => {
-                cartAlertModal.classList.remove('show'); // hide after 3 seconds
+                cartAlertModal.classList.remove('show');
             }, 3000);
         });
     });

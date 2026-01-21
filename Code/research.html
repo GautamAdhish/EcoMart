@@ -289,23 +289,36 @@
 
 <body>
   <header>
-    <!-- DIV: Navigation container -->
-    <div class="logo-container">
-      <h1 class="logo">EcoMart</h1>
-    </div>
+    <h1 class="logo">EcoMart</h1>
+
     <nav class="navbar">
       <div class="container">
-        <ul class="menu">
+      <ul class="menu">
           <li><a href="../Code/index.html">Home</a></li>
           <li><a href="../Code/about.html">About Us</a></li>
           <li><a href="../Code/products.html">Products</a></li>
           <li><a href="../Code/blog.html">Blog</a></li>
           <li><a href="../Code/research.html" class="active">Research</a></li>
           <li><a href="../Code/contact.html">Contact Us</a></li>
-        </ul>
+      </ul>
+
+      <div class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <label for="theme-toggle">
+          <div class="sun-moon">
+              <div class="craters"></div>
+          </div>
+          <div class="background">
+              <div class="stars s1"></div>
+              <div class="stars s2"></div>
+          </div>
+          </label>
       </div>
-    </nav>
+      </div>
+  </nav>
   </header>
+
+  <script src="../Code/night-day.js"></script>
 
   <main class="research-main">
     <section class="research-header">

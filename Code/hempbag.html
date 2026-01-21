@@ -226,7 +226,6 @@
         .product-image {
             margin: auto;
         }
-
     </style>
     <script src="../Code/paybutton.js"></script>
     <script src="../Code/addsuccessful.js"></script>
@@ -234,24 +233,39 @@
 
 <body>
 
-<!-- HEADER -->
- <header>
-        <h1 class="logo">
-            EcoMart
-        </h1>
-        <nav class="navbar">
-            <div class="container">
-                <ul class="menu">
-                    <li><a href="../Code/index.html">Home</a></li>
-                    <li><a href="../Code/about.html">About Us</a></li>
-                    <li><a href="../Code/products.html" class="active">Products</a></li>
-                    <li><a href="../Code/blog.html">Blog</a></li>
-                    <li><a href="../Code/research.html">Research</a></li>
-                    <li><a href="../Code/contact.html">Contact Us</a></li>
-                </ul>
+    <!-- HEADER -->
+    <header>
+    <h1 class="logo">EcoMart</h1>
+
+    <nav class="navbar">
+        <div class="container">
+        <ul class="menu">
+            <li><a href="../Code/index.html">Home</a></li>
+            <li><a href="../Code/about.html">About Us</a></li>
+            <li><a href="../Code/products.html" class="active">Products</a></li>
+            <li><a href="../Code/blog.html">Blog</a></li>
+            <li><a href="../Code/research.html">Research</a></li>
+            <li><a href="../Code/contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="switch">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle">
+            <div class="sun-moon">
+                <div class="craters"></div>
             </div>
-        </nav>
+            <div class="background">
+                <div class="stars s1"></div>
+                <div class="stars s2"></div>
+            </div>
+            </label>
+        </div>
+        </div>
+    </nav>
     </header>
+
+    <script src="../Code/night-day.js"></script>
+
 
     <!-- Popup that comes when pressing the buy button -->
 

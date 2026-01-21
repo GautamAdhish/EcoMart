@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>EcoMart - Products</title>
+    <title>EcoMart | Products</title>
     <style>
         .buttongrp {
             display: flex;
@@ -34,6 +34,26 @@
 
         .buy img, .cart img, .view img {
             background-color: transparent;
+        }
+
+        .light-theme { 
+            .buy, .cart, .view {
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background-color: #a3b18a;
+                border: 2px solid #31572c;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+
+            .buy:hover, .cart:hover, .view:hover {
+                background-color: #deb887;
+                transform: translateY(-2px);
+            }
         }
     </style>
 </head>
@@ -78,7 +98,6 @@
         <section class="products">
             <div class="card">
                 <img src="../Assets/Images/Products/BambooToothBrush.png" alt="Bamboo Toothbrush">
-
                 <div class="card-content">
                     <p class="name">Bamboo Toothbrush</p>
                     <p class="category">Personal Care</p>
@@ -86,11 +105,10 @@
                         <span class="old-price">Rs.200</span> <strong>Rs.150</strong>
                     </p>
                 </div>
-
                 <div class="buttongrp">
-                    <button class="buy""><img src="../Assets/Images/bag-shopping-solid-full.svg" alt=""></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
 
@@ -100,9 +118,9 @@
                 <p class="category">Personal Care</p>
                 <p><span class="old-price">Rs.350</span> <strong>Rs.300</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -111,9 +129,9 @@
                 <p class="category">Personal Care</p>
                 <p><strong>Rs.200</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
         </section>
@@ -126,9 +144,9 @@
                 <p class="category">Reusable & Daily Use</p>
                 <p><span class="old-price">Rs.750</span> <strong>Rs.600</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -137,9 +155,9 @@
                 <p class="category">Reusable & Daily Use</p>
                 <p><span class="old-price">Rs.700</span> <strong>Rs.550</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -148,9 +166,9 @@
                 <p class="category">Reusable & Daily Use</p>
                 <p><span class="old-price">Rs.600</span> <strong>Rs.500</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -159,9 +177,9 @@
                 <p class="category">Reusable & Daily Use</p>
                 <p><span class="old-price">Rs.1000</span> <strong>Rs.850</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
         </section>
@@ -174,9 +192,9 @@
                 <p class="category">Sustainable Fashion</p>
                 <p><span class="old-price">Rs.2000</span> <strong>Rs.1800</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view" onclick="window.location.href='../Code/hempbag.html'"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -185,9 +203,9 @@
                 <p class="category">Sustainable Fashion</p>
                 <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -196,9 +214,9 @@
                 <p class="category">Sustainable Fashion</p>
                 <p><span class="old-price">Rs.1800</span> <strong>Rs.1500</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
         </section>
@@ -211,9 +229,9 @@
                 <p class="category">Home Essentials</p>
                 <p><span class="old-price">Rs.500</span> <strong>Rs.420</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -222,9 +240,9 @@
                 <p class="category">Home Essentials</p>
                 <p><span class="old-price">Rs.650</span> <strong>Rs.550</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -233,9 +251,9 @@
                 <p class="category">Kitchen Essentials</p>
                 <p><span class="old-price">Rs.450</span> <strong>Rs.380</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
         </section>
@@ -248,9 +266,9 @@
                 <p class="category">Stationery</p>
                 <p><span class="old-price">Rs.300</span> <strong>Rs.250</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -259,9 +277,9 @@
                 <p class="category">Stationery</p>
                 <p><span class="old-price">Rs.200</span> <strong>Rs.100</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
             <div class="card">
@@ -270,9 +288,9 @@
                 <p class="category">Stationery</p>
                 <p><span class="old-price">Rs.150</span> <strong>Rs.75</strong></p>
                 <div class="buttongrp">
-                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                    <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button" style="background-color: transparent;"></button>
+                    <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="Cart button" style="background-color: transparent;"></button></button>
+                    <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button" style="background-color: transparent;"></button></button>
                 </div>
             </div>
         </section>

@@ -54,3 +54,4 @@ blog ma faq rakhne jun chai on-click expand hunxa, using js
 
 products page ma timer down rakhne jasle chai sale ma vako products lai indicate garxa, yo chai hamle last ma sabai kaam sakesi rakhne js use garera
 
+REMAINDER: Card image ma button ko images pari parxa, need to make a span for the images in the buttons

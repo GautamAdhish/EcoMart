@@ -621,3 +621,16 @@ footer {
   color: #132a13;
 }
 
+.light-theme footer {
+    background-color: #484b6a;
+    color: #d2d3db;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid rgba(236, 243, 158, 0.1);
+    z-index: 100;
+    margin-top: auto;
+}
+

@@ -65,7 +65,7 @@
       color: #ecf39e;
       margin-bottom: 50px;
       padding-bottom: 15px;
-      border-bottom: 3px solid #90A955;
+      border-bottom: 3px solid #9394a5;
     }
     
     /* Team member flex container - REPLACED GRID WITH FLEX */
@@ -287,7 +287,7 @@
     .light-theme .mission-highlight p {
       font-size: 20px; 
       font-style: italic;
-      color: #3a5a40;
+      color: #344;
     }
 
     .light-theme .mission-section h1 {
@@ -307,6 +307,102 @@
       color: #344e41;
     }
 
+    .div-cta h2 {color: #ecf39e; font-size: 32px; margin-bottom: 20px;}
+
+    .div-cta p {color: #cfe1b9; font-size: 18px; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;}
+
+    .team-section p { text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 18px; color: #cfe1b9;}
+
+    .light-theme {
+      .eco-highlight {
+        background-color: #cccccc;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+      }
+
+      .team-section h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #3a5a40;
+        margin-bottom: 50px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #9394a5;
+      }
+
+      .team-section p {
+        color: #3a5a40;
+      }
+
+      .team-member-card {
+        background-color: #9394a5;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+        border: 3px solid #393a4c;
+        text-align: center;
+        padding-bottom: 25px;
+        flex: 1 1 280px; /* Flexible basis of 280px, can grow and shrink */
+        max-width: 350px; /* Maximum width for larger screens */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .skill-tag {
+        background-color: #aaaaaa;
+        color: #3a5a40;
+      }
+
+      .portfolio-link {
+        background-color: #a3b18a;
+        border: 2px solid #393a4c;
+        color: #3a5a40;
+      }
+
+      .portfolio-link:hover {
+        background-color: #deb887;
+      }
+
+      .values-section {
+        border: 3px solid #393a4c;
+        background-color: #9394a5;
+      }
+
+      .value-card {
+        background-color: #aaaaaa;
+        border: 3px solid #344e41;
+      }
+
+      .values-section h2, .values-section p  {
+        color: #3a5a40;
+      }
+
+      .div-cta h2 { color: #3a5a40; font-size: 32px; margin-bottom: 20px; }
+
+      .stat-card {
+        background-color: #9394a5;
+        border: 3px solid #344e41;
+      }
+
+      .stat-number {
+        color: #344e41;
+      }
+
+      .stat-label {
+        color: #344;
+      }
+
+      .div-cta p {
+        color: #344; 
+        font-size: 18px; 
+        margin-bottom: 30px; 
+        max-width: 800px; 
+        margin-left: auto; 
+        margin-right: auto;
+      }
+    }
+
   </style>
 </head>
 
@@ -316,7 +412,7 @@
 
     <nav class="navbar">
         <div class="container">
-        <ul class="menu"> class="active"
+        <ul class="menu">
             <li><a href="../Code/index.html">Home</a></li>
             <li><a href="../Code/about.html" class="active">About Us</a></li>
             <li><a href="../Code/products.html">Products</a></li>
@@ -364,16 +460,16 @@
     <section class="team-section">
       <h2>Meet Our Creative Team</h2>
       
-      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 18px; line-height: 1.6; color: #cfe1b9;">
+      <p>
         Our diverse team of passionate individuals brings together expertise in web development, design, sustainability, and user experience. Each member has contributed uniquely to creating EcoMart.
       </p>
       
-      <!-- Team Member Cards - NOW USING FLEX -->
+      <!-- Team Member Cards -->
       <div class="team-flex">
         
         <!-- Devan -->
         <div class="team-member-card">
-          <img src="../Assets/Images/Team/team1.jpg" alt="Devan - Home & Blog Developer" class="member-photo">
+          <img src="../Assets/Images/Team/team1.jpg" alt="Devan - Home & About Developer" class="member-photo">
           <div class="member-info">
             <h3 class="member-name">Devan</h3>
             <p class="member-role">Home & About Us Developer</p>
@@ -425,7 +521,7 @@
           <div class="member-info">
             <h3 class="member-name">Sneha</h3>
             <p class="member-role">Blog Developer</p>
-            <p class="member-bio">Created this comprehensive About Us page showcasing our team. Focused on presenting individual contributions while maintaining a cohesive team narrative.</p>
+            <p class="member-bio">Created this comprehensive Blog page showcasing our team. Focused on presenting individual contributions while maintaining a cohesive team narrative.</p>
             <div class="member-skills">
               <span class="skill-tag">HTML Structure</span>
               <span class="skill-tag">Blog Page</span>
@@ -441,7 +537,7 @@
           <div class="member-info">
             <h3 class="member-name">Anamika</h3>
             <p class="member-role">Research & Documentation</p>
-            <p class="member-bio">Conducted comprehensive research on competitor websites and sustainable e-commerce trends. Documented our development process and improvements.</p>
+            <p class="member-bio">Conducted comprehensive research on competitor websites and sustainable e-commerce trends and documented our progress.</p>
             <div class="member-skills">
               <span class="skill-tag">Research Analysis</span>
               <span class="skill-tag">Documentation</span>
@@ -498,9 +594,9 @@
     </section>
     
     <!-- DIV: Call to action -->
-    <div style="text-align: center; margin: 60px 0 40px;">
-      <h2 style="color: #ecf39e; font-size: 32px; margin-bottom: 20px;">Ready to Make a Difference?</h2>
-      <p style="color: #cfe1b9; font-size: 18px; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <div style="text-align: center; margin: 60px 0 40px;" class="div-cta">
+      <h2>Ready to Make a Difference?</h2>
+      <p>
         Explore our sustainable products or learn more about eco-living through our blog.
       </p>
       <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">

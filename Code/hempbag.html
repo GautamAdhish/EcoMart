@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Casual Hemp Bag | EcoMart</title>
@@ -12,8 +13,8 @@
 
         /* Main product card */
         .product-card {
-            display: flex;              
-            gap: 30px;                 
+            display: flex;
+            gap: 30px;
             background-color: #4f772d;
             padding: 30px;
             border-radius: 25px;
@@ -22,7 +23,8 @@
 
         /* Product image container */
         .product-image {
-            flex: 1;            /* Takes less space than info */
+            flex: 1;
+            /* Takes less space than info */
             text-align: center;
         }
 
@@ -30,18 +32,21 @@
         .product-image img {
             width: 85%;
             height: 400px;
-            object-fit: fill;        /* Ensures no empty space */
+            object-fit: fill;
+            /* Ensures no empty space */
             border-radius: 25px;
         }
 
         /* Inner bordered product info box */
         .product-info {
-            flex: 2;         /* Takes more space than image */
+            flex: 2;
+            /* Takes more space than image */
             border: 2px solid #ecf39e;
             color: #ecf39e;
             padding: 30px;
             border-radius: 25px;
-            line-height: 1.8;       /*The space between each line is 1.8 times the font size*/
+            line-height: 1.8;
+            /*The space between each line is 1.8 times the font size*/
             background-color: transparent;
         }
 
@@ -52,7 +57,8 @@
             font-weight: bold;
             padding: 6px 12px;
             border-radius: 15px;
-            display: inline-block;      /* allows an element to stay inline while still using width, height, padding, and margin like a block element. */
+            display: inline-block;
+            /* allows an element to stay inline while still using width, height, padding, and margin like a block element. */
             margin-bottom: 10px;
         }
 
@@ -79,7 +85,7 @@
         .buy-btn:hover {
             background-color: #d9e57d;
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* RECOMMENDED PRODUCTS SECTION - POLISHED */
@@ -124,7 +130,7 @@
             justify-content: center;
         }
 
-        .recomcards > * {
+        .recomcards>* {
             flex: 1 1 280px;
         }
 
@@ -137,7 +143,8 @@
             margin-top: 10px;
             width: 100%;
             height: 220px;
-            object-fit: contain; /* To fit the whole image as is */
+            object-fit: contain;
+            /* To fit the whole image as is */
             transition: transform 0.5s ease;
         }
 
@@ -201,7 +208,9 @@
             flex-wrap: wrap;
         }
 
-        .buy, .cart, .view {
+        .buy,
+        .cart,
+        .view {
             width: 55px;
             height: 55px;
             border-radius: 50%;
@@ -214,12 +223,16 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .buy:hover, .cart:hover, .view:hover {
+        .buy:hover,
+        .cart:hover,
+        .view:hover {
             background-color: #90A955;
             transform: translateY(-2px);
         }
 
-        .buy img, .cart img, .view img {
+        .buy img,
+        .cart img,
+        .view img {
             background-color: transparent;
         }
 
@@ -235,33 +248,33 @@
 
     <!-- HEADER -->
     <header>
-    <h1 class="logo">EcoMart</h1>
+        <h1 class="logo">EcoMart</h1>
 
-    <nav class="navbar">
-        <div class="container">
-        <ul class="menu">
-            <li><a href="../Code/index.html">Home</a></li>
-            <li><a href="../Code/about.html">About Us</a></li>
-            <li><a href="../Code/products.html" class="active">Products</a></li>
-            <li><a href="../Code/blog.html">Blog</a></li>
-            <li><a href="../Code/research.html">Research</a></li>
-            <li><a href="../Code/contact.html">Contact Us</a></li>
-        </ul>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="../Code/index.html">Home</a></li>
+                    <li><a href="../Code/about.html">About Us</a></li>
+                    <li><a href="../Code/products.html" class="active">Products</a></li>
+                    <li><a href="../Code/blog.html">Blog</a></li>
+                    <li><a href="../Code/research.html">Research</a></li>
+                    <li><a href="../Code/contact.html">Contact Us</a></li>
+                </ul>
 
-        <div class="switch">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle">
-            <div class="sun-moon">
-                <div class="craters"></div>
+                <div class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle">
+                        <div class="sun-moon">
+                            <div class="craters"></div>
+                        </div>
+                        <div class="background">
+                            <div class="stars s1"></div>
+                            <div class="stars s2"></div>
+                        </div>
+                    </label>
+                </div>
             </div>
-            <div class="background">
-                <div class="stars s1"></div>
-                <div class="stars s2"></div>
-            </div>
-            </label>
-        </div>
-        </div>
-    </nav>
+        </nav>
     </header>
 
     <script src="../Code/night-day.js"></script>
@@ -292,45 +305,45 @@
         </div>
     </div>
 
-<!-- PRODUCT DETAILS -->
-<section class="product-details">
-    <div class="product-card">
+    <!-- PRODUCT DETAILS -->
+    <section class="product-details">
+        <div class="product-card">
 
-        <!-- Product Image -->
-        <div class="product-image">
-            <img src="../Assets/Images/Products/ReusableBag.png" alt="Casual Hemp Bag">
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="../Assets/Images/Products/ReusableBag.png" alt="Casual Hemp Bag">
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+                <span class="badge">People's Favorite</span>
+
+                <h2>Casual Hemp Bag</h2>
+                <p><strong>Category:</strong> Sustainable Fashion</p>
+
+                <p>
+                    <span class="old-price">Rs.2000</span>
+                    <strong> Rs.1800</strong>
+                </p>
+
+                <p>
+                    The Casual Hemp Bag is made from natural hemp fibers,
+                    offering a durable and eco-friendly alternative to synthetic bags.
+                    It is suitable for daily use and reduces environmental impact.
+                </p>
+
+                <ul>
+                    <li>Made from natural hemp fabric</li>
+                    <li>Strong and long-lasting</li>
+                    <li>Reusable and biodegradable</li>
+                    <li>Stylish and eco-conscious design</li>
+                </ul>
+                <button class="buy-btn buy-btn-popup">Buy Now</button>
+                <button class="buy-btn cart-btn-popup">Add to Cart</button>
+                <button class="buy-btn" onclick="window.location.href='../Code/products.html'">Go Back</button>
+            </div>
+
         </div>
-
-        <!-- Product Information -->
-        <div class="product-info">
-            <span class="badge">People's Favorite</span>
-
-            <h2>Casual Hemp Bag</h2>
-            <p><strong>Category:</strong> Sustainable Fashion</p>
-
-            <p>
-                <span class="old-price">Rs.2000</span>
-                <strong> Rs.1800</strong>
-            </p>
-
-            <p>
-                The Casual Hemp Bag is made from natural hemp fibers,
-                offering a durable and eco-friendly alternative to synthetic bags.
-                It is suitable for daily use and reduces environmental impact.
-            </p>
-
-            <ul>
-                <li>Made from natural hemp fabric</li>
-                <li>Strong and long-lasting</li>
-                <li>Reusable and biodegradable</li>
-                <li>Stylish and eco-conscious design</li>
-            </ul>
-            <button class="buy-btn buy-btn-popup">Buy Now</button>
-            <button class="buy-btn cart-btn-popup">Add to Cart</button>
-            <button class="buy-btn" onclick="window.location.href='../Code/products.html'">Go Back</button>
-        </div>
-
-    </div>
 
     </section>
 
@@ -352,13 +365,14 @@
                     </div>
 
                     <div class="buttongrp">
-                        <button class="buy buy-btn-popup"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt=""></button>
+                        <button class="buy buy-btn-popup"><img src="../Assets/Images/bag-shopping-solid-full.svg"
+                                alt=""></button>
                         <button class="cart "><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""></button>
                         <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""></button>
                     </div>
 
                 </div>
-                
+
                 <div class="card">
                     <div class="image">
                         <span class="eco-badge" style="right: 60px;">Premium</span>
@@ -368,12 +382,15 @@
                     <p class="category">Reusable & Daily Use</p>
                     <p><span class="old-price">Rs.700</span> <strong>Rs.550</strong></p>
                     <div class="buttongrp">
-                        <button class="buy buy-btn-popup"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                        <button class="buy buy-btn-popup"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt=""
+                                style="border-color: transparent; height: 50px;"></button>
+                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""
+                                style="border-color: transparent; height: 50px;"></button>
+                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""
+                                style="border-color: transparent; height: 50px;"></button>
                     </div>
-                </div> 
-                
+                </div>
+
                 <div class="card">
                     <div class="image">
                         <span class="eco-badge">Handmade</span>
@@ -383,9 +400,13 @@
                     <p class="category">Sustainable Fashion</p>
                     <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
                     <div class="buttongrp">
-                        <button class="buy buy-btn-popup" id="buyButton"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
-                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="" style="border-color: transparent; height: 50px;"></button>
+                        <button class="buy buy-btn-popup" id="buyButton"><img
+                                src="../Assets/Images/bag-shopping-solid-full.svg" alt=""
+                                style="border-color: transparent; height: 50px;"></button>
+                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""
+                                style="border-color: transparent; height: 50px;"></button>
+                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""
+                                style="border-color: transparent; height: 50px;"></button>
                     </div>
                 </div>
             </div>
@@ -398,4 +419,5 @@
     </footer>
 
 </body>
+
 </html>

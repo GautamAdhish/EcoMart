@@ -1,190 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>EcoMart - Talk To Us</title>
-        <style>
-            .form {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 20px;
-            }
 
-            .inputwrap {
-                position: relative;
-                flex: 0 0 calc(50% - 10px);
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EcoMart - Talk To Us</title>
+    <style>
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
+        .inputwrap {
+            position: relative;
+            flex: 0 0 calc(50% - 10px);
+        }
 
-            /* Full width fields */
-            /* this is what affects the form */
-            /* flex: vaneko
+        /* Full width fields */
+        /* this is what affects the form */
+        /* flex: vaneko
             initial: dont take excess space
             middle do not shrink
             rest affects the reamining part of the form */
-            .full,
-            .gender-wrap,
-            .container-button-group {
-                flex: 0 0 100%;
-            }
+        .full,
+        .gender-wrap,
+        .container-button-group {
+            flex: 0 0 100%;
+        }
 
-            /* Inputs */
-            .contact-input {
-                width: 100%;
-                padding: 18px 45px 18px 20px;
-                border-radius: 20px;
-                border: none;
-                background-color: #eef2f6;
-                font-size: 16px;
-                outline: none;
-            }
+        /* Inputs */
+        .contact-input {
+            width: 100%;
+            padding: 18px 45px 18px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #eef2f6;
+            font-size: 16px;
+            outline: none;
+        }
 
-            /* Textarea */
-            textarea.contact-input {
-                min-height: 140px;
-                resize: none;
-            }
+        /* Textarea */
+        textarea.contact-input {
+            min-height: 140px;
+            resize: none;
+        }
 
-            /* Icons */
-            .inputwrap img {
-                position: absolute;
-                right: 18px;
-                top: 50%;
-                transform: translateY(-50%);
-                opacity: 0.6;
-            }
+        /* Icons */
+        .inputwrap img {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.6;
+        }
 
-            /* Floating labels */
-            .inputwrap label {
-                position: absolute;
-                left: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 14px;
-                color: #8a8a8a;
-                pointer-events: none;
-                transition: 0.3s ease;
-            }
+        /* Floating labels */
+        .inputwrap label {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #8a8a8a;
+            pointer-events: none;
+            transition: 0.3s ease;
+        }
 
-            .contact-input:focus + label, .contact-input:valid + label, textarea.contact-input:focus + label, textarea.contact-input:valid + label {
-                top: 6px;
-                font-size: 12px;
-                color: #6b7280;
-            }
+        .contact-input:focus+label,
+        .contact-input:valid+label,
+        textarea.contact-input:focus+label,
+        textarea.contact-input:valid+label {
+            top: 6px;
+            font-size: 12px;
+            color: #6b7280;
+        }
 
-            /* Gender */
-            .gender-wrap {
-                background-color: #eef2f6;
-                border-radius: 20px;
-                padding: 16px 20px;
-                display: flex;
-                gap: 20px;
-                align-items: center;
-                font-size: 14px;
-                color: #333;
-            }
+        /* Gender */
+        .gender-wrap {
+            background-color: #eef2f6;
+            border-radius: 20px;
+            padding: 16px 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+        }
 
-            .gender-wrap span {
-                color: #6b7280;
-            }
+        .gender-wrap span {
+            color: #6b7280;
+        }
 
-            /* Select fix */
-            select.contact-input {
-                appearance: none;
-                cursor: pointer;
-            }
+        /* Select fix */
+        select.contact-input {
+            appearance: none;
+            cursor: pointer;
+        }
 
-            /* Floating labels for inputs, textarea, and select */
-            .contact-input:focus + label, .contact-input:valid + label, textarea.contact-input:focus + label, textarea.contact-input:valid + label {
-                top: 15px; /* Adjust this value to your preference */
-                transform: translateY(-50%);
-                font-size: 12px;
-                color: #6b7280;
-            }
+        /* Floating labels for inputs, textarea, and select */
+        .contact-input:focus+label,
+        .contact-input:valid+label,
+        textarea.contact-input:focus+label,
+        textarea.contact-input:valid+label {
+            top: 15px;
+            /* Adjust this value to your preference */
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: #6b7280;
+        }
 
-            /* Specific fix for the Subject Select Icon (Optional) */
-            select.contact-input {
-                padding-top: 18px; /* Adds space for the label to float into */
-            }
+        /* Specific fix for the Subject Select Icon (Optional) */
+        select.contact-input {
+            padding-top: 18px;
+            /* Adds space for the label to float into */
+        }
 
-            /* Center the wrapper across both grid columns */
-            .submit-button {
-                display: flex;
-                justify-content: center;
-            }
+        /* Center the wrapper across both grid columns */
+        .submit-button {
+            display: flex;
+            justify-content: center;
+        }
 
-            .container-button-group {
-                flex: 0 0 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 150px;
-            }
-            
-            .submit {
-                background-color: #31572c;
-                color: #ecf39e;
-                padding: 12px 24px;
-                border: none;
-                border-radius: 25px;
-                cursor: pointer;
-                font-size: 22px;
-                transition: background-color 0.3s ease;
-            }
+        .container-button-group {
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 150px;
+        }
 
-            .submit:hover {
-                background-color: #90A955;
-                color: #292712;
-            }
+        .submit {
+            background-color: #31572c;
+            color: #ecf39e;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 22px;
+            transition: background-color 0.3s ease;
+        }
 
-            .back {
-                background-color: #31572c;
-                color: #ecf39e;
-                padding: 12px 24px;
-                border: none;
-                border-radius: 25px;
-                cursor: pointer;
-                font-size: 22px;
-                transition: background-color 0.3s ease;
-            }
+        .submit:hover {
+            background-color: #90A955;
+            color: #292712;
+        }
 
-            .back-button {
-                display: flex;
-            }
+        .back {
+            background-color: #31572c;
+            color: #ecf39e;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 22px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button {
+            display: flex;
+        }
 
 
-            .back:hover {
-                background-color: #90A955;
-                color: #292712;
-            }
+        .back:hover {
+            background-color: #90A955;
+            color: #292712;
+        }
 
-            .formcollective {
-                transition: transform 0.4s ease, box-shadow 0.5s ease;
-            }
+        .formcollective {
+            transition: transform 0.4s ease, box-shadow 0.5s ease;
+        }
 
-            .formcollective:hover {
-                transform: translateY(-5px); /* Same lift as product cards */
-                box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6); /* Deeper shadow on hover */
-            }
+        .formcollective:hover {
+            transform: translateY(-5px);
+            /* Same lift as product cards */
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6);
+            /* Deeper shadow on hover */
+        }
 
-            .contactform, .feedbackform, .form {
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
+        .contactform,
+        .feedbackform,
+        .form {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-            .submit:hover, .back:hover {
-                transform: scale(1.05); /* Slight grow effect to match the 'active' feel */
-                transition: 0.3s ease;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1 class="logo">EcoMart</h1>
+        .submit:hover,
+        .back:hover {
+            transform: scale(1.05);
+            /* Slight grow effect to match the 'active' feel */
+            transition: 0.3s ease;
+        }
+    </style>
+</head>
 
-            <nav class="navbar">
-                <div class="container">
+<body>
+    <header>
+        <h1 class="logo">EcoMart</h1>
+
+        <nav class="navbar">
+            <div class="container">
                 <ul class="menu">
                     <li><a href="../Code/index.html">Home</a></li>
                     <li><a href="../Code/about.html">About Us</a></li>
@@ -197,103 +212,104 @@
                 <div class="switch">
                     <input type="checkbox" id="theme-toggle">
                     <label for="theme-toggle">
-                    <div class="sun-moon">
-                        <div class="craters"></div>
-                    </div>
-                    <div class="background">
-                        <div class="stars s1"></div>
-                        <div class="stars s2"></div>
-                    </div>
+                        <div class="sun-moon">
+                            <div class="craters"></div>
+                        </div>
+                        <div class="background">
+                            <div class="stars s1"></div>
+                            <div class="stars s2"></div>
+                        </div>
                     </label>
                 </div>
+            </div>
+        </nav>
+    </header>
+
+    <script src="../Code/night-day.js"></script>
+
+    <main>
+        <!-- Inline CSS Used Below -->
+        <h1 class="invite" style="text-decoration: underline;">
+            Talk To Our Team
+        </h1>
+        <div class="formcollective">
+            <div class="mailimage">
+                <img src="../Assets/Images/mail-send-svgrepo-com.svg" alt="Mail Image" height="400">
+            </div>
+
+            <div class="form">
+                <!-- First Name -->
+                <div class="inputwrap">
+                    <input type="text" class="contact-input" required>
+                    <label>First Name</label>
+                    <img src="../Assets/Images/address-card-solid-full.svg" height="20">
                 </div>
-            </nav>
-            </header>
 
-            <script src="../Code/night-day.js"></script>
-
-        <main>
-            <!-- Inline CSS Used Below -->
-            <h1 class="invite" style="text-decoration: underline;"> 
-                Talk To Our Team
-            </h1>
-            <div class="formcollective">
-                <div class="mailimage">
-                    <img src="../Assets/Images/mail-send-svgrepo-com.svg" alt="Mail Image" height="400">
+                <!-- Last Name -->
+                <div class="inputwrap">
+                    <input type="text" class="contact-input" required>
+                    <label>Last Name</label>
+                    <img src="../Assets/Images/address-card-solid-full.svg" height="20">
                 </div>
 
-                <div class="form">
-                    <!-- First Name -->
-                    <div class="inputwrap">
-                        <input type="text" class="contact-input" required>
-                        <label>First Name</label>
-                        <img src="../Assets/Images/address-card-solid-full.svg" height="20">
-                    </div>
+                <!-- Email -->
+                <div class="inputwrap full">
+                    <input type="email" class="contact-input" required>
+                    <label>E-Mail</label>
+                    <img src="../Assets/Images/envelope-solid-full.svg" height="20">
+                </div>
 
-                    <!-- Last Name -->
-                    <div class="inputwrap">
-                        <input type="text" class="contact-input" required>
-                        <label>Last Name</label>
-                        <img src="../Assets/Images/address-card-solid-full.svg" height="20">
-                    </div>
+                <!-- Phone -->
+                <div class="inputwrap full">
+                    <input type="tel" class="contact-input" required>
+                    <label>Phone Number</label>
+                    <img src="../Assets/Images/phone-solid-full.svg" height="20">
+                </div>
 
-                    <!-- Email -->
-                    <div class="inputwrap full">
-                        <input type="email" class="contact-input" required>
-                        <label>E-Mail</label>
-                        <img src="../Assets/Images/envelope-solid-full.svg" height="20">
-                    </div>
+                <!-- Gender -->
+                <div class="gender-wrap">
+                    <span>Gender</span>
+                    <label><input type="radio" name="gender" required> Male</label>
+                    <label><input type="radio" name="gender"> Female</label>
+                    <label><input type="radio" name="gender"> Other</label>
+                </div>
 
-                    <!-- Phone -->
-                    <div class="inputwrap full">
-                        <input type="tel" class="contact-input" required>
-                        <label>Phone Number</label>
-                        <img src="../Assets/Images/phone-solid-full.svg" height="20">
-                    </div>
+                <!-- Subject -->
+                <div class="inputwrap full">
+                    <select class="contact-input" required>
+                        <option value="select" disabled selected>-- Select an option --</option>
+                        <option value="product">Product Inquiry</option>
+                        <option value="support">Support</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label>Subject</label>
+                </div>
 
-                    <!-- Gender -->
-                    <div class="gender-wrap">
-                        <span>Gender</span>
-                        <label><input type="radio" name="gender" required> Male</label>
-                        <label><input type="radio" name="gender"> Female</label>
-                        <label><input type="radio" name="gender"> Other</label>
-                    </div>
+                <!-- Message -->
+                <div class="inputwrap full">
+                    <textarea class="contact-input" required></textarea>
+                    <label>Message</label>
+                    <img src="../Assets/Images/message-solid-full.svg" height="20">
+                </div>
 
-                    <!-- Subject -->
-                    <div class="inputwrap full">
-                        <select class="contact-input" required>
-                            <option value="select" disabled selected>-- Select an option --</option>
-                            <option value="product">Product Inquiry</option>
-                            <option value="support">Support</option>
-                            <option value="partnership">Partnership</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <label>Subject</label>
+                <div class="container-button-group">
+                    <div class="submit-button">
+                        <button class="submit" type="submit">Submit</button>
                     </div>
-
-                    <!-- Message -->
-                    <div class="inputwrap full">
-                        <textarea class="contact-input" required></textarea>
-                        <label>Message</label>
-                        <img src="../Assets/Images/message-solid-full.svg" height="20">
-                    </div>
-
-                    <div class="container-button-group">
-                        <div class="submit-button">
-                            <button class="submit" type="submit">Submit</button>
-                        </div>
-                        <div class="back-button">
-                            <a href="../Code/contact.html">
-                                <button class="back" type="button">Go Back</button>
-                            </a>
-                        </div>
+                    <div class="back-button">
+                        <a href="../Code/contact.html">
+                            <button class="back" type="button">Go Back</button>
+                        </a>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; 2026 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
-        </footer>
-    </body>
+    <footer>
+        <p>&copy; 2026 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
+    </footer>
+</body>
+
 </html>

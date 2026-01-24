@@ -101,6 +101,48 @@
             margin: 40px 0;
             border: none;
         }
+
+        .light-theme {
+            .blog-container {
+                max-width: 1000px;
+                margin: 40px auto;
+                background: rgba(22, 23, 34, 0.9);
+                padding: 50px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                border: 3px solid #393a4c;
+                color: #ecf39e;
+            }
+
+            .blog-header {
+                text-align: center;
+                margin-bottom: 40px;
+                padding-bottom: 20px;
+                border-bottom: 3px solid #393a4c;
+            }
+
+            .blog-section {
+                margin: 40px 0;
+                padding: 30px;
+                background: rgba(119, 122, 146, 0.7);
+                border-radius: 15px;
+                border-left: 5px solid #cccccc;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .blog-section h2::before {
+                content: "•";
+                color: #cccccc;
+                font-size: 30px;
+            }
+
+            .section-divider {
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #cccccc, transparent);
+                margin: 40px 0;
+                border: none;
+            }
+        }
     </style>
 </head>
 

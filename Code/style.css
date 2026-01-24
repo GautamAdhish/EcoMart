@@ -152,7 +152,7 @@ header ul li a:hover::after {
 
 .contactform:hover,
 .feedbackform:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
     z-index: 1000;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
     transform: translateY(-10px);

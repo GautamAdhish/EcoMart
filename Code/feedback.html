@@ -196,6 +196,40 @@
             /* Slight grow effect to match the 'active' feel */
             transition: 0.3s ease;
         }
+
+        .light-theme {
+            .invite {
+                color: #123a13;
+                text-decoration: underline;
+            }
+
+            .formcollective {
+                background-color: #8a8a8a;
+                border: 3px solid #484b6a;
+            }
+
+            .submit {
+                background-color: rgba(119, 122, 146, 1);
+                border: 3px solid #484b6a;
+                color: #123a13;
+            }
+
+            .back {
+                background-color: rgba(119, 122, 146, 1);
+                color: #123a13;
+                padding: 12px 24px;
+                border: 3px solid #484b6a;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 22px;
+                transition: background-color 0.3s ease;
+            }
+
+            .submit:hover, .back:hover {
+                background-color: rgba(119, 122, 146, 0.4);
+                color: #292712;
+            }
+        }
     </style>
 </head>
 

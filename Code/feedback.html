@@ -7,23 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <title>EcoMart - Feedback</title>
     <style>
+        /* Form container */
         .form {
             display: flex;
             flex-wrap: wrap;
-            /* allows items to wrap to next line */
             gap: 20px;
-            /* spacing between items */
         }
-
 
         .inputwrap {
             position: relative;
             flex: 1 1 calc(50% - 10px);
-            /* Two per row with gap compensation */
             min-width: 250px;
-            /* optional for responsiveness */
         }
-
 
         /* Full width fields */
         .full,
@@ -31,7 +26,7 @@
             flex: 1 1 100%;
         }
 
-        /* Inputs */
+        /* Inputs and textarea */
         .contact-input {
             width: 100%;
             padding: 18px 45px 18px 20px;
@@ -42,7 +37,6 @@
             outline: none;
         }
 
-        /* Textarea */
         textarea.contact-input {
             min-height: 140px;
             resize: none;
@@ -70,12 +64,17 @@
         }
 
         .contact-input:focus+label,
-        .contact-input:valid+label,
         textarea.contact-input:focus+label,
-        textarea.contact-input:valid+label {
-            top: 6px;
+        select.contact-input:focus+label,
+        .contact-input.filled+label,
+        textarea.contact-input.filled+label,
+        select.contact-input.filled+label {
+            top: 15px;
+            transform: translateY(-50%);
             font-size: 12px;
             color: #6b7280;
+            background-color: transparent;
+            padding: 0 4px;
         }
 
         /* Gender */
@@ -94,46 +93,29 @@
             color: #6b7280;
         }
 
-        /* Select fix */
+        /* Select */
         select.contact-input {
             appearance: none;
             cursor: pointer;
-        }
-
-        /* Floating labels for inputs, textarea, and select */
-        .contact-input:focus+label,
-        .contact-input:valid+label,
-        textarea.contact-input:focus+label,
-        textarea.contact-input:valid+label {
-            top: 15px;
-            /* Adjust this value to your preference */
-            transform: translateY(-50%);
-            font-size: 12px;
-            color: #6b7280;
-        }
-
-        /* Specific fix for the Subject Select Icon (Optional) */
-        select.contact-input {
             padding-top: 18px;
-            /* Adds space for the label to float into */
+            /* space for label float */
         }
 
-        /* Center the wrapper across both grid columns */
+        /* Button layout */
         .submit-button {
             display: flex;
             justify-content: center;
         }
-
 
         .container-button-group {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            /* ensures it stretches across */
             margin-top: 20px;
         }
 
+        /* Buttons */
         .submit {
             background-color: #31572c;
             color: #ecf39e;
@@ -142,13 +124,8 @@
             border-radius: 25px;
             cursor: pointer;
             font-size: 22px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             margin-left: 25px;
-        }
-
-        .submit:hover {
-            background-color: #90A955;
-            color: #292712;
         }
 
         .back {
@@ -159,24 +136,25 @@
             border-radius: 25px;
             cursor: pointer;
             font-size: 22px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             margin-right: 25px;
         }
 
+        .submit:hover,
         .back:hover {
+            transform: scale(1.05);
             background-color: #90A955;
             color: #292712;
         }
 
+        /* Form collective hover effect */
         .formcollective {
             transition: transform 0.4s ease, box-shadow 0.5s ease;
         }
 
         .formcollective:hover {
             transform: translateY(-5px);
-            /* Same lift as product cards */
             box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.6);
-            /* Deeper shadow on hover */
         }
 
         .contactform,
@@ -187,51 +165,100 @@
 
         .form:hover {
             transform: translateY(-3px);
-            /* Keeps the look consistent without overlapping the main container too much */
         }
 
-        .submit:hover,
-        .back:hover {
-            transform: scale(1.05);
-            /* Slight grow effect to match the 'active' feel */
-            transition: 0.3s ease;
+        /* Light theme overrides */
+        .light-theme .invite {
+            color: #123a13;
+            text-decoration: underline;
         }
 
-        .light-theme {
-            .invite {
-                color: #123a13;
-                text-decoration: underline;
+        .light-theme .formcollective {
+            background-color: #8a8a8a;
+            border: 3px solid #484b6a;
+        }
+
+        .light-theme .submit,
+        .light-theme .back {
+            background-color: rgba(119, 122, 146, 1);
+            border: 3px solid #484b6a;
+            color: #123a13;
+        }
+
+        .light-theme .submit:hover,
+        .light-theme .back:hover {
+            background-color: rgba(119, 122, 146, 0.4);
+            color: #292712;
+        }
+
+        /* Error styling */
+        .inputwrap .error-message {
+            color: #dc2626;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .inputwrap.error .error-message {
+            display: block;
+        }
+
+        .inputwrap.error .contact-input {
+            border: 2px solid #dc2626;
+            background-color: #fee2e2;
+        }
+
+        .inputwrap.error label {
+            color: #dc2626;
+        }
+
+        /* Shake animation */
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
             }
 
-            .formcollective {
-                background-color: #8a8a8a;
-                border: 3px solid #484b6a;
+            20%,
+            60% {
+                transform: translateX(-5px);
             }
 
-            .submit {
-                background-color: rgba(119, 122, 146, 1);
-                border: 3px solid #484b6a;
-                color: #123a13;
+            40%,
+            80% {
+                transform: translateX(5px);
             }
+        }
 
-            .back {
-                background-color: rgba(119, 122, 146, 1);
-                color: #123a13;
-                padding: 12px 24px;
-                border: 3px solid #484b6a;
-                border-radius: 25px;
-                cursor: pointer;
-                font-size: 22px;
-                transition: background-color 0.3s ease;
-            }
-
-            .submit:hover,
-            .back:hover {
-                background-color: rgba(119, 122, 146, 0.4);
-                color: #292712;
-            }
+        .inputwrap.error.shake {
+            animation: shake 0.3s ease;
         }
     </style>
+    <!-- script to design the label -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('.contact-input');
+
+            inputs.forEach(input => {
+                // On page load, check if input already has content
+                if (input.value.trim() !== '') {
+                    input.classList.add('filled');
+                }
+
+                // Listen for input changes
+                input.addEventListener('input', () => {
+                    if (input.value.trim() !== '') {
+                        input.classList.add('filled');
+                    } else {
+                        input.classList.remove('filled');
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="../Code/feedbackValidation.js"></script>
+
 </head>
 
 <body>
@@ -272,66 +299,68 @@
         <h1 class="invite" style="text-decoration: underline;">
             Give Us Your Feedback
         </h1>
-        <div class="formcollective">
-            <div class="mailimage">
-                <img src="../Assets/Images/user-square-svgrepo-com.svg" alt="Feedback Image" height="400">
-            </div>
-
-            <div class="form">
-                <!-- First Name -->
-                <div class="inputwrap">
-                    <input type="text" class="contact-input" required>
-                    <label>First Name</label>
-                    <img src="../Assets/Images/address-card-solid-full.svg" height="20">
+        <form class="fbackForm">
+            <div class="formcollective">
+                <div class="mailimage">
+                    <img src="../Assets/Images/user-square-svgrepo-com.svg" alt="Feedback Image" height="400">
                 </div>
 
-                <!-- Last Name -->
-                <div class="inputwrap">
-                    <input type="text" class="contact-input" required>
-                    <label>Last Name</label>
-                    <img src="../Assets/Images/address-card-solid-full.svg" height="20">
-                </div>
-
-                <!-- Email -->
-                <div class="inputwrap full">
-                    <input type="email" class="contact-input" required>
-                    <label>E-Mail</label>
-                    <img src="../Assets/Images/envelope-solid-full.svg" height="20">
-                </div>
-
-                <!-- Phone -->
-                <div class="inputwrap full">
-                    <input type="tel" class="contact-input" required>
-                    <label>Phone Number</label>
-                    <img src="../Assets/Images/phone-solid-full.svg" height="20">
-                </div>
-
-                <!-- Title -->
-                <div class="inputwrap full">
-                    <input type="title" class="contact-input" required>
-                    <label>Title</label>
-                    <img src="../Assets/Images/message-solid-full.svg" height="20">
-                </div>
-
-                <!-- Message -->
-                <div class="inputwrap full">
-                    <textarea class="contact-input" required></textarea>
-                    <label>Message</label>
-                    <img src="../Assets/Images/message-solid-full.svg" height="20">
-                </div>
-
-                <div class="container-button-group">
-                    <div class="submit-button">
-                        <button class="submit" type="submit">Submit</button>
+                <div class="form">
+                    <!-- First Name -->
+                    <div class="inputwrap">
+                        <input type="text" class="contact-input">
+                        <label>First Name</label>
+                        <img src="../Assets/Images/address-card-solid-full.svg" height="20">
                     </div>
-                    <div class="back-button">
-                        <a href="../Code/contact.html">
-                            <button class="back" type="button">Go Back</button>
-                        </a>
+
+                    <!-- Last Name -->
+                    <div class="inputwrap">
+                        <input type="text" class="contact-input">
+                        <label>Last Name</label>
+                        <img src="../Assets/Images/address-card-solid-full.svg" height="20">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="inputwrap full">
+                        <input type="email" class="contact-input">
+                        <label>E-Mail</label>
+                        <img src="../Assets/Images/envelope-solid-full.svg" height="20">
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="inputwrap full">
+                        <input type="tel" class="contact-input">
+                        <label>Phone Number</label>
+                        <img src="../Assets/Images/phone-solid-full.svg" height="20">
+                    </div>
+
+                    <!-- Title -->
+                    <div class="inputwrap full">
+                        <input type="title" class="contact-input">
+                        <label>Title</label>
+                        <img src="../Assets/Images/message-solid-full.svg" height="20">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="inputwrap full">
+                        <textarea class="contact-input"></textarea>
+                        <label>Message</label>
+                        <img src="../Assets/Images/message-solid-full.svg" height="20">
+                    </div>
+
+                    <div class="container-button-group">
+                        <div class="submit-button">
+                            <button class="submit" type="submit">Submit</button>
+                        </div>
+                        <div class="back-button">
+                            <a href="../Code/contact.html">
+                                <button class="back" type="button">Go Back</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 
     <footer>

@@ -276,7 +276,7 @@ header ul li a:hover::after {
 .card:hover {
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7);
     transform: translateY(-5px);
-    z-index: 1000;
+    z-index: 100;
 }
 
 .card img {
@@ -351,17 +351,22 @@ header ul li a:hover::after {
    Not completed yet. */
 
 .product-tag {
+    position: absolute; /* overlay */
     padding: 5px 12px;
     border-radius: 15px;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;  /* overlay */
+    transition: transform 0.5s ease;
 }
 
-
+.product-tag:hover {
+    transform: scaleX(1.08);
+}
 /* Different tag colors */
 .product-tag.sale {
     background-color: #e74c3c;

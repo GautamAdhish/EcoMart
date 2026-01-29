@@ -305,6 +305,18 @@
         color: #132a13;
       }
 
+      .comparison-card img {
+        width: 100%;
+        /* Makes image fill the card width */
+        height: 250px;
+        /* Fixed height for consistency */
+        object-fit: cover;
+        /* Ensures images maintain aspect ratio and fill the space */
+        object-position: 100% 100%;
+        border-bottom: 3px solid #31572c;
+        /* Optional: border between image and content */
+      }
+
       .comparison-table th {
         background-color: rgba(34, 34, 34, 0.6);
       }
@@ -388,14 +400,18 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <img src="../Assets/Research/home2.png" alt="Reference Home Page" class="comparison-img">
+            <a href="https://thesomastore.com" target="_blank">
+              <img src="../Assets/Research/home2.png" alt="Reference Home Page" class="comparison-img">
+            </a>
             <p><strong>Website:</strong> The Soma Store (https://thesomastore.com)</p>
             <p>Features clean design with hero section, product categories, and sustainable messaging.</p>
           </div>
 
           <div class="comparison-card">
             <h3>Our Home Page</h3>
-            <img src="../Assets/Research/home1.png" alt="Our Home Page" class="comparison-img">
+            <a href="../index.html" target="_blank">
+              <img src="../Assets/Research/home1.png" alt="Our Home Page" class="comparison-img">
+            </a>
             <p><strong>EcoMart Home Page</strong></p>
             <p>Includes hero section, about us, eco-goals, featured products, and call-to-action buttons.</p>
           </div>
@@ -465,14 +481,18 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <img src="../Assets/Research/product2.png" alt="Reference Products Page" class="comparison-img">
+            <a href="https://packagefreeshop.com" target="_blank">
+              <img src="../Assets/Research/product2.png" alt="Reference Products Page" class="comparison-img">
+            </a>
             <p><strong>Website:</strong> Package Free Shop (https://packagefreeshop.com)</p>
             <p>Product grid with filters, prices, and basic product information.</p>
           </div>
 
           <div class="comparison-card">
             <h3>Our Products Page</h3>
-            <img src="../Assets/Research/product1.png" alt="Our Products Page" class="comparison-img">
+            <a href="../Code/products.html" target="_blank">
+              <img src="../Assets/Research/product1.png" alt="Our Products Page" class="comparison-img">
+            </a>
             <p><strong>EcoMart Products Page</strong></p>
             <p>Categorized products with interactive buttons, badges, and detailed views.</p>
           </div>
@@ -542,14 +562,18 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <img src="../Assets/Research/contact2.png" alt="Reference Contact Page" class="comparison-img">
+            <a href="https://ecomart.app/pages/contact" target="_blank">
+              <img src="../Assets/Research/contact2.png" alt="Reference Contact Page" class="comparison-img">
+            </a>
             <p><strong>Website:</strong> Ecomart.app Contact Page</p>
             <p>Basic contact form with name, email, and message fields.</p>
           </div>
 
           <div class="comparison-card">
             <h3>Our Contact Page</h3>
-            <img src="../Assets/Research/contact1.png" alt="Our Contact Page" class="comparison-img">
+            <a href="../Code/contact.html" target="_blank">
+              <img src="../Assets/Research/contact1.png" alt="Our Contact Page" class="comparison-img">
+            </a>
             <p><strong>EcoMart Contact Page</strong></p>
             <p>Dual-form system with both contact and feedback options.</p>
           </div>
@@ -596,14 +620,16 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <img src="../Assets/Research/aboutus2.png" alt="Reference About Page" class="comparison-img">
+            <a href="https://ibambo.com/about-us/" target="_blank">
+              <img src="../Assets/Research/aboutus2.png" alt="Reference Contact Page" class="comparison-img">
+            </a>
             <p><strong>Website:</strong> iBambo About Us Page</p>
             <p>Company description, mission, and values with team photos.</p>
           </div>
 
           <div class="comparison-card">
             <h3>Our About Us Page</h3>
-            <!-- <img src="../Assets/Images/Research/our_about.png" alt="Our About Page" class="comparison-img"> -->
+            <img src="../Assets/Research/aboutus1.png" alt="Our About Page" class="comparison-img">
             <p><strong>EcoMart About Us Page</strong></p>
             <p>Team member portfolios with individual layouts and roles.</p>
           </div>

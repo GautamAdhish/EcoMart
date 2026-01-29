@@ -293,6 +293,52 @@
 
       .comparison-section {
         background-color: rgba(22, 23, 34, 0.9);
+        border: none;
+      }
+
+      .comparison-card {
+        background-color: #777a92;
+        color: #132a13;
+      }
+
+      .comparison-card h3 {
+        color: #132a13;
+      }
+
+      .comparison-table th {
+        background-color: rgba(34, 34, 34, 0.6);
+      }
+
+      .comparison-table tr {
+        background-color: rgb(119, 122, 146);
+      }
+
+      .comparison-table td {
+        color: #132a13;
+        border-bottom: 1px solid #123;
+      }
+
+      .comparison-table tr:hover {
+        background-color: rgba(119, 122, 146, 0.8);
+      }
+
+      .references-container {
+        background-color: rgba(22, 23, 34, 0.9);
+      }
+
+      .page-nav {
+        border-top: 2px solid #9394a5;
+        border-bottom: 2px solid #9394a5;
+      }
+
+      .nav-btn {
+        background-color: rgb(119, 122, 146);
+        border: 3px solid #484b6a;
+        color: #123a13;
+      }
+
+      .nav-btn:hover {
+        background-color: rgba(119, 122, 146, 0.6);
       }
     }
   </style>
@@ -313,17 +359,9 @@
           <li><a href="../Code/contact.html">Contact Us</a></li>
         </ul>
 
-        <div class="switch">
-          <input type="checkbox" id="theme-toggle">
-          <label for="theme-toggle">
-            <div class="sun-moon">
-              <div class="craters"></div>
-            </div>
-            <div class="background">
-              <div class="stars s1"></div>
-              <div class="stars s2"></div>
-            </div>
-          </label>
+        <div class="theme-toggle" id="theme-toggle">
+          <img src="../Assets/Images/sun-solid-full.svg" alt="Sun icon for light mode" class="sun-icon">
+          <img src="../Assets/Images/moon-solid-full.svg" alt="Moon icon for dark mode" class="moon-icon">
         </div>
       </div>
     </nav>
@@ -350,14 +388,14 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <!-- <img src="../Assets/Images/Research/home_reference.png" alt="Reference Home Page" class="comparison-img"> -->
+            <img src="../Assets/Research/home2.png" alt="Reference Home Page" class="comparison-img">
             <p><strong>Website:</strong> The Soma Store (https://thesomastore.com)</p>
             <p>Features clean design with hero section, product categories, and sustainable messaging.</p>
           </div>
 
           <div class="comparison-card">
             <h3>Our Home Page</h3>
-            <!-- <img src="../Assets/Images/Research/our_home.png" alt="Our Home Page" class="comparison-img"> -->
+            <img src="../Assets/Research/home1.png" alt="Our Home Page" class="comparison-img">
             <p><strong>EcoMart Home Page</strong></p>
             <p>Includes hero section, about us, eco-goals, featured products, and call-to-action buttons.</p>
           </div>
@@ -365,40 +403,36 @@
 
         <!-- TABLE: Comparison table -->
         <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Aspect</th>
-              <th>Reference Website</th>
-              <th>Our Website (EcoMart)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Hero Section</strong></td>
-              <td>Simple banner with tagline</td>
-              <td>Interactive hero with clear value proposition and visual appeal</td>
-            </tr>
-            <tr>
-              <td><strong>Navigation</strong></td>
-              <td>Standard top navigation</td>
-              <td>Enhanced navigation with hover effects and active state indicators</td>
-            </tr>
-            <tr>
-              <td><strong>Content Organization</strong></td>
-              <td>Basic grid layout</td>
-              <td>Strategic grid with clear sections: About, Goals, Featured Products</td>
-            </tr>
-            <tr>
-              <td><strong>Color Scheme</strong></td>
-              <td>Minimal green accents</td>
-              <td>Consistent eco-themed palette (#31572c, #4f772d, #90A955, #ecf39e)</td>
-            </tr>
-            <tr>
-              <td><strong>Mobile Responsiveness</strong></td>
-              <td>Responsive but basic</td>
-              <td>Fully responsive with optimized layouts for all devices</td>
-            </tr>
-          </tbody>
+          <tr>
+            <th>Aspect</th>
+            <th>Reference Website</th>
+            <th>Our Website (EcoMart)</th>
+          </tr>
+          <tr>
+            <td><strong>Hero Section</strong></td>
+            <td>Simple banner with tagline</td>
+            <td>Interactive hero with clear value proposition and visual appeal</td>
+          </tr>
+          <tr>
+            <td><strong>Navigation</strong></td>
+            <td>Standard top navigation</td>
+            <td>Enhanced navigation with hover effects and active state indicators</td>
+          </tr>
+          <tr>
+            <td><strong>Content Organization</strong></td>
+            <td>Basic grid layout</td>
+            <td>Strategic grid with clear sections: About, Goals, Featured Products</td>
+          </tr>
+          <tr>
+            <td><strong>Color Scheme</strong></td>
+            <td>Minimal green accents</td>
+            <td>Consistent eco-themed palette (#31572c, #4f772d, #90A955, #ecf39e)</td>
+          </tr>
+          <tr>
+            <td><strong>Mobile Responsiveness</strong></td>
+            <td>Responsive but basic</td>
+            <td>Fully responsive with optimized layouts for all devices</td>
+          </tr>
         </table>
 
         <div style="display: flex; gap: 40px; margin-top: 30px;">
@@ -431,53 +465,50 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <!-- <img src="../Assets/Images/Research/products_reference.png" alt="Reference Products Page" class="comparison-img"> -->
+            <img src="../Assets/Research/product2.png" alt="Reference Products Page" class="comparison-img">
             <p><strong>Website:</strong> Package Free Shop (https://packagefreeshop.com)</p>
             <p>Product grid with filters, prices, and basic product information.</p>
           </div>
 
           <div class="comparison-card">
             <h3>Our Products Page</h3>
-            <!-- <img src="../Assets/Images/Research/our_products.png" alt="Our Products Page" class="comparison-img"> -->
+            <img src="../Assets/Research/product1.png" alt="Our Products Page" class="comparison-img">
             <p><strong>EcoMart Products Page</strong></p>
             <p>Categorized products with interactive buttons, badges, and detailed views.</p>
           </div>
         </div>
 
         <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Aspect</th>
-              <th>Reference Website</th>
-              <th>Our Website (EcoMart)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Product Organization</strong></td>
-              <td>Simple grid layout</td>
-              <td>Categorized by type (Personal Care, Fashion, etc.) with clear headers</td>
-            </tr>
-            <tr>
-              <td><strong>Product Information</strong></td>
-              <td>Basic name and price</td>
-              <td>Detailed with category, old/new prices, and interactive buttons</td>
-            </tr>
-            <tr>
-              <td><strong>User Interaction</strong></td>
-              <td>Add to cart only</td>
-              <td>Three-button system: Buy, Cart, View with hover effects</td>
-            </tr>
-            <tr>
-              <td><strong>Visual Design</strong></td>
-              <td>Minimal product cards</td>
-              <td>Enhanced cards with borders, shadows, and consistent styling</td>
-            </tr>
-            <tr>
-              <td><strong>Product Details</strong></td>
-              <td>Separate page or modal</td>
-              <td>Detailed view page with recommendations (e.g., hempbag.html)</td>
-            </tr>
+          <tr>
+            <th>Aspect</th>
+            <th>Reference Website</th>
+            <th>Our Website (EcoMart)</th>
+          </tr>
+          <tr>
+            <td><strong>Product Organization</strong></td>
+            <td>Simple grid layout</td>
+            <td>Categorized by type (Personal Care, Fashion, etc.) with clear headers</td>
+          </tr>
+          <tr>
+            <td><strong>Product Information</strong></td>
+            <td>Basic name and price</td>
+            <td>Detailed with category, old/new prices, and interactive buttons</td>
+          </tr>
+          <tr>
+            <td><strong>User Interaction</strong></td>
+            <td>Add to cart only</td>
+            <td>Three-button system: Buy, Cart, View with hover effects</td>
+          </tr>
+          <tr>
+            <td><strong>Visual Design</strong></td>
+            <td>Minimal product cards</td>
+            <td>Enhanced cards with borders, shadows, and consistent styling</td>
+          </tr>
+          <tr>
+            <td><strong>Product Details</strong></td>
+            <td>Separate page or modal</td>
+            <td>Detailed view page with recommendations (e.g., hempbag.html)</td>
+          </tr>
           </tbody>
         </table>
 
@@ -511,54 +542,50 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <!-- <img src="../Assets/Images/Research/contact_reference.png" alt="Reference Contact Page" class="comparison-img"> -->
+            <img src="../Assets/Research/contact2.png" alt="Reference Contact Page" class="comparison-img">
             <p><strong>Website:</strong> Ecomart.app Contact Page</p>
             <p>Basic contact form with name, email, and message fields.</p>
           </div>
 
           <div class="comparison-card">
             <h3>Our Contact Page</h3>
-            <!-- <img src="../Assets/Images/Research/our_contact.png" alt="Our Contact Page" class="comparison-img"> -->
+            <img src="../Assets/Research/contact1.png" alt="Our Contact Page" class="comparison-img">
             <p><strong>EcoMart Contact Page</strong></p>
             <p>Dual-form system with both contact and feedback options.</p>
           </div>
         </div>
 
         <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Aspect</th>
-              <th>Reference Website</th>
-              <th>Our Website (EcoMart)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Form Structure</strong></td>
-              <td>Single contact form</td>
-              <td>Dual-option: Contact Team + Feedback forms</td>
-            </tr>
-            <tr>
-              <td><strong>Fields Included</strong></td>
-              <td>Basic: Name, Email, Message</td>
-              <td>Comprehensive: Name, Email, Phone, Gender, Subject, Message</td>
-            </tr>
-            <tr>
-              <td><strong>User Experience</strong></td>
-              <td>Simple form submission</td>
-              <td>Floating labels, icons, and hover effects</td>
-            </tr>
-            <tr>
-              <td><strong>Additional Features</strong></td>
-              <td>None</td>
-              <td>Gender selection, subject dropdown, back button</td>
-            </tr>
-            <tr>
-              <td><strong>Visual Design</strong></td>
-              <td>Minimal styling</td>
-              <td>Professional forms with consistent eco-theme</td>
-            </tr>
-          </tbody>
+          <tr>
+            <th>Aspect</th>
+            <th>Reference Website</th>
+            <th>Our Website (EcoMart)</th>
+          </tr>
+          <tr>
+            <td><strong>Form Structure</strong></td>
+            <td>Single contact form</td>
+            <td>Dual-option: Contact Team + Feedback forms</td>
+          </tr>
+          <tr>
+            <td><strong>Fields Included</strong></td>
+            <td>Basic: Name, Email, Message</td>
+            <td>Comprehensive: Name, Email, Phone, Gender, Subject, Message</td>
+          </tr>
+          <tr>
+            <td><strong>User Experience</strong></td>
+            <td>Simple form submission</td>
+            <td>Floating labels, icons, and hover effects</td>
+          </tr>
+          <tr>
+            <td><strong>Additional Features</strong></td>
+            <td>None</td>
+            <td>Gender selection, subject dropdown, back button</td>
+          </tr>
+          <tr>
+            <td><strong>Visual Design</strong></td>
+            <td>Minimal styling</td>
+            <td>Professional forms with consistent eco-theme</td>
+          </tr>
         </table>
       </section>
 
@@ -569,7 +596,7 @@
         <div class="comparison-grid">
           <div class="comparison-card">
             <h3>Reference Website</h3>
-            <!-- <img src="../Assets/Images/Research/about_reference.png" alt="Reference About Page" class="comparison-img"> -->
+            <img src="../Assets/Research/aboutus2.png" alt="Reference About Page" class="comparison-img">
             <p><strong>Website:</strong> iBambo About Us Page</p>
             <p>Company description, mission, and values with team photos.</p>
           </div>

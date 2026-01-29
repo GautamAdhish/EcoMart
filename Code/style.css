@@ -351,7 +351,8 @@ header ul li a:hover::after {
    Not completed yet. */
 
 .product-tag {
-    position: absolute; /* overlay */
+    position: absolute;
+    /* overlay */
     padding: 5px 12px;
     border-radius: 15px;
     font-size: 15px;
@@ -360,13 +361,15 @@ header ul li a:hover::after {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 2;  /* overlay */
+    z-index: 2;
+    /* overlay */
     transition: transform 0.5s ease;
 }
 
 .product-tag:hover {
     transform: scaleX(1.08);
 }
+
 /* Different tag colors */
 .product-tag.sale {
     background-color: #e74c3c;
@@ -524,111 +527,54 @@ footer {
     margin-top: auto;
 }
 
-.switch {
-    position: relative;
+/* Add these new styles for the image toggle */
+.theme-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 32px;
-    flex-shrink: 0;
+    position: relative;
 }
 
-/* Hide checkbox */
-.switch input {
+.theme-toggle img {
+    width: 30px;
+    height: 30px;
     position: absolute;
+    transition: all 0.3s ease;
+    filter: invert(100%);
+}
+
+/* Sun icon - visible in dark mode */
+.theme-toggle .sun-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme-toggle .moon-icon {
     opacity: 0;
+    transform: scale(0.5);
 }
 
-/* Clickable label */
-.switch label {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    height: 100%;
-}
+/* light theme styles */
 
-/* Background track */
-.background {
-    position: absolute;
-    inset: 0;
-    border-radius: 20px;
-    border: 2px solid #202020;
-    background: linear-gradient(to right, #484848, #202020);
-    transition: 0.3s ease;
-    overflow: hidden;
-}
-
-/* Stars */
-.stars {
-    position: absolute;
-    width: 3px;
-    height: 3px;
-    background: #fff;
-    border-radius: 50%;
-    transition: 0.3s ease;
-}
-
-.s1 {
-    top: 6px;
-    right: 10px;
-}
-
-.s2 {
-    top: 18px;
-    right: 23px;
-}
-
-/* Sun / Moon */
-.sun-moon {
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 24px;
-    height: 24px;
-    background: #fffdf2;
-    border-radius: 50%;
-    border: 2px solid #dee2c6;
-    transition: 0.4s ease;
-    z-index: 2;
-}
-
-/* Moon craters */
-.craters {
-    position: absolute;
-    top: 4px;
-    left: 12px;
-    width: 7px;
-    height: 7px;
-    background: #efeecb;
-    border-radius: 50%;
-    border: 1.5px solid #dee2c6;
-    transition: 0.3s ease;
-}
-
-/* ===== CHECKED STATE ===== */
-
-.switch input:checked~label .sun-moon {
-    left: 33px;
-    background: #f5ec59;
-    border-color: #e7c65c;
-    transform: rotate(-25deg);
-}
-
-.switch input:checked~label .craters {
-    width: 11px;
-    height: 11px;
-    top: 1px;
-    left: -6px;
-    background: #fff;
-    border-color: #fff;
-}
-
-.switch input:checked~label .background {
-    background: linear-gradient(to right, #78c1d5, #bbe7f5);
-    border-color: #78c1d5;
-}
-
-.switch input:checked~label .stars {
+body.light-theme .theme-toggle .sun-icon {
     opacity: 0;
-    transform: translateY(10px);
+    transform: scale(0.5);
+}
+
+body.light-theme .theme-toggle .moon-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.theme-toggle:hover .sun-icon {
+    transform: rotate(15deg) scale(1.1);
+}
+
+.theme-toggle:hover .moon-icon {
+    transform: scale(1.1);
 }
 
 .light-theme {

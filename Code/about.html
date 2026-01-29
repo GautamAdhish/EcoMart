@@ -100,6 +100,18 @@
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
 
+    .team-member-card img {
+      width: 100%;
+      /* Makes image fill the card width */
+      height: 250px;
+      /* Fixed height for consistency */
+      object-fit: cover;
+      /* Ensures images maintain aspect ratio and fill the space */
+      object-position: 50% 10%;
+      border-bottom: 3px solid #31572c;
+      /* Optional: border between image and content */
+    }
+
     /* Individual portfolio links */
     .portfolio-link {
       display: inline-block;
@@ -486,7 +498,43 @@
         margin-right: auto;
       }
 
+      .diff1 {
+        background-color: rgba(37, 39, 60, 0.8);
+        padding: 15px 35px;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 2px solid #393a4c;
+        transition: all 0.3s ease;
+      }
 
+      .diff2 {
+        background-color: rgba(37, 39, 60, 0.6);
+        color: #ecf39e;
+        padding: 15px 35px;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 2px solid #90A955;
+        transition: all 0.3s ease;
+      }
+
+      .diff3 {
+        background-color: rgba(37, 39, 60, 0.4);
+        color: #132a13;
+        padding: 15px 35px;
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 2px solid #31572c;
+        transition: all 0.3s ease;
+      }
+
+      .diff1 a,
+      .diff2 a,
+      .diff3 a {
+        text-decoration: none;
+        color: #ecf39e;
+      }
     }
   </style>
 </head>
@@ -506,17 +554,9 @@
           <li><a href="../Code/contact.html">Contact Us</a></li>
         </ul>
 
-        <div class="switch">
-          <input type="checkbox" id="theme-toggle">
-          <label for="theme-toggle">
-            <div class="sun-moon">
-              <div class="craters"></div>
-            </div>
-            <div class="background">
-              <div class="stars s1"></div>
-              <div class="stars s2"></div>
-            </div>
-          </label>
+        <div class="theme-toggle" id="theme-toggle">
+          <img src="../Assets/Images/sun-solid-full.svg" alt="Sun icon for light mode" class="sun-icon">
+          <img src="../Assets/Images/moon-solid-full.svg" alt="Moon icon for dark mode" class="moon-icon">
         </div>
       </div>
     </nav>
@@ -559,7 +599,7 @@
 
         <!-- Devan -->
         <div class="team-member-card">
-          <img src="../Assets/Images/Team/team1.jpg" alt="Devan - Home & About Developer" class="member-photo">
+          <img src="../Assets/People/deban.jpeg" alt="Devan - Home & About Developer" class="member-photo" style="object-fit: cover;">
           <div class="member-info">
             <h3 class="member-name">Devan</h3>
             <p class="member-role">Home & About Us Developer</p>
@@ -576,7 +616,7 @@
 
         <!-- Adhish -->
         <div class="team-member-card">
-          <img src="../Assets/Images/Team/team2.jpg" alt="Adhish - JavaScript Specialist" class="member-photo">
+          <img src="../Assets/People/adhish.jpg" alt="Adhish - JavaScript Specialist" class="member-photo">
           <div class="member-info">
             <h3 class="member-name">Adhish</h3>
             <p class="member-role">JavaScript & Contact Specialist</p>
@@ -593,7 +633,7 @@
 
         <!-- Kritagya -->
         <div class="team-member-card">
-          <img src="../Assets/Images/Team/team3.jpg" alt="Kritigya - CSS Designer" class="member-photo">
+          <img src="../Assets/People/kritagya.jpeg" alt="Kritigya - CSS Designer" class="member-photo">
           <div class="member-info">
             <h3 class="member-name">Kritagya</h3>
             <p class="member-role">CSS & Products Designer</p>
@@ -610,7 +650,7 @@
 
         <!-- Sneha -->
         <div class="team-member-card">
-          <img src="../Assets/Images/Team/team4.jpg" alt="Sneha - Blog Developer" class="member-photo">
+          <img src="../Assets/People/sneha.jpg" alt="Sneha - Blog Developer" class="member-photo">
           <div class="member-info">
             <h3 class="member-name">Sneha</h3>
             <p class="member-role">Blog Developer</p>
@@ -627,12 +667,12 @@
 
         <!-- Anamika -->
         <div class="team-member-card">
-          <img src="../Assets/Images/Team/team5.jpg" alt="Anamika - Research Specialist" class="member-photo">
+          <img src="../Assets/People/Anamika.jpg" alt="Anamika - Research Specialist" class="member-photo">
           <div class="member-info">
             <h3 class="member-name">Anamika</h3>
             <p class="member-role">Research & Documentation</p>
             <p class="member-bio">Conducted comprehensive research on competitor websites and sustainable e-commerce
-              trends and documented our progress.</p>
+              trends.</p>
             <div class="member-skills">
               <span class="skill-tag">Research Analysis</span>
               <span class="skill-tag">Documentation</span>

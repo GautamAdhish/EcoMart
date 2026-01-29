@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="../Code/style.css">
   <style>
     .herobody {
-      background-color: #9394a5;
+      background-color: #4f772d;
       height: 140px;
       text-align: center;
       margin: 20px auto;
       width: 1000px;
       align-items: center;
       padding: 20px 20px 90px 20px;
-      color: #123a13;
+      color: #ecf39e;
       border-radius: 25px;
-      border: 2px solid #484b48;
+      border: 2px solid #31572C;
     }
 
     .herobody h1 {
@@ -49,11 +49,11 @@
     .achieve {
       flex: 0 0 auto;
       /* Remove fixed flex-basis from individual boxes */
-      background-color: #9394a5;
+      background-color: #4f772d;
       border-radius: 15px;
-      border: 2px solid #484b48;
+      border: 2px solid #31572C;
       padding: 20px;
-      color: #123a13;
+      color: #ecf39e;
       text-align: center;
       width: 490px;
       /* Set width directly */
@@ -106,22 +106,22 @@
       padding: 10px 20px;
       font-size: 20px;
       border-radius: 50px;
-      background-color: rgb(37, 39, 60);
-      color: #d2d3db;
-      border: 2px solid #484b48;
+      background-color: rgb(49, 87, 44);
+      color: #ecf39e;
+      border: 2px solid #31572C;
       transition: background-color 0.3s ease;
     }
 
     .reachout:hover {
-      background-color: rgba(37, 39, 60, 0.8);
+      background-color: rgba(49, 87, 44, 0.5);
     }
 
     .featuredcards {
-      background-color: #9394a5;
+      background-color: #4f772d;
       margin: 20px auto;
       height: auto;
       width: 1000px;
-      border: 2px solid #484b48;
+      border: 2px solid #31572C;
       border-radius: 15px;
       padding: 20px 25px;
       display: flex;
@@ -143,8 +143,8 @@
       width: 55px;
       height: 55px;
       border-radius: 50%;
-      background-color: #a3b18a;
-      border: 2px solid #393a4c;
+      background-color: #2e560b;
+      border: 2px solid #31572C;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -155,14 +155,13 @@
     .buy:hover,
     .cart:hover,
     .view:hover {
-      background-color: #deb887;
+      background-color: rgba(46, 86, 11, 0.6);
       transform: translateY(-2px);
     }
 
     .buy img,
     .cart img,
     .view img {
-      filter: brightness(0) invert(0.3);
       background-color: transparent;
     }
 
@@ -195,6 +194,89 @@
     .featuredcards::-webkit-scrollbar {
       display: none;
       /* Chrome / Safari */
+    }
+
+    .light-theme {
+      .herobody {
+        background-color: #9394a5;
+        height: 140px;
+        text-align: center;
+        margin: 20px auto;
+        width: 1000px;
+        align-items: center;
+        padding: 20px 20px 90px 20px;
+        color: #123a13;
+        border-radius: 25px;
+        border: 2px solid #484b48;
+      }
+
+      .about,
+      .goals,
+      .achieve {
+        flex: 0 0 auto;
+        /* Remove fixed flex-basis from individual boxes */
+        background-color: #9394a5;
+        border-radius: 15px;
+        border: 2px solid #484b48;
+        padding: 20px;
+        color: #123a13;
+        text-align: center;
+        width: 490px;
+        /* Set width directly */
+      }
+
+      .featuredcards {
+        background-color: #9394a5;
+        margin: 20px auto;
+        height: auto;
+        width: 1000px;
+        border: 2px solid #484b48;
+        border-radius: 15px;
+        padding: 20px 25px;
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+      }
+
+      .reachout {
+        margin: 20px 0 10px 0;
+        padding: 10px 20px;
+        font-size: 20px;
+        border-radius: 50px;
+        background-color: rgb(37, 39, 60);
+        color: #d2d3db;
+        border: 2px solid #484b48;
+        transition: background-color 0.3s ease;
+      }
+
+      .buy,
+      .cart,
+      .view {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: #a3b18a;
+        border: 2px solid #393a4c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .buy:hover,
+      .cart:hover,
+      .view:hover {
+        background-color: #deb887;
+        transform: translateY(-2px);
+      }
+
+      .buy img,
+      .cart img,
+      .view img {
+        filter: brightness(0) invert(0.3);
+        background-color: transparent;
+      }
     }
   </style>
   <script src="../Code/slider.js"></script>

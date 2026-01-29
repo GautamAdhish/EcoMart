@@ -6,29 +6,39 @@
     <title>Casual Hemp Bag | EcoMart</title>
     <link rel="stylesheet" href="../Code/style.css">
     <style>
-        /* PRODUCT DETAILS SECTION */
-        .product-details {
-            padding: 40px 70px;
-        }
-
-        /* Main product card */
-        .product-card {
+        .product {
             display: flex;
+            align-items: center;
             gap: 30px;
             background-color: #4f772d;
             padding: 30px;
             border-radius: 25px;
             border: 5px solid #31572c;
+            margin: 20px 50px 0 50px;
         }
 
-        /* Product image container */
+        .product-title {
+            text-align: left;
+            padding: 10px 0 30px 30px;
+        }
+
+        .product-title h1 {
+            color: #ecf39e;
+            display: inline-block;
+            border-bottom: 2px solid #ecf39e;
+        }
+
         .product-image {
             flex: 1;
             /* Takes less space than info */
-            text-align: center;
+            display: flex;
+            /* Add this */
+            align-items: center;
+            /* Add this - vertically centers */
+            justify-content: center;
+            /* Add this - horizontally centers */
         }
 
-        /* Product image */
         .product-image img {
             width: 85%;
             height: 400px;
@@ -37,7 +47,6 @@
             border-radius: 25px;
         }
 
-        /* Inner bordered product info box */
         .product-info {
             flex: 2;
             /* Takes more space than image */
@@ -50,162 +59,109 @@
             background-color: transparent;
         }
 
-        /* Popular product badge */
-        .badge {
-            background-color: #ecf39e;
-            color: #4f772d;
-            font-weight: bold;
-            padding: 6px 12px;
-            border-radius: 15px;
-            display: inline-block;
-            /* allows an element to stay inline while still using width, height, padding, and margin like a block element. */
-            margin-bottom: 10px;
+        .recommendedProducts {
+            height: auto;
+            margin: 20px 50px 20px 50px;
+            background-color: #4f772d;
+            border-radius: 25px;
+            border: 5px solid #31572c;
+            overflow: hidden;
         }
 
-        /* Old price styling */
-        .old-price {
-            text-decoration: line-through;
-            opacity: 0.8;
-        }
-
-        /* Add to cart button */
         .buy-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            background-color: #ecf39e;
-            color: #4f772d;
-            font-weight: bold;
-            border-radius: 20px;
-            cursor: pointer;
-            margin-right: 10px;
-            transition: all 0.3s ease;
+            background-color: rgb(49, 87, 44);
+            padding: 15px;
+            font-size: 12px;
+            border-radius: 50px;
+            margin: 10px 20px 0 0;
+            color: #ecf39e;
+            border: 2px solid #132a13;
+            font-size: 16px;
+            font-weight: 600;
+
         }
 
         .buy-btn:hover {
-            background-color: #d9e57d;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgba(49, 87, 44, 0.5);
         }
 
-        /* RECOMMENDED PRODUCTS SECTION - POLISHED */
-        .recommendation {
-            padding: 20px 50px;
+        .card {
+           
+  padding: 40px;
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  flex: 1 1 280px;
+  max-width: 310px;
         }
 
-        .recom {
-            margin: 0 auto;
-            background-color: #4f772d;
-            padding: 40px;
-            border-radius: 25px;
-            border: 5px solid #31572c;
-            max-width: 1100px;
-        }
-
-        .recom h2 {
-            text-align: center;
-            color: #ecf39e;
-            font-size: 28px;
-            margin-bottom: 40px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .recom h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #90a955;
-            border-radius: 2px;
-        }
-
-        .recomcards {
+        .slider-track {
             display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-        }
-
-        .recomcards>* {
-            flex: 1 1 280px;
-        }
-
-        .recomcard:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(79, 119, 45, 0.15);
-        }
-
-        .recomcard img {
-            margin-top: 10px;
-            width: 100%;
-            height: 220px;
-            object-fit: contain;
-            /* To fit the whole image as is */
+            flex: none;
+            gap: 10px;
             transition: transform 0.5s ease;
+            margin: 10px 0px 20px;
+            transition: transform 0.6s;
         }
 
-        .recomcard:hover img {
-            transform: scale(1.05);
-        }
-
-        .recomcard-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .recomcard h3 {
-            color: #31572c;
-            font-size: 20px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .recomcard p {
-            color: #4f772d;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-size: 15px;
-            flex-grow: 1;
-        }
-
-        .recomcard-price {
-            color: #4f772d;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        /* Eco badge for recommended products */
-        .eco-badge {
-            position: absolute;
-            top: 55px;
-            right: 50px;
-            background-color: #4f772d;
-            color: white;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 12px;
-            z-index: 2;
-        }
-
-        .recomcard-image-container {
-            position: relative;
+        .featuredcards {
+            overflow-x: auto;
+            overflow-y: hidden;
+            /* Smooth scrolling */
+            scroll-behavior: smooth;
+            /* Hide scrollbar */
+            scrollbar-width: none;
             overflow: hidden;
+            /* hides overflow while sliding */
+            position: relative;
+        }
+
+        .featuredcards::-webkit-scrollbar {
+            display: none;
+            /* Chrome / Safari */
+        }
+
+        .featured-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #ecf39e;
+            margin: 0 auto 20px auto;
+            display: block;
+            border-bottom: 2px solid #123;
+            width: fit-content;
+            /* shrink border to text width */
+        }
+
+
+        .slider-container {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            width: 100%;
+            padding: 0 30px;
+            box-sizing: border-box;
         }
 
         .buttongrp {
             display: flex;
-            gap: 14px;
-            margin-top: 20px;
+            /* This makes buttons appear in a row */
+            gap: 10px;
+            /* Space between buttons */
             justify-content: center;
-            flex-wrap: wrap;
+            /* Center the buttons */
+            margin-top: 15px;
+            /* Space above button group */
         }
 
         .buy,
@@ -214,70 +170,140 @@
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            background-color: #31572c;
-            border: 2px solid #31572c;
+            background-color: #2e560b;
+            border: 2px solid #31572C;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            gap: 10px;
         }
 
         .buy:hover,
         .cart:hover,
         .view:hover {
-            background-color: #90A955;
+            background-color: rgba(46, 86, 11, 0.6);
             transform: translateY(-2px);
         }
 
-        .buy img,
-        .cart img,
-        .view img {
-            background-color: transparent;
+        .featured-title {
+            margin: 20px auto;
         }
 
-        .product-image {
-            margin: auto;
+        .title-row {
+            display: flex;
+            align-items: center;
+            /* Vertically center items */
+            gap: 15px;
+            /* Space between badge and title */
+            margin-bottom: 15px;
         }
 
-        .light-theme {
+        .product-tag {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            white-space: nowrap;
+            /* Prevent text wrapping */
+            background-color: #ff6b6b;
+            /* Example color for limited tag */
+        }
 
-            .buy,
-            .cart,
-            .view {
-                width: 55px;
-                height: 55px;
-                border-radius: 50%;
-                background-color: #a3b18a;
-                border: 2px solid #393a4c;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                transition: background-color 0.3s ease, transform 0.2s ease;
-            }
+        .price {
+            background-color: #31572c;
+            display: inline-block;
+            padding: 5px 10px 5px 10px;
+            border-radius: 15px;
+            border-left: 2px solid #123a13;
+            border-bottom: 2px solid #123a13;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
 
-            .buy:hover,
-            .cart:hover,
-            .view:hover {
-                background-color: #deb887;
-                transform: translateY(-2px);
-            }
+        .light-theme .product {
+            background-color: #9394a5;
+            border-color: #4d5066;
+            color: #132a13;
+        }
 
-            .buy img,
-            .cart img,
-            .view img {
-                filter: brightness(0) invert(0.3);
-                background-color: transparent;
-            }
+        .light-theme .product-info {
+            color: #123;
+            border: 2px solid #123;
+        }
+
+        .light-theme .featured-title {
+            color: #123;
+        }
+
+        .light-theme .buy-btn {
+            background-color: rgba(236, 243, 158, 0.8);
+            color: #132a13;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .light-theme .buy-btn:hover {
+            background-color: rgba(236, 243, 158, 0.4);
+        }
+
+        .light-theme .recommendedProducts {
+            height: auto;
+            margin: 20px 50px 20px 50px;
+            background-color: rgb(147, 148, 165);
+            border-radius: 25px;
+            border: 5px solid #4d5066;
+        }
+
+        .light-theme .buy,
+        .light-theme .cart,
+        .light-theme .view {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgb(163, 177, 138);
+            border: 2px solid #31572C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            gap: 10px;
+        }
+
+        .light-theme .buy:hover,
+        .light-theme .cart:hover,
+        .light-theme .view:hover {
+            background-color: rgba(163, 177, 138, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .light-theme .buy img,
+        .light-theme .cart img,
+        .light-theme .view img {
+            filter: invert(1);
+        }
+
+        .light-theme .price {
+            background-color: #a3b18a;
+            display: inline-block;
+            padding: 5px 10px 5px 10px;
+            border-radius: 15px;
+            color: #123;
+            border-left: 2px solid #123a13;
+            border-bottom: 2px solid #123a13;
+            margin-top: 3px;
+            margin-bottom: 3px;
         }
     </style>
     <script src="../Code/paybutton.js"></script>
     <script src="../Code/addsuccessful.js"></script>
+
 </head>
 
 <body>
-
     <!-- HEADER -->
     <header>
         <h1 class="logo">EcoMart</h1>
@@ -302,7 +328,7 @@
     </header>
 
     <script src="../Code/night-day.js"></script>
-
+    <script src="../Code/slider.js"></script>
 
     <!-- Popup that comes when pressing the buy button -->
 
@@ -323,119 +349,136 @@
             <div id="checkimage">
                 <img src="../Assets/Images/check-solid-full.svg" alt="Success">
             </div>
-            <h3>Success!</h3>
+            <h3>Success! (Simulated)</h3>
             <p>Your item has successfully been added to the cart.</p>
-            <p>You may continue browsing the mart.</p>
+            <p>You may continue browsing the mart. (Simulated)</p>
         </div>
     </div>
 
     <!-- PRODUCT DETAILS -->
-    <section class="product-details">
-        <div class="product-card">
-
-            <!-- Product Image -->
-            <div class="product-image">
-                <img src="../Assets/Images/Products/ReusableBag.png" alt="Casual Hemp Bag">
-            </div>
-
-            <!-- Product Information -->
-            <div class="product-info">
-                <span class="badge">People's Favorite</span>
-
-                <h2>Casual Hemp Bag</h2>
-                <p><strong>Category:</strong> Sustainable Fashion</p>
-
-                <p>
-                    <span class="old-price">Rs.2000</span>
-                    <strong> Rs.1800</strong>
-                </p>
-
-                <p>
-                    The Casual Hemp Bag is made from natural hemp fibers,
-                    offering a durable and eco-friendly alternative to synthetic bags.
-                    It is suitable for daily use and reduces environmental impact.
-                </p>
-
-                <ul>
-                    <li>Made from natural hemp fabric</li>
-                    <li>Strong and long-lasting</li>
-                    <li>Reusable and biodegradable</li>
-                    <li>Stylish and eco-conscious design</li>
-                </ul>
-                <button class="buy-btn buy-btn-popup">Buy Now</button>
-                <button class="buy-btn cart-btn-popup">Add to Cart</button>
-                <button class="buy-btn" onclick="window.location.href='../Code/products.html'">Go Back</button>
-            </div>
-
+    <div class="product">
+        <div class="product-image">
+            <img src="../Assets/Images/Products/ReusableBag.png" alt="Casual Hemp Bag">
         </div>
 
-    </section>
+        <!-- Product Information -->
+        <div class="product-info">
+            <!-- Title row with badge and product name side by side -->
+            <div class="title-row">
+                <span class="product-tag limited">Limited</span>
+                <h2 style="margin-left: 120px;">Casual Hemp Bag</h2>
+            </div>
 
-    <section class="recommendation">
-        <div class="recom">
-            <h2>You Might Also Like</h2>
-            <div class="recomcards">
-                <div class="card">
-                    <div class="image">
-                        <span class="eco-badge" style="right: 60px;">Eco-Friendly</span>
-                        <img src="../Assets/Products/BambooToothBrush.png" alt="Organic Cotton Face Mask">
-                    </div>
-                    <div class="card-content">
-                        <p class="name">Bamboo Toothbrush</p>
-                        <p class="category">Personal Care</p>
-                        <p class="price">
-                            <span class="old-price">Rs.200</span> <strong>Rs.150</strong>
-                        </p>
-                    </div>
+            <p><strong>Category:</strong> Sustainable Fashion</p>
 
-                    <div class="buttongrp">
-                        <button class="buy buy-btn-popup"><img src="../Assets/Images/bag-shopping-solid-full.svg"
-                                alt=""></button>
-                        <button class="cart "><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""></button>
-                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""></button>
-                    </div>
+            <p class="price">
+                <strong> Rs.2000</strong>
+            </p>
 
-                </div>
+            <p>
+                The Casual Hemp Bag is made from natural hemp fibers,
+                offering a durable and eco-friendly alternative to synthetic bags.
+                It is suitable for daily use and reduces environmental impact.
+            </p>
 
-                <div class="card">
-                    <div class="image">
-                        <span class="eco-badge" style="right: 60px;">Premium</span>
-                        <img src="../Assets/Products/BambooBottle.png" alt="Organic Cotton Face Mask">
-                    </div>
-                    <p class="name">Glass Spray Bottle</p>
-                    <p class="category">Reusable & Daily Use</p>
-                    <p><span class="old-price">Rs.700</span> <strong>Rs.550</strong></p>
-                    <div class="buttongrp">
-                        <button class="buy buy-btn-popup"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt=""
-                                style="border-color: transparent; height: 50px;"></button>
-                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""
-                                style="border-color: transparent; height: 50px;"></button>
-                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""
-                                style="border-color: transparent; height: 50px;"></button>
-                    </div>
-                </div>
+            <ul>
+                <li>Made from natural hemp fabric</li>
+                <li>Strong and long-lasting</li>
+                <li>Reusable and biodegradable</li>
+                <li>Stylish and eco-conscious design</li>
+            </ul>
+            <button class="buy-btn buy-btn-popup">Buy Now</button>
+            <button class="buy-btn cart-btn-popup">Add to Cart</button>
+            <button class="buy-btn" onclick="window.location.href='../Code/products.html'">Go Back</button>
+        </div>
+    </div>
 
-                <div class="card">
-                    <div class="image">
-                        <span class="eco-badge">Handmade</span>
-                        <img src="../Assets/Images/Products/CottonMask.png" alt="Organic Cotton Face Mask">
+    <div class="recommendedProducts">
+        <h1 class="featured-title">Featured Products</h1>
+        <div class="featuredcards">
+            <div class="slider-container">
+                <div class="slider-track" style="margin: 10px 0 20px 0;">
+                    <div class="card">
+                        <div class="product-tag limited" style="top: 35px; right: 35px">Limited</div>
+                        <img src="../Assets/Images/Products/GlassSpray.png" alt="Empty Glass Spray">
+                        <p class="name">Glass Spray Bottle</p>
+                        <p class="category">Reusable & Daily Use</p>
+                        <p><strong>Rs.700</strong></p>
+                        <div class="buttongrp">
+                            <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button"
+                                    style="background-color: transparent;"></button>
+                            <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg"
+                                    alt="Cart button" style="background-color: transparent;"></button></button>
+                            <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button"
+                                    style="background-color: transparent;"></button></button>
+                        </div>
                     </div>
-                    <p class="name">Organic Cotton Face Mask</p>
-                    <p class="category">Sustainable Fashion</p>
-                    <p><span class="old-price">Rs.400</span> <strong>Rs.350</strong></p>
-                    <div class="buttongrp">
-                        <button class="buy buy-btn-popup" id="buyButton"><img
-                                src="../Assets/Images/bag-shopping-solid-full.svg" alt=""
-                                style="border-color: transparent; height: 50px;"></button>
-                        <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg" alt=""
-                                style="border-color: transparent; height: 50px;"></button>
-                        <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt=""
-                                style="border-color: transparent; height: 50px;"></button>
+                    <div class="card">
+                        <div class="product-tag favorite" style="top: 35px; right: 35px">Favorite</div>
+                        <img src="../Assets/Images/Products/ReusableBag.png" alt="Casual Hemp Bag">
+                        <p class="name">Casual Hemp Bag</p>
+                        <p class="category">Sustainable Fashion</p>
+                        <p><strong>Rs.2000</strong></p>
+                        <div class="buttongrp">
+                            <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button"
+                                    style="background-color: transparent;"></button>
+                            <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg"
+                                    alt="Cart button" style="background-color: transparent;"></button></button>
+                            <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button"
+                                    style="background-color: transparent;"
+                                    onclick="window.location.href='../Code/hempbag.html'"></button></button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="product-tag handmade" style="top: 35px; right: 35px">Handmade</div>
+                        <img src="../Assets/Images/Products/WoodenCutlery.png" alt="Wooden Cutlery Set">
+                        <p class="name">Wooden Cutlery Set</p>
+                        <p class="category">Kitchen Essentials</p>
+                        <p><strong>Rs.480</strong></p>
+                        <div class="buttongrp">
+                            <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button"
+                                    style="background-color: transparent;"></button>
+                            <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg"
+                                    alt="Cart button" style="background-color: transparent;"></button></button>
+                            <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button"
+                                    style="background-color: transparent;"></button></button>
+                        </div>
+                    </div>
+                    <!-- starting here for automatic slider that shifts each 3 seconds -->
+                    <div class="card">
+                        <div class="product-tag premium" style="top: 35px; right: 35px">Premium</div>
+                        <img src="../Assets/Images/Products/BambooBottle.png" alt="Insulated Water Bottle">
+                        <p class="name">Bamboo Water Bottle</p>
+                        <p class="category">Reusable & Daily Use</p>
+                        <p><strong>Rs.850</strong></p>
+                        <div class="buttongrp">
+                            <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button"
+                                    style="background-color: transparent;"></button>
+                            <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg"
+                                    alt="Cart button" style="background-color: transparent;"></button></button>
+                            <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button"
+                                    style="background-color: transparent;"></button></button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="product-tag sale" style="top: 35px; right: 35px">Sale</div>
+                        <img src="../Assets/Images/Products/LunchBox.png" alt="Bamboo Fiber Lunch Box">
+                        <p class="name">Bamboo Fiber Lunch Box</p>
+                        <p class="category">Reusable & Daily Use</p>
+                        <p><span class="old-price">Rs.1000</span> <strong>Rs.850</strong></p>
+                        <div class="buttongrp">
+                            <button class="buy"><img src="../Assets/Images/bag-shopping-solid-full.svg" alt="Buy button"
+                                    style="background-color: transparent;"></button>
+                            <button class="cart"><img src="../Assets/Images/cart-shopping-solid-full.svg"
+                                    alt="Cart button" style="background-color: transparent;"></button>
+                            <button class="view"><img src="../Assets/Images/eye-solid-full.svg" alt="View button"
+                                    style="background-color: transparent;"></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- FOOTER -->
     <footer>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecomart – Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* BODY */
+    body.portfolio {
+        background: radial-gradient(circle at top, #1a2b12, #050b05);
+        color: #eef4c8;
+        min-height: 100vh;
+    }
+
+    /* HEADER */
+    .hero {
+        background: linear-gradient(180deg, #4a7c2a, #2f5f1f);
+        padding: 3rem 1rem;
+        text-align: center;
+        border-bottom: 2px solid #a5c96a;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #f5f9c9;
+    }
+
+    .hero p {
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+        color: #e7f0b1;
+    }
+
+    /* MAIN WRAPPER */
+    .wrap {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 2rem;
+        padding: 3rem;
+    }
+
+    /* LEFT CARD */
+    .left-card {
+        background: #15250d;
+        border: 2px solid #8aa95b;
+        border-radius: 30px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    }
+
+    /* PROFILE IMAGE */
+    .profile-img {
+        width: 170px;
+        height: 170px;
+        border-radius: 25px;
+        object-fit: cover;
+        border: 2px solid #cfe38a;
+        margin-bottom: 1.5rem;
+    }
+
+    /* SKILL PILLS */
+    .skills {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skill-pill {
+        padding: 0.4rem 1rem;
+        border-radius: 30px;
+        border: 1px solid #bcd77a;
+        background: transparent;
+        font-size: 0.9rem;
+        color: #f3f7c7;
+    }
+
+    /* LEFT TEXT */
+    .left-text {
+        line-height: 1.8;
+        font-size: 1rem;
+               color: #e6efb6;
+    }
+
+    /* RIGHT SECTION */
+    .right-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .accent-line {
+        width: 6px;
+        height: 35px;
+        background: #bcd77a;
+        border-radius: 10px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+        color: #f7fbd2;
+    }
+
+    /* PRODUCT CARDS */
+    .product-card {
+        background: #1b2f12;
+        border: 2px solid #8aa95b;
+        border-radius: 22px;
+        padding: 1.5rem;
+        box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card h3 {
+        font-size: 1.3rem;
+        color: #f4f8c9;
+    }
+
+    .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    /* FOOTER */
+    .footer {
+        text-align: center;
+        padding: 1.5rem;
+        color: #cfe38a;
+        font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+        .wrap {
+            grid-template-columns: 1fr;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.3rem;
+        }
+    }
+</style>
+
+
+<body class="portfolio">
+
+    <!-- HEADER -->
+    <header class="hero">
+        <h1>Sneha Maharjan</h1>
+        <p>Networking student focused on sustainable, user-friendly web experiences.</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="wrap">
+
+        <!-- LEFT PROFILE CARD -->
+        <section class="left-card">
+            <img class="profile-img" src="../Assets/People/sneha.jpg" alt="Portrait of Sneha Maharjan" />
+
+            <div class="skills">
+                <span class="skill-pill">HTML</span>
+                <span class="skill-pill">CSS</span>
+                <span class="skill-pill">JavaScript</span>
+            </div>
+
+            <p class="left-text">
+                I am an undergraduate Networking student at Islington College (Level 4).
+                I am learning front-end development and currently working on the EcoMart coursework.
+                My main contribution to the project is the Blog page.
+            </p>
+        </section>
+
+        <!-- RIGHT SKILLS SECTION -->
+        <section class="right-section">
+            <div class="section-title">
+                <span class="accent-line"></span>
+                <h2>Featured Skills</h2>
+            </div>
+
+            <div class="skills">
+
+                <article class="product-card">
+                    <h3>Java</h3>
+                </article>
+
+                <article class="product-card">
+                    <h3>HTML</h3>
+                </article>
+
+                <article class="product-card">
+                    <h3>CSS</h3>
+                </article>
+
+                <article class="product-card">
+                    <h3>MySQL Queries</h3>
+                </article>
+
+                <article class="product-card">
+                    <h3>Networking</h3>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 EcoMart</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EcoMart — portfolios</title>
+    <link rel="stylesheet" href="../Code/anami.css">
+    <style>
+        /*for the page we see when we open the portfolio*/
+
+        .intro_portfolio {
+            background-color: #244520;
+            display: flex;
+            gap: 200px;
+            padding-bottom: 70px;
+            margin-top: 14px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 10px;
+            border-top: 5px solid #4f772d;
+            border-bottom: 5px solid #4f772d;
+        }
+
+        /*for the image part*/
+        .intro_portfolio img {
+            /*flex-direction: colum;*/
+            margin-top: 90px;
+            border-radius: 10px;
+            margin-left: 100px;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        .intro_portfolio img:hover {
+            transform: translateY(-5px);
+
+
+        }
+
+        /*to have a line before texts*/
+        /*.container_portfolio h1, p{
+    border-left:2px solid #90a955  ;
+}*/
+
+        /*for h1 text*/
+        .container_portfolio h1 {
+            font-family: 'Times New Roman', Times, serif;
+            border-left: 2px solid #90a955;
+            margin-top: 180px;
+            color: #90a955;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 60px;
+        }
+
+        /*for the text in paragragh*/
+        .container_portfolio p {
+            font-family: 'Times New Roman', Times, serif;
+            border-left: 2px solid #90a955;
+            color: #90a955;
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 28px;
+        }
+
+
+        /*research content*/
+        .c {
+            border-radius: 10px;
+            margin: 30px 10px;
+            background-color: #244520;
+            border-top: 5px solid #4f772d;
+            border-bottom: 5px solid #4f772d;
+        }
+
+        div.c1 {
+            display: flex;
+            gap: 100px;
+
+        }
+
+        /*images*/
+        div.c2 {
+            gap: 0px;
+            overflow: auto;
+            white-space: nowrap;
+            max-width: 900px;
+            border: 3px solid #132a13;
+            margin-left: 30px;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /*images work*/
+        div.c2 img {
+            background-color: #31572c;
+            padding: 10px;
+        }
+
+        .aboutme {
+            display: flex;
+            height: 400px;
+            margin: 50px 10px;
+            background-color: #244520;
+            border-top: 5px solid #4f772d;
+            border-bottom: 5px solid #4f772d;
+        }
+
+        .abt {
+            height: auto;
+            align-items: center;
+            margin: 50px 130px;
+            background-color: #31572c;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .abt:hover {
+            transform: translateY(-5px);
+
+        }
+
+        .abt h1 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            border-bottom: 1px solid #90a955;
+            color: #90a955;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .abt h3 {
+            font-family: 'Times New Roman', Times, serif;
+            color: #90a955;
+            border-left: 1px #90a955;
+            margin-top: 5pxpx;
+            text-align: justify;
+            font-size: 20px;
+
+        }
+
+        .abt img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #contact {
+            width: 100%;
+            background-color: #31572c;
+            margin: 50px 10px;
+            border-top: 5px solid #4f772d;
+            border-bottom: 5px solid #4f772d;
+            border-radius: 10px;
+            /*margin-left: 400px;*/
+            height: 180px;
+        }
+
+        #contact h1 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: left;
+            color: #90a955;
+            font-size: 40px;
+            text-align: center;
+        }
+
+
+        #contact h3 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: #90a955;
+            font-size: 25px;
+        }
+
+        #contact table {
+            width: 250px;
+            align-content: center;
+            margin-top: 0px;
+
+            margin-left: 800px;
+        }
+
+        #contact img {
+            border-radius: 10px;
+
+        }
+
+        /* Page navigation */
+        .to_page {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding: 20px 0;
+            border-top: 2px solid #4f772d;
+            border-bottom: 2px solid #4f772d;
+        }
+
+        .n_av {
+            background-color: #4f772d;
+            color: #ecf39e;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .n_av:hover {
+            background-color: #90A955;
+            color: #132a13;
+            border-color: #31572c;
+        }
+    </style>
+
+<body>
+    <header>
+        <h1 class="logo">EcoMart</h1>
+
+        <nav class="navbar">
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="../Code/index.html">Home</a></li>
+                    <li><a href="../Code/about.html">About Us</a></li>
+                    <li><a href="../Code/products.html">Products</a></li>
+                    <li><a href="../Code/blog.html">Blog</a></li>
+                    <li><a href="../Code/research.html">Research</a></li>
+                    <li><a href="../Code/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--portfolio content-->
+
+    <section>
+        <div class="intro_portfolio">
+
+            <div class="container_portfolio">
+                <img src="../Assets/Anamika/Anamika.jpg" alt="my image">
+            </div>
+
+            <div class="container_portfolio">
+
+                <h1>Hi! <br>It's Anamika Ghale</h1>
+                <p>Welcome in my portfolio!</p>
+                <p>I'm still a learner, an undergraduate student exploring in cyberpace</p>
+                <!-- <p>I am an undergraduate student, currently studying as a Networking <br>student, at Islington College in level 4. I'm still a beginner learner, when it comes <br>
+         to HTML, CSS and JS. <br><br>In this coursework, my contribution is in Research page.</p>-->
+            </div>
+        </div>
+    </section>
+
+    <!--aboutme-->
+    <section>
+        <div class="aboutme">
+            <div class="abt">
+                <h1>About Me</h1>
+                <h3> I'm an undergraduate Networking and Cybersecurity<br> student,
+                    currently studying at Islington College as a <br> Level 4 student. I'm a basic learner when it
+                    comes<br> to coding.
+                    <br>
+                    But I want to work harder to be skilled in these <br> topics, theoretically and practically.
+                </h3>
+            </div>
+            <div class="abt">
+                <h1>Skills</h1>
+
+                <h3>As being a basic learner, I have basic knowledge and skill in:
+                    <ol>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                        <li>MYSQL Queries</li>
+                        <li>Networking</li>
+                    </ol>
+                </h3>
+            </div>
+
+
+        </div>
+
+
+        <!--my work content-->
+        <section>
+            <div class="c">
+                <h1
+                    style="color: #90a955; text-align: center; padding-top:30px ;margin-bottom: 30px; font-size: 50px;border-bottom: 2px solid #90a955;font-family:'Times New Roman', Times, serif;">
+                    First Project</h1>
+                <div class="c1">
+
+
+                    <div class="c2">
+                        <img src="../Assets/Anamika/1.png" alt="1" width="900" height="600">
+                        <img src="../Assets/Anamika/2.png" alt="2" width="900" height="600">
+                        <img src="../Assets/Anamika/3.png" alt="3" width="900" height="600">
+                        <img src="../Assets/Anamika/4.png" alt="4" width="900" height="600">
+                        <img src="../Assets/Anamika/5.png" alt="5" width="900" height="600">
+                        <img src="../Assets/Anamika/6.png" alt="6" width="900" height="600">
+                    </div>
+                    <h2
+                        style="color: #90a955; text-align: center;font-size: 30px; margin-top: 150px; border-left: 2px solid #90a955 ; margin-bottom: 200px;font-family:'Times New Roman', Times, serif;">
+                        I've used my bacic knowledge and skill of HTML, CSS, and JS. Every code is beginner friendly and
+                        not complex at all.
+                        <br>
+
+                        You can check the page for to see: <br>
+                        <a href="research.html"
+                            style="color: #90a955; text-decoration: underline; font-size: 29px;font-family:'Times New Roman', Times, serif;">Research
+                            page</a>
+                        <p
+                            style="color: #90a955; text-align: center;font-size: 20px; margin-top: 100px;font-family:'Times New Roman', Times, serif;">
+                            (Scroll the photo to "right", to see the other works done in research.)
+                        </p>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!--contact-->
+        <section>
+            <div id="contact">
+
+                <h1>Contact</h1>
+                <h3>You can contact me in:
+
+                    <table>
+                        <tr>
+                            <th><a href="https://www.instagram.com/ahnamii_/" target="_blank"><img
+                                        src="../Assets/Anamika/insta.png" width="100px" height="100px"></a>
+                            </th>
+                            <th><a href="https://www.facebook.com/anamika.ghale.52" target="_blank"><img
+                                        src="../Assets/Anamika/fb.png" width="100px" height="100px"></a>
+                            </th>
+                        </tr>
+                    </table>
+                </h3>
+            </div>
+        </section>
+
+        <div class="to_page">
+            <a href="../Code/about.html" class="n_av">← Back to About Us Page</a>
+
+        </div>
+</body>
+<footer>
+    <p>&copy; 2026 EcoMart. All rights reserved. | Committed to Sustainable Living</p>
+</footer>
+</body>
+
+</html>

@@ -1,164 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-   <style>
-       /* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-/* BODY */
-body {
-    background-color: #6f6f6f;
-    padding: 40px;
-}
+        /* BODY */
+        body {
+            background-color: #6f6f6f;
+            padding: 40px;
+        }
 
-/* MAIN PAGE LAYOUT */
-.page {
-    display: flex;
-    gap: 25px;
-    max-width: 1200px;
-    margin: auto;
-}
+        /* MAIN PAGE LAYOUT */
+        .page {
+            display: flex;
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-/* LEFT PROFILE CARD */
-.profile-card {
-    background-color: white;
-    padding: 40px;
-    border-radius: 30px;
-    flex: 2;
+        /* LEFT PROFILE CARD */
+        .profile-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 30px;
+            flex: 2;
 
-    /* animation */
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+            /* animation */
 
-.profile-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* HEADER SECTION */
-.profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
 
-.profile-header h1 {
-    font-size: 56px;
-    font-weight: bold;
-}
+        /* HEADER SECTION */
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header h1 {
+            font-size: 56px;
+            font-weight: bold;
+        }
 
 
-.image {
-    width: 200px;
-    height: 200px;          /* square for clean look */
-    border-radius: 30px;     
-    overflow: hidden;       /* hides extra image part */
-    border: 3px solid #000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .image {
+            width: 200px;
+            height: 200px;
+            /* square for clean look */
+            border-radius: 30px;
+            overflow: hidden;
+            /* hides extra image part */
+            border: 3px solid #000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;      
-}
-.image:hover{
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* DESCRIPTION */
-.description {
-    font-size: 26px;
-    line-height: 1.6;
-    max-width: 600px;
-    text-align: justify;
-}
+        .image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
 
-/* Contact links styling */
-.contact-links {
-    margin-top: 20px;
-    font-size: 16px;
-}
+        /* DESCRIPTION */
+        .description {
+            font-size: 26px;
+            line-height: 1.6;
+            max-width: 600px;
+            text-align: justify;
+        }
 
-.contact-links p {
-    margin-bottom: 8px;
-    font-weight: bold;
-}
+        /* Contact links styling */
+        .contact-links {
+            margin-top: 20px;
+            font-size: 16px;
+        }
 
-.contact-links a {
-    display: inline-block;
-    margin-right: 15px;
-    text-decoration: none;
-    color: #333;
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
-}
+        .contact-links p {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
-.contact-links a:hover {
-    color: #000;
-    border-bottom: 1px solid #000;
-}
+        .contact-links a {
+            display: inline-block;
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
 
-/* RIGHT SIDE SECTION */
-.side-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+        .contact-links a:hover {
+            color: #000;
+            border-bottom: 1px solid #000;
+        }
 
-/* INFO CARDS */
-.info-card {
-    background-color: white;
-    padding: 25px;
-    border-radius: 30px;
+        /* RIGHT SIDE SECTION */
+        .side-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
 
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        /* INFO CARDS */
+        .info-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 30px;
 
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
 
-/* HEADINGS */
-.info-card h2 {
-    margin-bottom: 10px;
-}
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* LIST STYLES */
-.info-card ul,
-.info-card ol {
-    padding-left: 20px;
-    margin-bottom: 15px;
-}
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
 
-.info-card li {
-    margin-bottom: 8px;
-    font-size: 15px;
+        /* HEADINGS */
+        .info-card h2 {
+            margin-bottom: 10px;
+        }
 
-    transition: color 0.3s ease, transform 0.3s ease;
-}
+        /* LIST STYLES */
+        .info-card ul,
+        .info-card ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
 
-.info-card li:hover {
-    color: #000;
-    transform: translateX(5px);
-}
+        .info-card li {
+            margin-bottom: 8px;
+            font-size: 15px;
 
-   </style>
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .info-card li:hover {
+            color: #000;
+            transform: translateX(5px);
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- PAGE WRAPPER -->
@@ -176,14 +180,15 @@ body {
             </div>
             <br><br><br>
             <p class="description">
-                Currently, just a student learning about Cyber Security and Networking who has dreams about working hard in the field of cyber security to help individuals and organizations.
+                Currently, just a student learning about Cyber Security and Networking who has dreams about working hard
+                in the field of cyber security to help individuals and organizations.
             </p><br>
             <!-- Contact section below description -->
             <div class="contact-links">
                 <p>You can contact me via:</p>
-                    <a href="https://www.instagram.com/_basnetkri_" target="_blank">Instagram</a>
-                    <a href="https://www.facebook.com/kritagya.basnet.829461" target="_blank">Facebook</a>
-</div>
+                <a href="https://www.instagram.com/_basnetkri_" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/kritagya.basnet.829461" target="_blank">Facebook</a>
+            </div>
         </section>
 
         <!-- RIGHT SIDE CARDS -->
@@ -226,4 +231,5 @@ body {
     </div>
 
 </body>
+
 </html>

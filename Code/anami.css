@@ -1,8 +1,8 @@
 /* To arrange the browser elements */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* General Reset */
@@ -20,11 +20,11 @@ body {
 /* Header Layout */
 header {
     background-color: #31572c;
-    padding: 10px 80px;  
-    display: flex;       
-    justify-content: space-between; 
-    align-items: center; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Logo Styling */
@@ -44,8 +44,8 @@ header a {
 /* Navigation List */
 ul.menu {
     list-style-type: none;
-    display: flex;       
-    gap: 40px;           
+    display: flex;
+    gap: 40px;
 }
 
 /* Navigation Links */
@@ -54,15 +54,15 @@ header ul li a {
     color: #ecf39e;
     font-size: 20px;
     font-weight: 500;
-    position: relative; 
+    position: relative;
     padding-bottom: 5px;
     transition: color 0.3s ease;
 }
 
 .navbar .container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 /* ADDED: Middle-Out Underline */
@@ -95,8 +95,8 @@ header ul li a:hover::after {
     line-height: 1.8;
     background-color: #4f772d;
     max-width: 450px;
-    min-height: 600px; 
-    margin: 20px; 
+    min-height: 600px;
+    margin: 20px;
     border-radius: 25px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -133,7 +133,8 @@ header ul li a:hover::after {
 }
 
 /* Combined Form Styles for consistency */
-.contactform, .feedbackform  {
+.contactform,
+.feedbackform {
     flex: 1;
     max-width: 450px;
     display: flex;
@@ -143,20 +144,22 @@ header ul li a:hover::after {
     padding: 30px;
     border-radius: 25px;
     min-height: 470px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     text-align: justify;
     font-size: 18px;
     transform: translateY(0px);
 }
 
-.contactform:hover, .feedbackform:hover {
-    box-shadow: 20px 20px 30px rgba(0,0,0,0.7);
+.contactform:hover,
+.feedbackform:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7);
     z-index: 1000;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
     transform: translateY(-10px);
 }
 
-.contactform h2, .feedbackform h2 {
+.contactform h2,
+.feedbackform h2 {
     color: #ecf39e;
     font-size: 30px;
     margin-bottom: 10px;
@@ -164,7 +167,8 @@ header ul li a:hover::after {
     text-decoration: underline;
 }
 
-.formbutton1, .formbutton2{
+.formbutton1,
+.formbutton2 {
     background-color: #31572c;
     color: #ecf39e;
     border: none;
@@ -175,19 +179,22 @@ header ul li a:hover::after {
     transition: background-color 0.3s ease;
 }
 
-.formbutton1:hover, .formbutton2:hover {
+.formbutton1:hover,
+.formbutton2:hover {
     background-color: #90A955;
     color: #292712;
 }
 
-.formbutton1, .formbutton2 {
+.formbutton1,
+.formbutton2 {
     align-self: center;
     margin: 30px auto 0;
     width: fit-content;
     display: block;
 }
 
-.feedbackform a, .contactform a {
+.feedbackform a,
+.contactform a {
     color: #ecf39e;
     text-decoration: none;
 }
@@ -195,11 +202,11 @@ header ul li a:hover::after {
 .formcollective {
     background-color: #4f772d;
     padding: 30px;
-    display: flex; 
+    display: flex;
     justify-content: space-around;
     margin: auto;
-    gap: 50px; 
-    border-radius: 25px;  
+    gap: 50px;
+    border-radius: 25px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     max-width: 1000px;
     margin-bottom: 30px;
@@ -237,7 +244,8 @@ header ul li a:hover::after {
 
 .products {
     display: flex;
-    flex-wrap: wrap;               /* allows multiple rows, like the products column side by side */
+    flex-wrap: wrap;
+    /* allows multiple rows, like the products column side by side */
     gap: 30px;
     padding: 20px 70px 50px 70px;
 }
@@ -245,7 +253,7 @@ header ul li a:hover::after {
 /* PRODUCT CARD */
 .card {
     color: #ecf39e;
-    padding: 40px; 
+    padding: 40px;
     font-size: 18px;
     line-height: 1.8;
     background-color: #90a955;
@@ -266,24 +274,30 @@ header ul li a:hover::after {
 }
 
 .card:hover {
-    box-shadow: 20px 20px 30px rgba(0,0,0,0.7);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.7);
     transform: translateY(-5px);
     z-index: 1000;
 }
 
 .card img {
     max-width: 100%;
-    height: 200px; /* Fixed height for all images */
-    object-fit: contain; /* Prevents image distortion */
+    height: 200px;
+    /* Fixed height for all images */
+    object-fit: contain;
+    /* Prevents image distortion */
     border-radius: 10px;
-    background-color: #31572c; /* Adds background color */
-    padding: 10px; /* Adds padding around image */
-    transition: transform 0.5s ease; /* Smooth zoom transition */
+    background-color: #31572c;
+    /* Adds background color */
+    padding: 10px;
+    /* Adds padding around image */
+    transition: transform 0.5s ease;
+    /* Smooth zoom transition */
 }
 
 /* Zoom effect on image hover */
 .card:hover img {
-    transform: scale(1.08); /* Slight zoom on hover */
+    transform: scale(1.08);
+    /* Slight zoom on hover */
 }
 
 /* Uniform Product Typography */
@@ -344,29 +358,34 @@ header ul li a:hover::after {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 
 /* Different tag colors */
 .product-tag.sale {
-    background-color: #e74c3c; /* Red for SALE */
+    background-color: #e74c3c;
+    /* Red for SALE */
 }
 
 .product-tag.premium {
-    background-color: #f39c12; /* Gold for PREMIUM */
+    background-color: #f39c12;
+    /* Gold for PREMIUM */
 }
 
 .product-tag.handmade {
-    background-color: #3498db; /* Blue for HAND-MADE */
+    background-color: #3498db;
+    /* Blue for HAND-MADE */
 }
 
 .product-tag.limited {
-    background-color: #9b59b6; /* Purple for LIMITED STOCK */
+    background-color: #9b59b6;
+    /* Purple for LIMITED STOCK */
 }
 
 .product-tag.favorite {
-    background-color: #2ecc71; /* Green for FAVORITE */
+    background-color: #2ecc71;
+    /* Green for FAVORITE */
 }
 
 /* NEW: Small tags for secondary badges (below product name) */
@@ -409,7 +428,8 @@ header ul li a:hover::after {
 .alertContent {
     position: relative;
     background-color: rgba(231, 76, 60, 0.4);
-    padding: 20px 20px 20px 60px; /* leave space for the cross on the left */
+    padding: 20px 20px 20px 60px;
+    /* leave space for the cross on the left */
     border-radius: 50px;
     width: 500px;
     text-align: center;
@@ -420,22 +440,26 @@ header ul li a:hover::after {
 
 #crossimage {
     position: absolute;
-    left: 5px;               /* distance from left edge */
-    top: 50%;                 /* base vertical center */
-    transform: translateY(-50%); /* slightly adjust up/down */
-    pointer-events: none;  
+    left: 5px;
+    /* distance from left edge */
+    top: 50%;
+    /* base vertical center */
+    transform: translateY(-50%);
+    /* slightly adjust up/down */
+    pointer-events: none;
 }
 
 #crossimage img {
-    width: 75px;   
-    height: 75px; 
+    width: 75px;
+    height: 75px;
     gap: 10px;
 }
 
 .cartAlertContent {
     position: relative;
     background-color: rgba(12, 148, 5, 0.323);
-    padding: 20px 20px 20px 60px; /* leave space for the cross on the left */
+    padding: 20px 20px 20px 60px;
+    /* leave space for the cross on the left */
     border-radius: 50px;
     width: 500px;
     text-align: center;
@@ -467,16 +491,20 @@ header ul li a:hover::after {
 
 #checkimage {
     position: absolute;
-    left: 5px;               /* distance from left edge */
-    top: 50%;                 /* base vertical center */
-    transform: translateY(-50%); /* slightly adjust up/down */
-    pointer-events: none;  
+    left: 5px;
+    /* distance from left edge */
+    top: 50%;
+    /* base vertical center */
+    transform: translateY(-50%);
+    /* slightly adjust up/down */
+    pointer-events: none;
 }
 
 #checkimage img {
-    width: 75px;   
-    height: 75px; 
+    width: 75px;
+    height: 75px;
 }
+
 /* Footer Styling */
 footer {
     background-color: #31572c;
@@ -533,12 +561,14 @@ footer {
     transition: 0.3s ease;
 }
 
-.s1 { 
-    top: 6px; right: 10px; 
+.s1 {
+    top: 6px;
+    right: 10px;
 }
 
-.s2 { 
-    top: 18px; right: 23px; 
+.s2 {
+    top: 18px;
+    right: 23px;
 }
 
 /* Sun / Moon */
@@ -570,14 +600,14 @@ footer {
 
 /* ===== CHECKED STATE ===== */
 
-.switch input:checked ~ label .sun-moon {
+.switch input:checked~label .sun-moon {
     left: 33px;
     background: #f5ec59;
     border-color: #e7c65c;
     transform: rotate(-25deg);
 }
 
-.switch input:checked ~ label .craters {
+.switch input:checked~label .craters {
     width: 11px;
     height: 11px;
     top: 1px;
@@ -586,18 +616,18 @@ footer {
     border-color: #fff;
 }
 
-.switch input:checked ~ label .background {
+.switch input:checked~label .background {
     background: linear-gradient(to right, #78c1d5, #bbe7f5);
     border-color: #78c1d5;
 }
 
-.switch input:checked ~ label .stars {
+.switch input:checked~label .stars {
     opacity: 0;
     transform: translateY(10px);
 }
 
 .light-theme {
-    background-color:  #e4e5f1;
+    background-color: #e4e5f1;
     color: #dad7cd;
 }
 
@@ -608,7 +638,7 @@ footer {
 
 .light-theme header h1,
 .light-theme header ul li a {
-    color:  #d2d3db;
+    color: #d2d3db;
 }
 
 /* Cards */
@@ -635,16 +665,16 @@ footer {
 
 .light-theme {
     .products-header {
-        color:#132a13;
+        color: #132a13;
     }
 
     .category-title {
-        color:#132a13;
+        color: #132a13;
         border-bottom: 2px solid #9394a5;
     }
 
     .card {
-        padding: 40px; 
+        padding: 40px;
         font-size: 18px;
         line-height: 1.8;
         text-align: center;
@@ -663,12 +693,17 @@ footer {
 
     .card img {
         max-width: 100%;
-        height: 200px; /* FIX: Fixed height for all images */
-        object-fit: contain; /* FIX: Prevents image distortion */
+        height: 200px;
+        /* FIX: Fixed height for all images */
+        object-fit: contain;
+        /* FIX: Prevents image distortion */
         border-radius: 10px;
-        background-color: #4d5066; /* FIX: Adds background color */
-        padding: 10px; /* FIX: Adds padding around image */
-        transition: transform 0.5s ease; /* NEW: Smooth zoom transition */
+        background-color: #4d5066;
+        /* FIX: Adds background color */
+        padding: 10px;
+        /* FIX: Adds padding around image */
+        transition: transform 0.5s ease;
+        /* NEW: Smooth zoom transition */
     }
 
     .active {

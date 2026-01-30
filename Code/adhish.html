@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Adhish Gautam | Portfolio</title>
@@ -21,7 +22,14 @@
         header {
             background-color: #013A63;
             height: 80px;
-            padding: 20px 40px;
+            padding: 0 40px;
+            display: flex;
+            /* Activates Flexbox */
+            justify-content: space-between;
+            /* Pushes Logo left, Nav right */
+            align-items: center;
+            /* Centers them vertically */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
         .logo {
@@ -32,7 +40,7 @@
 
         .navbar {
             display: inline-block;
-            float: right;
+            align-items: right;
             margin-top: 8px;
         }
 
@@ -75,13 +83,20 @@
         /* SECTION */
         .section {
             padding: 60px 40px;
-            text-align: center;
             background-color: #01497C;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
         }
 
         .section h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
+            font-size: 40px;
+            margin-top: 90px;
+            color: #64ffda;
         }
 
         /* SKILLS */
@@ -149,10 +164,202 @@
             justify-content: center;
         }
 
-        .skillbtn, .contactbtn {
+        .skillbtn,
+        .contactbtn {
             padding: 15px 20px;
             font-size: 30px;
-            border: 3px solid #89C2D9;
+            border: 3px solid rgb(29, 9, 97);
+            border-radius: 15px;
+            background-color: rgb(1, 79, 134);
+            color: #89C2D9;
+            transition: background-color 0.4s ease;
+        }
+
+        .skillbtn:hover,
+        .contactbtn:hover {
+            background-color: rgba(1, 79, 134, 0.6);
+            cursor: pointer;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .skill-card {
+            background-color: #013A63;
+            width: 320px;
+            /* Matching Project Card width */
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            /* Align text to the left like projects */
+            border: 1px solid #468FAF;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            border-color: #64ffda;
+        }
+
+        .skill-card h3 {
+            font-size: 24px;
+            color: #64ffda;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .skill-card p {
+            font-size: 13px;
+            color: #d6e2eb;
+            line-height: 1.4;
+        }
+
+        /* PROJECTS SECTION - Unified with Section Styling */
+        .projects {
+            padding: 80px 40px;
+            background-color: #012A4A;
+            /* Contrast color */
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #64ffda;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1100px;
+        }
+
+        .project-card {
+            background-color: #013A63;
+            width: 320px;
+            /* Consistent width */
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            border: 1px solid #468FAF;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #64ffda;
+        }
+
+        /* CONTACT FORM SECTION */
+        .contact-section {
+            padding: 80px 40px;
+            background-color: #01497C;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-section h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #64ffda;
+        }
+
+        .contact-form {
+            background-color: #013A63;
+            padding: 40px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #468FAF;
+            background-color: #012A4A;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #64ffda;
+        }
+
+        .submit-btn {
+            padding: 15px;
+            background-color: #468FAF;
+            color: #012A4A;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #64ffda;
+            transform: scale(1.02);
+        }
+
+        .contact-form-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #64ffda;
+            font-size: 40px;
+        }
+
+        /* Container for the form and image side-by-side */
+        .contact-section {
+            padding: 80px 40px;
+            background-color: #01497C;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        /* The Wrapper for the text and form */
+        .contact-content {
+            flex: 1;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .contact-section img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 150px / 200px;
+            border: 3px solid #64ffda;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+            order: 2;
         }
 
         /* FOOTER */
@@ -183,54 +390,103 @@
     <section class="hero" id="home">
         <h1>Hello, I'm <span class="name">Adhish Gautam!</span></h1>
         <p>
-            I am a student of <span class="name">BSc. (Hons) Computer Networking and IT Security (Level 4)</span> at <span class="college">Islington College.</span>
-            I enjoy building projects from scratch, understanding how websites work internally and trying to destroy them.
+            I am a student of <span class="name">BSc. (Hons) Computer Networking and IT Security (Level 4)</span> at
+            <span class="college">Islington College.</span>
+            I enjoy building projects from scratch, understanding how websites work internally and trying to destroy
+            them.
         </p>
         <div class="btngroup">
-            <button class="skillbtn" onclick="window.location.href='#skills'">Skill</button>
+            <button class="skillbtn" onclick="window.location.href='#skills'">My Skills</button>
             <button class="contactbtn">Contact</button>
         </div>
     </section>
 
     <!-- SKILLS -->
     <section class="section" id="skills">
-        <h2>My Skills</h2>
+        <h2>Technical skills</h2>
         <div class="skills-container">
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Web Design Basics</div>
-            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">
+                <h3>
+                    HTML
+                </h3>
+                <p>
+                    Basic Web Development using Core HTML Techniques.
+                </p>
+            </div>
+            <div class="skill-card">
+                <h3 style="margin-bottom: 10px;">
+                    CSS
+                </h3>
+                <p>
+                    Basic Web Styling using Code CSS Techniques.
+                </p>
+            </div>
+            <div class="skill-card">
+                <h3>
+                    JavaScript
+                </h3>
+                <p>
+                    Basic Scripting and the concept ofhow websites work behind the scenes.
+                </p>
+            </div>
+            <div class="skill-card">
+                <h3>
+                    Web Design Basics
+                </h3>
+            </div>
+            <div class="skill-card">
+                <h3>
+                    Problem Solving
+                </h3>
+            </div>
         </div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="section" id="projects">
-        <h2>Projects</h2>
+    <section class="projects" id="projects">
+        <h2>Featured Projects</h2>
         <div class="projects-container">
             <div class="project-card">
-                <h3>EcoMart Website</h3>
-                <p>
-                    An eco-friendly product website built using pure HTML, CSS,
-                    and JavaScript without frameworks.
-                </p>
+                <h3 style="color: #64ffda; margin-bottom: 15px;">EcoMart Website</h3>
+                <p>An eco-friendly product website built using pure HTML, CSS, and JavaScript without frameworks.</p>
             </div>
 
             <div class="project-card">
-                <h3>Feedback Form</h3>
-                <p>
-                    A clean feedback form with floating labels and basic validation.
-                </p>
-            </div>
-
-            <div class="project-card">
-                <h3>Personal Portfolio</h3>
-                <p>
-                    This portfolio showcasing my skills and projects using core CSS only.
-                </p>
+                <h3 style="color: #64ffda; margin-bottom: 15px;">Personal Portfolio</h3>
+                <p>This portfolio showcasing my skills and projects using core CSS only. Designed for maximum
+                    performance.</p>
             </div>
         </div>
     </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-content">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <img src="../Assets/People/portfoliopic.jpeg" alt="Adhish">
+    </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevents page reload
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            // Basic validation check & alert
+            if (name && email) {
+                alert(`System Protocol Initiated: Thank you, ${name}. I will contact you at ${email} soon.`);
+                this.reset(); // Clears the form
+            }
+        });
+    </script>
 
     <!-- FOOTER -->
     <footer>
@@ -238,4 +494,5 @@
     </footer>
 
 </body>
+
 </html>
